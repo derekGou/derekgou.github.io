@@ -1,0 +1,353 @@
+holder {
+  position: absolute;
+  aspect-ratio: 1/1;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(to left, #003d37, #00A292);
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+holder1 {
+  position: absolute;
+  aspect-ratio: 1/1;
+  height: 100%;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+.main {
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+.logo {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  top: 20%;
+  left: 20%;
+  align-self: center;
+  aspect-ratio: 1/1;
+  animation: float 2s 0s linear infinite;
+  border-radius: 50%;
+}
+.circlebutton {
+  margin: 0 15vh;
+  display: inline-block;
+  position: absolute;
+  background: transparent;
+  width: 50vh;
+  height: 50vh;
+  border-radius: 50%;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes float {
+  0% {
+    rotate: 19.92deg;
+    transform: translateY(0px);
+  }
+  5% {
+    rotate: 19.07deg;
+    transform: translateY(-15.45px);
+  }
+  10% {
+    rotate: 16.52deg;
+    transform: translateY(-29.4px);
+  }
+  15% {
+    rotate: 12.29deg;
+    transform: translateY(-40.45px);
+  }
+  20% {
+    rotate: 6.59deg;
+    transform: translateY(-47.55px);
+  }
+  25% {
+    rotate: 0deg;
+    transform: translateY(-50px);
+  }
+  30% {
+    rotate: -6.59deg;
+    transform: translateY(-47.55px);
+  }
+  35% {
+    rotate: -12.29deg;
+    transform: translateY(-40.45px);
+  }
+  40% {
+    rotate: -16.52deg;
+    transform: translateY(-29.4px);
+  }
+  45% {
+    rotate:-19.07deg;
+    transform: translateY(-15.45px);
+  }
+  50% {
+    rotate: -19.92deg;
+    transform: translateY(0px);
+  }
+  55% {
+    rotate:-19.07deg;
+    transform: translateY(15.45px);
+  }
+  60% {
+    rotate: -16.52deg;
+    transform: translateY(29.4px);
+  }
+  65% {
+    rotate: -12.29deg;
+    transform: translateY(40.45px);
+  }
+  70% {
+    rotate: -6.59deg;
+    transform: translateY(47.55px);
+  }
+  75% {
+    rotate: 0deg;
+    transform: translateY(50px);
+  }
+  80% {
+    rotate: 6.59deg;
+    transform: translateY(47.55px);
+  }
+  85% {
+    rotate: 12.29deg;
+    transform: translateY(40.45px);
+  }
+  90% {
+    rotate: 16.52deg;
+    transform: translateY(29.4px);
+  }
+  95% {
+    rotate: 19.07deg;
+    transform: translateY(15.45px);
+  }
+  100% {
+    rotate: 19.92deg;
+    transform: translateY(0px);
+  }
+}
+.wave {
+  width: 1600px;
+  height: 65%;
+  margin-top: 35%;
+  animation: wave 2s -1.5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+} 
+.wave1 {
+  width: 1600px;
+  height: 65%;
+  margin-top: -65%;
+  animation: wave1 2s -1.5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+}
+@keyframes wave {
+  0% {
+    margin-left: -2000px;
+  }
+  100% {
+    margin-left: -400px;
+  }
+}
+@keyframes wave1 {
+  0% {
+    margin-left: -400px;
+  }
+  100% {
+    margin-left: 1200px;
+  }
+}
+.pulse {
+  margin: 0 15vh;
+  display: inline-block;
+  position: absolute;
+  background: #108a7e;
+  aspect-ratio: 1/1;
+  height: 50vh;
+  border-radius: 50%;
+  animation: pulsing 2.5s 0s linear infinite;
+  cursor: pointer;
+}
+.pulse1 {
+  margin: 0 15vh;
+  display: inline-block;
+  position: absolute;
+  background: #108a7e;
+  aspect-ratio: 1/1;
+  height: 50vh;
+  border-radius: 50%;
+  animation: pulsing 2.5s -1.25s linear infinite;
+  cursor: pointer;
+}
+@keyframes pulsing {
+  0% {
+    aspect-ratio: 1/1;
+    opacity: 1;
+  }
+  100% {
+    aspect-ratio: 1/1;
+    opacity: 0;
+    transform: scale(1.25);
+  }
+}
+.over {
+  display: none;
+  position: absolute;
+  height: 50vh;
+  width: 50vh;
+  border-radius: 50%;
+  background: rgba(0, 0, 0);
+  border-style: none;
+  padding: 0;
+  animation: none;
+  opacity: 0;
+}
+.under {
+  display: flex;
+  position: absolute;
+  height: 50vh;
+  width: 50vh;
+  border-radius: 50%;
+  background: transparent;
+  border-style: none;
+  padding: 0;
+  cursor: pointer;
+}
+.smallbutton {
+  display: flex;
+  position: absolute;
+  background: #00A292;
+  height: 20vh;
+  width: 20vh;
+  border-style: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.icon {
+  scale: 67.5%;
+}
+#b1 {
+  margin: 0 30vh;
+  left: 0;
+  bottom: 40vh;
+  display: none;
+}
+#b2 {
+  margin: 0 30vh;
+  left: 0;
+  bottom: 40vh;
+  display: none;
+}
+#b3 {
+  margin: 0 30vh;
+  left: 0;
+  bottom: 40vh;
+  display: none;
+}
+#b4 {
+  margin: 0 30vh;
+  left: 0;
+  bottom: 40vh;
+  display: none;
+}
+.ping {
+  position: absolute;
+  background: white;
+  left: 24.5vh;
+  top: 17.5vh;
+  width: 1vh;
+  height: 15vh;
+  border-radius: 20%;
+
+  animation: pingboing 3s ease-in-out infinite;
+}
+.pong1 {
+  position: absolute;
+  background: white;
+  transform: rotate(45deg);
+  left: 28vh;
+  top: 23.5vh;
+  width: 1vh;
+  height: 10.60660172vh;
+  border-radius: 20%;
+
+  animation: pong1boing 3s ease-in-out infinite;
+}
+.pong2 {
+  position: absolute;
+  background: white;
+  transform: rotate(-45deg);
+  left: 21vh;
+  top: 23.5vh;
+  width: 1vh;
+  height: 10.60660172vh;
+  border-radius: 20%;
+  animation: pong2boing 3s ease-in-out infinite;
+}
+@keyframes pingboing {
+  0% {
+    top: 17.5vh;
+    height: 15vh;
+  }
+  15% {
+    top: 25vh;
+    height: 12vh;
+  }
+  30% {
+    top: 17.5vh;
+    height: 15vh;
+  }
+}
+@keyframes pong1boing {
+  0% {
+    transform: rotate(45deg);
+    left: 28vh;
+    top: 23.5vh;
+    height: 10.60660172vh;
+  }
+  15% {
+    transform: rotate(56.30993247deg);
+    left: 28vh;
+    top: 30vh;
+    width: 1vh;
+    height: 9.013878189vh;
+  }
+  30% {
+    transform: rotate(45deg);
+    left: 28vh;
+    top: 23.5vh;
+    height: 10.60660172vh;
+  }
+}
+@keyframes pong2boing {
+  0% {
+    transform: rotate(-45deg);
+    left: 21vh;
+    top: 23.5vh;
+    height: 10.60660172vh;
+  }
+  15% {
+    transform: rotate(-56.30993247deg);
+    left: 21vh;
+    top: 30vh;
+    height: 9.013878189vh;
+  }
+  30% {
+    transform: rotate(-45deg);
+    left: 21vh;
+    top: 23.5vh;
+    height: 10.60660172vh;
+  }
+}
