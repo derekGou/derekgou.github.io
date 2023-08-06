@@ -271,7 +271,7 @@ holder1 {
   height: 15vh;
   border-radius: 20%;
 
-  animation: pingboing 3s ease-in-out infinite;
+  animation: pingboing 3s linear infinite;
 }
 .pong1 {
   position: absolute;
@@ -283,7 +283,7 @@ holder1 {
   height: 10.60660172vh;
   border-radius: 20%;
 
-  animation: pong1boing 3s ease-in-out infinite;
+  animation: pong1boing 3s linear infinite;
 }
 .pong2 {
   position: absolute;
@@ -294,18 +294,42 @@ holder1 {
   width: 1vh;
   height: 10.60660172vh;
   border-radius: 20%;
-  animation: pong2boing 3s ease-in-out infinite;
+  animation: pong2boing 3s linear infinite;
 }
 @keyframes pingboing {
   0% {
     top: 17.5vh;
     height: 15vh;
   }
-  15% {
+  10% {
     top: 25vh;
     height: 12vh;
   }
-  30% {
+  20% {
+    top: 17.5vh;
+    height: 15vh;
+  }
+  25% {
+    top: 13.5vh;
+    height: 16vh;
+  }
+  28% {
+    top: 11.5vh;
+    height: 16.5vh;
+  }
+  32% {
+    top: 11.5vh;
+    height: 16.5vh;
+  }
+  35% {
+    top: 13.5vh;
+    height: 16vh;
+  }
+  40% {
+    top: 17.5vh;
+    height: 15vh;
+  }
+  100% {
     top: 17.5vh;
     height: 15vh;
   }
@@ -317,14 +341,50 @@ holder1 {
     top: 23.5vh;
     height: 10.60660172vh;
   }
-  15% {
+  10% {
     transform: rotate(56.30993247deg);
     left: 28vh;
     top: 30vh;
     width: 1vh;
     height: 9.013878189vh;
   }
-  30% {
+  20% {
+    transform: rotate(45deg);
+    left: 28vh;
+    top: 23.5vh;
+    height: 10.60660172vh;
+  }
+  25% {
+    transform: rotate(45deg);
+    left: 28vh;
+    top: 20.5vh;
+    height: 10.60660172vh;
+  }
+  28.5% {
+    transform: rotate(45deg);
+    left: 28vh;
+    top: 19vh;
+    height: 10.60660172vh;
+  }
+  31.5% {
+    transform: rotate(45deg);
+    left: 28vh;
+    top: 19vh;
+    height: 10.60660172vh;
+  }
+  35% {
+    transform: rotate(45deg);
+    left: 28vh;
+    top: 20.5vh;
+    height: 10.60660172vh;
+  }
+  40% {
+    transform: rotate(45deg);
+    left: 28vh;
+    top: 23.5vh;
+    height: 10.60660172vh;
+  }
+  100% {
     transform: rotate(45deg);
     left: 28vh;
     top: 23.5vh;
@@ -338,13 +398,49 @@ holder1 {
     top: 23.5vh;
     height: 10.60660172vh;
   }
-  15% {
+  10% {
     transform: rotate(-56.30993247deg);
     left: 21vh;
     top: 30vh;
     height: 9.013878189vh;
   }
-  30% {
+  20% {
+    transform: rotate(-45deg);
+    left: 21vh;
+    top: 23.5vh;
+    height: 10.60660172vh;
+  }
+  25% {
+    transform: rotate(-45deg);
+    left: 21vh;
+    top: 20.5vh;
+    height: 10.60660172vh;
+  }
+  28.5% {
+    transform: rotate(-45deg);
+    left: 21vh;
+    top: 19vh;
+    height: 10.60660172vh;
+  }
+  31.5% {
+    transform: rotate(-45deg);
+    left: 21vh;
+    top: 19vh;
+    height: 10.60660172vh;
+  }
+  35% {
+    transform: rotate(-45deg);
+    left: 21vh;
+    top: 20.5vh;
+    height: 10.60660172vh;
+  }
+  40% {
+    transform: rotate(-45deg);
+    left: 21vh;
+    top: 23.5vh;
+    height: 10.60660172vh;
+  }
+  100% {
     transform: rotate(-45deg);
     left: 21vh;
     top: 23.5vh;
