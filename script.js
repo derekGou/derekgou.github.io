@@ -36,9 +36,22 @@ function fadeout() {
 function noOver() {
     overButton.style.display = "none";
 }
+under.addEventListener("click", underclick);
+function underclick() {
+    if (overButton.style.display!='grid'){
+        overButton.style.display = "grid";
+        fadein();
+        setTimeout(function1B, 800)
+        setTimeout(flyin1, 900);
+        setTimeout(flyin2, 1000);
+        setTimeout(flyin3, 1100);
+        setTimeout(flyin4, 1200);
+    }
+}
 main.onclick = function (event) {
     var myBox = document.getElementById('under');
-    if (event.target.contains(myBox) && event.target !== myBox) {
+    var myBox2 = document.getElementById
+    if (event.target.contains(myBox) && event.target != myBox) {
         if (overButton.style.display!='none'){
             setTimeout(flyout4, 100);
             setTimeout(flyout3, 200);
@@ -47,16 +60,6 @@ main.onclick = function (event) {
             setTimeout(function1A, 700);
             setTimeout(fadeout, 800);
             setTimeout(noOver, 1300);
-        }
-    } else {
-        if (overButton.style.display!='grid'){
-            overButton.style.display = "grid";
-            fadein();
-            setTimeout(function1B, 800)
-            setTimeout(flyin1, 900);
-            setTimeout(flyin2, 1000);
-            setTimeout(flyin3, 1100);
-            setTimeout(flyin4, 1200);
         }
     }
 }
@@ -208,3 +211,23 @@ function function1B() {
     SB3.style.display = "block";
     SB4.style.display = "block";
 }
+function visitPage1(){
+    window.location='https://chrome.google.com/webstore';
+}
+function visitPage2(){
+    window.location='https://chrome.google.com/webstore';
+}
+function visitPage3(){
+    window.location='https://chrome.google.com/webstore';
+}
+function visitPage4(){
+    window.location='https://chrome.google.com/webstore';
+}
+function visitPage5(){
+    window.location='https://chrome.google.com/webstore';
+}
+overButton.addEventListener("click", visitPage1);
+SB1.addEventListener("click", visitPage2);
+SB2.addEventListener("click", visitPage3);
+SB3.addEventListener("click", visitPage4);
+SB4.addEventListener("click", visitPage5);
