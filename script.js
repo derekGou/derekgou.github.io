@@ -6,6 +6,7 @@ var SB4 = document.getElementById("b4");
 var overButton = document.getElementById("over");
 var main = document.getElementById("main");
 var id1 = null;
+var text = document.getElementById("textholder1");
 function fadein() {
     var transparency = 0;
     clearInterval(id1);
@@ -50,8 +51,7 @@ function underclick() {
 }
 main.onclick = function (event) {
     var myBox = document.getElementById('under');
-    var myBox2 = document.getElementById
-    if (event.target.contains(myBox) && event.target != myBox) {
+    if (event.target != myBox) {
         if (overButton.style.display!='none'){
             setTimeout(flyout4, 100);
             setTimeout(flyout3, 200);
