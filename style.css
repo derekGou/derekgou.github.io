@@ -178,7 +178,6 @@ holder1 {
   height: 50vh;
   border-radius: 50%;
   animation: pulsing 2.5s 0s linear infinite;
-  cursor: pointer;
 }
 .pulse1 {
   margin: 0 15vh;
@@ -189,7 +188,6 @@ holder1 {
   height: 50vh;
   border-radius: 50%;
   animation: pulsing 2.5s -1.25s linear infinite;
-  cursor: pointer;
 }
 @keyframes pulsing {
   0% {
@@ -213,6 +211,7 @@ holder1 {
   padding: 0;
   animation: none;
   opacity: 0;
+  cursor: pointer;
 }
 .under {
   display: flex;
@@ -446,4 +445,46 @@ holder1 {
     top: 23.5vh;
     height: 10.60660172vh;
   }
+}
+.textholder1 {
+  margin-left: 102vh;
+  height: 50vh;
+  align-items: center;
+  display: flex;
+  margin-right: 1vh;
+  box-sizing: border-box;
+}
+.textcenter {
+  align-items: center;
+  display: block;
+}
+h1 {
+  font-size: 4.5vh;
+  padding-top: 0.002vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+  color: teal;
+  letter-spacing: 0.003vh;
+  box-sizing: border-box;
+  margin: 0;
+}
+h2 {
+  font-size: 6vh;
+  padding-top: 0.01vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 900;
+  color: teal;
+  letter-spacing: 0.003vh;
+  box-sizing: border-box;
+  margin: 0;
+}
+p1 {
+  font-size: 3vh;
+  padding-top: 0.01vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 500;
+  color: teal;
+  letter-spacing: 0.003vh;
+  box-sizing: border-box;
+  margin: 0;
 }
