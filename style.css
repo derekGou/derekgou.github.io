@@ -27,6 +27,16 @@ holder1 {
   top: 0;
   left: 0;
 }
+.fullbody {
+  display: flex;
+  position: absolute;
+  height: 200vh;
+  width: 100%;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background: white;
+}
 .logo {
   position: absolute;
   height: 60%;
@@ -46,6 +56,7 @@ holder1 {
   width: 50vh;
   height: 50vh;
   border-radius: 50%;
+  left: 6.5vh;
 }
 @keyframes fadein {
   0% {
@@ -178,6 +189,7 @@ holder1 {
   height: 50vh;
   border-radius: 50%;
   animation: pulsing 2.5s 0s linear infinite;
+  left: 6.5vh;
 }
 .pulse1 {
   margin: 0 15vh;
@@ -188,6 +200,7 @@ holder1 {
   height: 50vh;
   border-radius: 50%;
   animation: pulsing 2.5s -1.25s linear infinite;
+  left: 6.5vh;
 }
 @keyframes pulsing {
   0% {
@@ -447,7 +460,7 @@ holder1 {
   }
 }
 .textholder1 {
-  margin-left: 102vh;
+  margin-left: 82.5vh;
   height: 50vh;
   align-items: center;
   display: flex;
@@ -459,32 +472,32 @@ holder1 {
   display: block;
 }
 h1 {
-  font-size: 4.5vh;
-  padding-top: 0.002vh;
+  font-size: 6vh;
+  padding-top: 0.01vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 300;
   color: teal;
   letter-spacing: 0.003vh;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0.1vh;
 }
 h2 {
-  font-size: 6vh;
+  font-size: 8vh;
   padding-top: 0.01vh;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 900;
   color: teal;
   letter-spacing: 0.003vh;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0.1vh;
 }
 p1 {
-  font-size: 3vh;
+  font-size: 4vh;
   padding-top: 0.01vh;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: 500;
   color: teal;
   letter-spacing: 0.003vh;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0.1vh;
 }
