@@ -7,6 +7,7 @@ var overButton = document.getElementById("over");
 var main = document.getElementById("main");
 var id1 = null;
 var text = document.getElementById("textholder1");
+var body = document.getElementById("fullbody");
 function fadein() {
     var transparency = 0;
     clearInterval(id1);
@@ -49,7 +50,7 @@ function underclick() {
         setTimeout(flyin4, 1200);
     }
 }
-main.onclick = function (event) {
+body.onclick = function (event) {
     var myBox = document.getElementById('under');
     if (event.target != myBox) {
         if (overButton.style.display!='none'){
@@ -226,8 +227,12 @@ function visitPage4(){
 function visitPage5(){
     window.location='https://chrome.google.com/webstore';
 }
+var h = window.innerHeight;
 overButton.addEventListener("click", visitPage1);
 SB1.addEventListener("click", visitPage2);
 SB2.addEventListener("click", visitPage3);
 SB3.addEventListener("click", visitPage4);
 SB4.addEventListener("click", visitPage5);
+window.onscroll = function scrollBackground() {
+    body.style.background = 'rgb('+(255-(255*(document.body.scrollTop/h)))+', '+(255-(255*(document.body.scrollTop/h)))+', '+(255-(255*(document.body.scrollTop/h)))+')';
+}
