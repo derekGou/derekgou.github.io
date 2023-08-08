@@ -66,7 +66,7 @@ holder1 {
   width: 50vh;
   height: 50vh;
   border-radius: 50%;
-  left: 6.5vh;
+  left: 2vh;
 }
 @keyframes fadein {
   0% {
@@ -199,7 +199,7 @@ holder1 {
   height: 50vh;
   border-radius: 50%;
   animation: pulsing 2.5s 0s linear infinite;
-  left: 6.5vh;
+  left: 2vh;
 }
 .pulse1 {
   margin: 0 15vh;
@@ -210,7 +210,7 @@ holder1 {
   height: 50vh;
   border-radius: 50%;
   animation: pulsing 2.5s -1.25s linear infinite;
-  left: 6.5vh;
+  left: 2vh;
 }
 @keyframes pulsing {
   0% {
@@ -262,25 +262,25 @@ holder1 {
 }
 #b1 {
   margin: 0 30vh;
-  left: 6.5vh;
+  left: 2vh;
   bottom: 40vh;
   display: none;
 }
 #b2 {
   margin: 0 30vh;
-  left: 6.5vh;
+  left: 2vh;
   bottom: 40vh;
   display: none;
 }
 #b3 {
   margin: 0 30vh;
-  left: 6.5vh;
+  left: 2vh;
   bottom: 40vh;
   display: none;
 }
 #b4 {
   margin: 0 30vh;
-  left: 6.5vh;
+  left: 2vh;
   bottom: 40vh;
   display: none;
 }
@@ -470,7 +470,7 @@ holder1 {
   }
 }
 .textholder1 {
-  margin-left: 82.5vh;
+  margin-left: 77.5vh;
   height: 50vh;
   align-items: center;
   display: flex;
