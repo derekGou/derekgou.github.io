@@ -48,7 +48,8 @@ function underclick() {
     if (overButton.style.display!='grid'){
         overButton.style.display = "grid";
         fadein();
-        setTimeout(function1B, 800)
+        setTimeout(slideR1, 800);
+        setTimeout(function1B, 800);
         setTimeout(flyin1, 900);
         setTimeout(flyin2, 1000);
         setTimeout(flyin3, 1100);
@@ -65,6 +66,7 @@ body.onclick = function (event) {
             setTimeout(flyout1, 400);
             setTimeout(function1A, 700);
             setTimeout(fadeout, 800);
+            setTimeout(slideL1, 200);
             setTimeout(noOver, 1300);
         }
     }
@@ -72,11 +74,11 @@ body.onclick = function (event) {
 var idA1 = null;
 function flyin1() {
     var bottom = 40;
-    var left = 6.5;
+    var left = 2;
     clearInterval(idA1);
     id = setInterval(A1, 1.5);
     function A1() {
-        if (bottom >= 67.71638598 && left >= 17.98050297) {
+        if (bottom >= 67.71638598 && left >= 13.48050297) {
             clearInterval(idA1);
         } else {
             bottom+=0.5543277196;
@@ -89,11 +91,11 @@ function flyin1() {
 var idA2 = null;
 function flyin2() {
     var bottom = 40;
-    var left = 6.5;
+    var left = 2;
     clearInterval(idA2);
     id = setInterval(A2, 1.5);
     function A2() {
-        if (bottom >= 51.48050297 && left >= 34.21638598) {
+        if (bottom >= 51.48050297 && left >= 29.71638598) {
             clearInterval(idA2);
         } else {
             bottom+=0.2296100594;
@@ -106,11 +108,11 @@ function flyin2() {
 var idA3 = null;
 function flyin3() {
     var bottom = 40;
-    var left = 6.5;
+    var left = 2;
     clearInterval(idA3);
     id = setInterval(A3, 1.5);
     function A3() {
-        if (bottom <= 28.51949703 && left >= 34.21638598) {
+        if (bottom <= 28.51949703 && left >= 29.71638598) {
             clearInterval(idA3);
         } else {
             bottom-=0.2296100594;
@@ -123,11 +125,11 @@ function flyin3() {
 var idA4 = null;
 function flyin4() {
     var bottom = 40;
-    var left = 6.5;
+    var left = 2;
     clearInterval(idA4);
     id = setInterval(A4, 1.5);
     function A4() {
-        if (bottom <= 12.28361402 && left >= 17.98050297) {
+        if (bottom <= 12.28361402 && left >= 13.48050297) {
             clearInterval(idA4);
         } else {
             bottom-=0.5543277196;
@@ -140,11 +142,11 @@ function flyin4() {
 var idB1 = null;
 function flyout1() {
     var bottom = 67.71638598;
-    var left = 17.98050297;
+    var left = 13.48050297;
     clearInterval(idB1);
     id = setInterval(B1, 1.5);
     function B1() {
-        if (bottom <= 40 && left <= 6.5) {
+        if (bottom <= 40 && left <= 2) {
             clearInterval(idB1);
         } else {
             bottom-=0.5543277196;
@@ -157,11 +159,11 @@ function flyout1() {
 var idB2 = null;
 function flyout2() {
     var bottom = 51.48050297;
-    var left = 34.21638598;
+    var left = 29.71638598;
     clearInterval(idB2);
     id = setInterval(B2, 1.5);
     function B2() {
-        if (bottom <= 40 && left <= 6.5) {
+        if (bottom <= 40 && left <= 2) {
             clearInterval(idB2);
         } else {
             bottom-=0.2296100594;
@@ -174,11 +176,11 @@ function flyout2() {
 var idB3 = null;
 function flyout3() {
     var bottom = 28.51949703;
-    var left = 34.21638598;
+    var left = 29.71638598;
     clearInterval(idB3);
     id = setInterval(B3, 1.5);
     function B3() {
-        if (bottom >= 40 && left <= 6.5) {
+        if (bottom >= 40 && left <= 2) {
             clearInterval(idB3);
         } else {
             bottom+=0.2296100594;
@@ -191,17 +193,45 @@ function flyout3() {
 var idB4 = null;
 function flyout4() {
     var bottom = 12.28361402;
-    var left = 17.98050297;
+    var left = 13.48050297;
     clearInterval(idB4);
     id = setInterval(B4, 1.5);
     function B4() {
-        if (bottom >= 40 && left <= 6.5) {
+        if (bottom >= 40 && left <= 2) {
             clearInterval(idB4);
         } else {
             bottom+=0.5543277196;
             left-=0.2296100594;
             SB4.style.bottom = bottom + 'vh';
             SB4.style.left = left + 'vh';
+        }
+    }
+}
+var idC1 = null;
+function slideR1() {
+    var left1 = 77.5;
+    clearInterval(idC1);
+    id = setInterval(C1, 3);
+    function C1() {
+        if (left1>=87.5) {
+            clearInterval(idC1);
+        } else {
+            left1+=0.1;
+            text.style.marginLeft = left1 + 'vh';
+        }
+    }
+}
+var idC2 = null;
+function slideL1() {
+    var left2 = 87.5;
+    clearInterval(idC2);
+    id = setInterval(C2, 3);
+    function C2() {
+        if (left2<=77.5) {
+            clearInterval(idC2);
+        } else {
+            left2-=0.1;
+            text.style.marginLeft = left2 + 'vh';
         }
     }
 }
