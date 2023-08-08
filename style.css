@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden;
+}
 holder {
   position: absolute;
   aspect-ratio: 1/1;
@@ -30,12 +33,19 @@ holder1 {
 .fullbody {
   display: flex;
   position: absolute;
-  height: 200vh;
-  width: 100%;
+  height: 190vh;
+  width: 100vw;
   align-items: center;
   top: 0;
   left: 0;
   background: white;
+  margin: 0;
+}
+.bodyinfo {
+  position: absolute;
+  top: 90vh;
+  height: 100vh;
+  width: 100vw;
 }
 .logo {
   position: absolute;
@@ -153,38 +163,38 @@ holder1 {
   }
 }
 .wave {
-  width: 1600px;
+  width: 150vh;
   height: 65%;
   margin-top: 35%;
   animation: wave 2s -1.5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 } 
 .wave1 {
-  width: 1600px;
+  width: 150vh;
   height: 65%;
   margin-top: -65%;
   animation: wave1 2s -1.5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
 }
 @keyframes wave {
   0% {
-    margin-left: -2000px;
+    margin-left: -200vh;
   }
   100% {
-    margin-left: -400px;
+    margin-left: -50vh;
   }
 }
 @keyframes wave1 {
   0% {
-    margin-left: -400px;
+    margin-left: -50vh;
   }
   100% {
-    margin-left: 1200px;
+    margin-left: 100vh;
   }
 }
 .pulse {
   margin: 0 15vh;
   display: inline-block;
   position: absolute;
-  background: #108a7e;
+  background: rgb(16,138,126);
   aspect-ratio: 1/1;
   height: 50vh;
   border-radius: 50%;
@@ -195,7 +205,7 @@ holder1 {
   margin: 0 15vh;
   display: inline-block;
   position: absolute;
-  background: #108a7e;
+  background: rgb(16,138,126);
   aspect-ratio: 1/1;
   height: 50vh;
   border-radius: 50%;
@@ -252,25 +262,25 @@ holder1 {
 }
 #b1 {
   margin: 0 30vh;
-  left: 0;
+  left: 6.5vh;
   bottom: 40vh;
   display: none;
 }
 #b2 {
   margin: 0 30vh;
-  left: 0;
+  left: 6.5vh;
   bottom: 40vh;
   display: none;
 }
 #b3 {
   margin: 0 30vh;
-  left: 0;
+  left: 6.5vh;
   bottom: 40vh;
   display: none;
 }
 #b4 {
   margin: 0 30vh;
-  left: 0;
+  left: 6.5vh;
   bottom: 40vh;
   display: none;
 }
@@ -475,8 +485,8 @@ h1 {
   font-size: 6vh;
   padding-top: 0.01vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 300;
-  color: teal;
+  font-weight: 500;
+  color: rgb(0, 125, 125);
   letter-spacing: 0.003vh;
   box-sizing: border-box;
   margin: 0.1vh;
@@ -485,8 +495,8 @@ h2 {
   font-size: 8vh;
   padding-top: 0.01vh;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 900;
-  color: teal;
+  font-weight: 1100;
+  color: rgb(0, 125, 125);
   letter-spacing: 0.003vh;
   box-sizing: border-box;
   margin: 0.1vh;
@@ -495,9 +505,70 @@ p1 {
   font-size: 4vh;
   padding-top: 0.01vh;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 500;
-  color: teal;
+  font-weight: 750;
+  color: rgb(0, 125, 125);
   letter-spacing: 0.003vh;
   box-sizing: border-box;
   margin: 0.1vh;
+}
+h3 {
+  text-align: center;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 4vh;
+  margin-top: 4vh;
+  margin-bottom: 0;
+  width: 100vw;
+  display: block;
+  margin-left: 0;
+  font-weight: 100;
+}
+h4 {
+  text-align: center;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 10vh;
+  margin-top: 1vh;
+  width: 100vw;
+  display: block;
+  margin-left: 0;
+  font-weight: 800;
+}
+headingholder {
+  position: absolute;
+  text-align: center;
+  display: block;
+  height: auto;
+}
+.tidbits {
+  position: absolute;
+  height: 55vh;
+  width: 90vw;
+  left: 5vw;
+  top: 25vh;
+}
+.sect {
+  position: absolute;
+  width: 26vw;
+  height: 55vh;
+  background: rgb(50, 50, 50);
+  top: 0;
+}
+#sect1 {
+  left: 0;
+}
+#sect2 {
+  left: 32vw;
+}
+#sect3 {
+  left: 64vw;
+}
+.dicon {
+  top: -8vw;
+  position: absolute;
+  scale: 30%;
+}
+#dicon2 {
+  top: -7.2vw;
+  scale: 25%;
 }
