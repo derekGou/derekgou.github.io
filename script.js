@@ -8,6 +8,11 @@ var main = document.getElementById("main");
 var id1 = null;
 var text = document.getElementById("textholder1");
 var body = document.getElementById("fullbody");
+var pulse = document.getElementById("pulse");
+var pulse1 = document.getElementById("pulse1");
+var header1 = document.getElementById("header1");
+var header2 = document.getElementById("header2");
+var para1 = document.getElementById("para1");
 function fadein() {
     var transparency = 0;
     clearInterval(id1);
@@ -67,11 +72,11 @@ body.onclick = function (event) {
 var idA1 = null;
 function flyin1() {
     var bottom = 40;
-    var left = 0;
+    var left = 6.5;
     clearInterval(idA1);
     id = setInterval(A1, 1.5);
     function A1() {
-        if (bottom >= 67.71638598 && left >= 11.48050297) {
+        if (bottom >= 67.71638598 && left >= 17.98050297) {
             clearInterval(idA1);
         } else {
             bottom+=0.5543277196;
@@ -84,11 +89,11 @@ function flyin1() {
 var idA2 = null;
 function flyin2() {
     var bottom = 40;
-    var left = 0;
+    var left = 6.5;
     clearInterval(idA2);
     id = setInterval(A2, 1.5);
     function A2() {
-        if (bottom >= 51.48050297 && left >= 27.71638598) {
+        if (bottom >= 51.48050297 && left >= 34.21638598) {
             clearInterval(idA2);
         } else {
             bottom+=0.2296100594;
@@ -101,11 +106,11 @@ function flyin2() {
 var idA3 = null;
 function flyin3() {
     var bottom = 40;
-    var left = 0;
+    var left = 6.5;
     clearInterval(idA3);
     id = setInterval(A3, 1.5);
     function A3() {
-        if (bottom <= 28.51949703 && left >= 27.71638598) {
+        if (bottom <= 28.51949703 && left >= 34.21638598) {
             clearInterval(idA3);
         } else {
             bottom-=0.2296100594;
@@ -118,11 +123,11 @@ function flyin3() {
 var idA4 = null;
 function flyin4() {
     var bottom = 40;
-    var left = 0;
+    var left = 6.5;
     clearInterval(idA4);
     id = setInterval(A4, 1.5);
     function A4() {
-        if (bottom <= 12.28361402 && left >= 11.48050297) {
+        if (bottom <= 12.28361402 && left >= 17.98050297) {
             clearInterval(idA4);
         } else {
             bottom-=0.5543277196;
@@ -135,11 +140,11 @@ function flyin4() {
 var idB1 = null;
 function flyout1() {
     var bottom = 67.71638598;
-    var left = 11.48050297;
+    var left = 17.98050297;
     clearInterval(idB1);
     id = setInterval(B1, 1.5);
     function B1() {
-        if (bottom <= 40 && left <= 0) {
+        if (bottom <= 40 && left <= 6.5) {
             clearInterval(idB1);
         } else {
             bottom-=0.5543277196;
@@ -152,11 +157,11 @@ function flyout1() {
 var idB2 = null;
 function flyout2() {
     var bottom = 51.48050297;
-    var left = 27.71638598;
+    var left = 34.21638598;
     clearInterval(idB2);
     id = setInterval(B2, 1.5);
     function B2() {
-        if (bottom <= 40 && left <= 0) {
+        if (bottom <= 40 && left <= 6.5) {
             clearInterval(idB2);
         } else {
             bottom-=0.2296100594;
@@ -169,11 +174,11 @@ function flyout2() {
 var idB3 = null;
 function flyout3() {
     var bottom = 28.51949703;
-    var left = 27.71638598;
+    var left = 34.21638598;
     clearInterval(idB3);
     id = setInterval(B3, 1.5);
     function B3() {
-        if (bottom >= 40 && left <= 0) {
+        if (bottom >= 40 && left <= 6.5) {
             clearInterval(idB3);
         } else {
             bottom+=0.2296100594;
@@ -186,11 +191,11 @@ function flyout3() {
 var idB4 = null;
 function flyout4() {
     var bottom = 12.28361402;
-    var left = 11.48050297;
+    var left = 17.98050297;
     clearInterval(idB4);
     id = setInterval(B4, 1.5);
     function B4() {
-        if (bottom >= 40 && left <= 0) {
+        if (bottom >= 40 && left <= 6.5) {
             clearInterval(idB4);
         } else {
             bottom+=0.5543277196;
@@ -235,4 +240,9 @@ SB3.addEventListener("click", visitPage4);
 SB4.addEventListener("click", visitPage5);
 window.onscroll = function scrollBackground() {
     body.style.background = 'rgb('+(255-(255*(document.body.scrollTop/h)))+', '+(255-(255*(document.body.scrollTop/h)))+', '+(255-(255*(document.body.scrollTop/h)))+')';
+    pulse.style.background = 'rgb('+(16+(239*(document.body.scrollTop/h)))+', '+(138+(117*(document.body.scrollTop/h)))+', '+(126+(129*(document.body.scrollTop/h)))+')';
+    pulse1.style.background = 'rgb('+(16+(239*(document.body.scrollTop/h)))+', '+(138+(117*(document.body.scrollTop/h)))+', '+(126+(129*(document.body.scrollTop/h)))+')';
+    header1.style.color = 'rgb('+(255*(document.body.scrollTop/h))+', '+(125+(130*(document.body.scrollTop/h)))+', '+(125+(130*(document.body.scrollTop/h)))+')';
+    header2.style.color = 'rgb('+(255*(document.body.scrollTop/h))+', '+(125+(130*(document.body.scrollTop/h)))+', '+(125+(130*(document.body.scrollTop/h)))+')';
+    para1.style.color = 'rgb('+(255*(document.body.scrollTop/h))+', '+(125+(130*(document.body.scrollTop/h)))+', '+(125+(130*(document.body.scrollTop/h)))+')';
 }
