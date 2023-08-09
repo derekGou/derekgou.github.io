@@ -568,11 +568,13 @@ headingholder {
 .dicon {
   top: -8vw;
   position: absolute;
-  scale: 30%;
+  width: 26vw;
+  height: auto;
 }
 #dicon2 {
   top: -7.2vw;
-  scale: 25%;
+  width: 22vw;
+  height: auto;
 }
 p2 {
   margin-left: 3vw;
