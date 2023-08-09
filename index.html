@@ -1,609 +1,81 @@
-body {
-  overflow-x: hidden;
-}
-holder {
-  position: absolute;
-  aspect-ratio: 1/1;
-  height: 100%;
-  border-radius: 50%;
-  background: linear-gradient(to left, #003d37, #00A292);
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-}
-holder1 {
-  position: absolute;
-  aspect-ratio: 1/1;
-  height: 100%;
-  border-radius: 50%;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-}
-.main {
-  display: flex;
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  align-items: center;
-  top: 0;
-  left: 0;
-}
-.fullbody {
-  display: flex;
-  position: absolute;
-  height: 190vh;
-  width: 100vw;
-  align-items: center;
-  top: 0;
-  left: 0;
-  background: white;
-  margin: 0;
-}
-.bodyinfo {
-  position: absolute;
-  top: 90vh;
-  height: 100vh;
-  width: 100vw;
-}
-.logo {
-  position: absolute;
-  height: 60%;
-  width: 60%;
-  top: 20%;
-  left: 20%;
-  align-self: center;
-  aspect-ratio: 1/1;
-  animation: float 2s 0s linear infinite;
-  border-radius: 50%;
-}
-.circlebutton {
-  margin: 0 15vh;
-  display: inline-block;
-  position: absolute;
-  background: transparent;
-  width: 50vh;
-  height: 50vh;
-  border-radius: 50%;
-  left: 2vh;
-}
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes float {
-  0% {
-    rotate: 19.92deg;
-    transform: translateY(0px);
-  }
-  5% {
-    rotate: 19.07deg;
-    transform: translateY(-15.45px);
-  }
-  10% {
-    rotate: 16.52deg;
-    transform: translateY(-29.4px);
-  }
-  15% {
-    rotate: 12.29deg;
-    transform: translateY(-40.45px);
-  }
-  20% {
-    rotate: 6.59deg;
-    transform: translateY(-47.55px);
-  }
-  25% {
-    rotate: 0deg;
-    transform: translateY(-50px);
-  }
-  30% {
-    rotate: -6.59deg;
-    transform: translateY(-47.55px);
-  }
-  35% {
-    rotate: -12.29deg;
-    transform: translateY(-40.45px);
-  }
-  40% {
-    rotate: -16.52deg;
-    transform: translateY(-29.4px);
-  }
-  45% {
-    rotate:-19.07deg;
-    transform: translateY(-15.45px);
-  }
-  50% {
-    rotate: -19.92deg;
-    transform: translateY(0px);
-  }
-  55% {
-    rotate:-19.07deg;
-    transform: translateY(15.45px);
-  }
-  60% {
-    rotate: -16.52deg;
-    transform: translateY(29.4px);
-  }
-  65% {
-    rotate: -12.29deg;
-    transform: translateY(40.45px);
-  }
-  70% {
-    rotate: -6.59deg;
-    transform: translateY(47.55px);
-  }
-  75% {
-    rotate: 0deg;
-    transform: translateY(50px);
-  }
-  80% {
-    rotate: 6.59deg;
-    transform: translateY(47.55px);
-  }
-  85% {
-    rotate: 12.29deg;
-    transform: translateY(40.45px);
-  }
-  90% {
-    rotate: 16.52deg;
-    transform: translateY(29.4px);
-  }
-  95% {
-    rotate: 19.07deg;
-    transform: translateY(15.45px);
-  }
-  100% {
-    rotate: 19.92deg;
-    transform: translateY(0px);
-  }
-}
-.wave {
-  width: 150vh;
-  height: 65%;
-  margin-top: 35%;
-  animation: wave 2s -1.5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-} 
-.wave1 {
-  width: 150vh;
-  height: 65%;
-  margin-top: -65%;
-  animation: wave1 2s -1.5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-}
-@keyframes wave {
-  0% {
-    margin-left: -200vh;
-  }
-  100% {
-    margin-left: -50vh;
-  }
-}
-@keyframes wave1 {
-  0% {
-    margin-left: -50vh;
-  }
-  100% {
-    margin-left: 100vh;
-  }
-}
-.pulse {
-  margin: 0 15vh;
-  display: inline-block;
-  position: absolute;
-  background: rgb(16,138,126);
-  aspect-ratio: 1/1;
-  height: 50vh;
-  border-radius: 50%;
-  animation: pulsing 2.5s 0s linear infinite;
-  left: 2vh;
-}
-.pulse1 {
-  margin: 0 15vh;
-  display: inline-block;
-  position: absolute;
-  background: rgb(16,138,126);
-  aspect-ratio: 1/1;
-  height: 50vh;
-  border-radius: 50%;
-  animation: pulsing 2.5s -1.25s linear infinite;
-  left: 2vh;
-}
-@keyframes pulsing {
-  0% {
-    aspect-ratio: 1/1;
-    opacity: 1;
-  }
-  100% {
-    aspect-ratio: 1/1;
-    opacity: 0;
-    transform: scale(1.25);
-  }
-}
-.over {
-  display: none;
-  position: absolute;
-  height: 50vh;
-  width: 50vh;
-  border-radius: 50%;
-  background: rgba(0, 0, 0);
-  border-style: none;
-  padding: 0;
-  animation: none;
-  opacity: 0;
-  cursor: pointer;
-}
-.under {
-  display: flex;
-  position: absolute;
-  height: 50vh;
-  width: 50vh;
-  border-radius: 50%;
-  background: transparent;
-  border-style: none;
-  padding: 0;
-  cursor: pointer;
-}
-.smallbutton {
-  display: flex;
-  position: absolute;
-  background: #00A292;
-  height: 20vh;
-  width: 20vh;
-  border-style: none;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.icon {
-  scale: 67.5%;
-}
-#b1 {
-  margin: 0 30vh;
-  left: 2vh;
-  bottom: 40vh;
-  display: none;
-}
-#b2 {
-  margin: 0 30vh;
-  left: 2vh;
-  bottom: 40vh;
-  display: none;
-}
-#b3 {
-  margin: 0 30vh;
-  left: 2vh;
-  bottom: 40vh;
-  display: none;
-}
-#b4 {
-  margin: 0 30vh;
-  left: 2vh;
-  bottom: 40vh;
-  display: none;
-}
-.ping {
-  position: absolute;
-  background: white;
-  left: 24.5vh;
-  top: 17.5vh;
-  width: 1vh;
-  height: 15vh;
-  border-radius: 20%;
-  transform: translateZ(0);
-  animation: pingboing 3s linear infinite;
-}
-.pong1 {
-  position: absolute;
-  background: white;
-  transform: rotate(45deg);
-  left: 28vh;
-  top: 23.5vh;
-  width: 1vh;
-  height: 10.60660172vh;
-  border-radius: 20%;
-  transform: translateZ(0);
-  animation: pong1boing 3s linear infinite;
-}
-.pong2 {
-  position: absolute;
-  background: white;
-  transform: rotate(-45deg);
-  left: 21vh;
-  top: 23.5vh;
-  width: 1vh;
-  height: 10.60660172vh;
-  border-radius: 20%;
-  transform: translateZ(0);
-  animation: pong2boing 3s linear infinite;
-}
-@keyframes pingboing {
-  0% {
-    top: 17.5vh;
-    height: 15vh;
-  }
-  10% {
-    top: 25vh;
-    height: 12vh;
-  }
-  20% {
-    top: 17.5vh;
-    height: 15vh;
-  }
-  25% {
-    top: 13.5vh;
-    height: 16vh;
-  }
-  28% {
-    top: 11.5vh;
-    height: 16.5vh;
-  }
-  32% {
-    top: 11.5vh;
-    height: 16.5vh;
-  }
-  35% {
-    top: 13.5vh;
-    height: 16vh;
-  }
-  40% {
-    top: 17.5vh;
-    height: 15vh;
-  }
-  100% {
-    top: 17.5vh;
-    height: 15vh;
-  }
-}
-@keyframes pong1boing {
-  0% {
-    transform: rotate(45deg);
-    left: 28vh;
-    top: 23.5vh;
-    height: 10.60660172vh;
-  }
-  10% {
-    transform: rotate(56.30993247deg);
-    left: 28vh;
-    top: 30vh;
-    width: 1vh;
-    height: 9.013878189vh;
-  }
-  20% {
-    transform: rotate(45deg);
-    left: 28vh;
-    top: 23.5vh;
-    height: 10.60660172vh;
-  }
-  25% {
-    transform: rotate(45deg);
-    left: 28vh;
-    top: 20.5vh;
-    height: 10.60660172vh;
-  }
-  28.5% {
-    transform: rotate(45deg);
-    left: 28vh;
-    top: 19vh;
-    height: 10.60660172vh;
-  }
-  31.5% {
-    transform: rotate(45deg);
-    left: 28vh;
-    top: 19vh;
-    height: 10.60660172vh;
-  }
-  35% {
-    transform: rotate(45deg);
-    left: 28vh;
-    top: 20.5vh;
-    height: 10.60660172vh;
-  }
-  40% {
-    transform: rotate(45deg);
-    left: 28vh;
-    top: 23.5vh;
-    height: 10.60660172vh;
-  }
-  100% {
-    transform: rotate(45deg);
-    left: 28vh;
-    top: 23.5vh;
-    height: 10.60660172vh;
-  }
-}
-@keyframes pong2boing {
-  0% {
-    transform: rotate(-45deg);
-    left: 21vh;
-    top: 23.5vh;
-    height: 10.60660172vh;
-  }
-  10% {
-    transform: rotate(-56.30993247deg);
-    left: 21vh;
-    top: 30vh;
-    height: 9.013878189vh;
-  }
-  20% {
-    transform: rotate(-45deg);
-    left: 21vh;
-    top: 23.5vh;
-    height: 10.60660172vh;
-  }
-  25% {
-    transform: rotate(-45deg);
-    left: 21vh;
-    top: 20.5vh;
-    height: 10.60660172vh;
-  }
-  28.5% {
-    transform: rotate(-45deg);
-    left: 21vh;
-    top: 19vh;
-    height: 10.60660172vh;
-  }
-  31.5% {
-    transform: rotate(-45deg);
-    left: 21vh;
-    top: 19vh;
-    height: 10.60660172vh;
-  }
-  35% {
-    transform: rotate(-45deg);
-    left: 21vh;
-    top: 20.5vh;
-    height: 10.60660172vh;
-  }
-  40% {
-    transform: rotate(-45deg);
-    left: 21vh;
-    top: 23.5vh;
-    height: 10.60660172vh;
-  }
-  100% {
-    transform: rotate(-45deg);
-    left: 21vh;
-    top: 23.5vh;
-    height: 10.60660172vh;
-  }
-}
-.textholder1 {
-  margin-left: 77.5vh;
-  height: 50vh;
-  align-items: center;
-  display: flex;
-  margin-right: 1vh;
-  box-sizing: border-box;
-}
-.textcenter {
-  align-items: center;
-  display: block;
-}
-h1 {
-  font-size: 6vh;
-  padding-top: 0.01vh;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 500;
-  color: rgb(0, 125, 125);
-  letter-spacing: 0.003vh;
-  box-sizing: border-box;
-  margin: 0.1vh;
-}
-h2 {
-  font-size: 8vh;
-  padding-top: 0.01vh;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 1100;
-  color: rgb(0, 125, 125);
-  letter-spacing: 0.003vh;
-  box-sizing: border-box;
-  margin: 0.1vh;
-}
-p1 {
-  font-size: 4vh;
-  padding-top: 0.01vh;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 750;
-  color: rgb(0, 125, 125);
-  letter-spacing: 0.003vh;
-  box-sizing: border-box;
-  margin: 0.1vh;
-}
-h3 {
-  text-align: center;
-  color: white;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 4vh;
-  margin-top: 4vh;
-  margin-bottom: 0;
-  width: 100vw;
-  display: block;
-  margin-left: 0;
-  font-weight: 100;
-}
-h4 {
-  text-align: center;
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 10vh;
-  margin-top: 1vh;
-  width: 100vw;
-  display: block;
-  margin-left: 0;
-  font-weight: 800;
-}
-headingholder {
-  position: absolute;
-  text-align: center;
-  display: block;
-  height: auto;
-}
-.tidbits {
-  position: absolute;
-  height: 55vh;
-  width: 90vw;
-  left: 5vw;
-  top: 25vh;
-}
-.sect {
-  position: absolute;
-  width: 26vw;
-  height: 55vh;
-  background: rgb(50, 50, 50);
-  top: 0;
-  text-align: center;
-}
-#sect1 {
-  left: 0;
-}
-#sect2 {
-  left: 32vw;
-}
-#sect3 {
-  left: 64vw;
-}
-.dicon {
-  top: -8vw;
-  position: absolute;
-  width: 26vw;
-  height: auto;
-}
-#dicon2 {
-  top: -7.2vw;
-  width: 22vw;
-  height: auto;
-}
-p2 {
-  margin-left: 3vw;
-  margin-right: 3vw;
-  margin-top: 25vh;
-  color: white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  display: inline-block;
-  font-size: 1.4vw;
-  font-weight: lighter;
-}
-g {
-  color: aquamarine;
-}
-/*.footer {
-  position: absolute;
-  background: rgb(80, 80, 80);
-  height: 15vh;
-  width: 100vw;
-  top: 175vh;
-}
-.footlink {
-  text-decoration: none;
-  color: white;
-  display: block;
-}
-.footlogo {
-  position: absolute;
-  right: -2vh;
-  top: -6vh;
-  scale: 30%;
-}*/
+<html>
+    <head>
+        <title>Phishy</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="favicon.ico">
+    </head>
+    <body>
+        <div id = "fullbody" class = "fullbody">
+            <div id = "main" class = "main">
+                <div id = "textholder1" class = "textholder1">
+                    <div class = "textcenter">
+                        <h1 id = "header1">Download Phishy:</h1>
+                        <h2 id = "header2">The Phishmonger</h2>
+                        <p1 id = "para1">Protect yourself from phishing attacks and scam emails.</p1>
+                    </div>
+                </div>
+                <a id = "pulse" class = "pulse"></a>
+                <a id = "pulse1" class = "pulse1"></a>
+                <div class ="circlebutton">
+                    <holder>
+                        <img class="logo" src="logo.png">
+                    </holder>
+                    <holder1>
+                        <img class="wave" src="wave.svg">
+                        <img class="wave1" src="wave.svg">
+                    </holder1>
+                    <button id = "under" class = "under"></button>
+                    <button id = "over" class = "over">
+                        <div class = "ping"></div>
+                        <div class = "pong1"></div>
+                        <div class = "pong2"></div>
+                    </button>
+                </div>
+                <div id = "otherbuttons" class = "otherbuttons">
+                    <button id = "b4" class = "smallbutton">
+                        <img class = "icon" id = "i4" src = "Question1.svg">
+                    </button>
+                    <button id = "b3" class = "smallbutton">
+                        <img class = "icon" id = "i3" src = "Team1.svg">
+                    </button>
+                    <button id = "b2" class = "smallbutton">
+                        <img class = "icon" id = "i2" src = "Product1.svg">
+                    </button>
+                    <button id = "b1" class = "smallbutton">
+                        <img class = "icon" id = "i1" src = "House1.svg">
+                    </button>
+                </div>
+            </div>
+            <div class = "bodyinfo">
+                <headingholder>
+                    <h3>You Never Know When You Could Be Getting</h3>
+                    <h4>BAITED</h4>
+                </headingholder>
+                <div class = "tidbits">
+                    <div id = "sect1" class = "sect">
+                        <img id = "dicon1" class = "dicon" src = "Number1.svg">
+                        <p2 id = "p2a">Phishy's <b><g>machine-learning model</g></b> achieves an accuracy rate of <b><g>99.7%</g></b>. Its advanced algorithms and data-mining techniques ensure <b><g>reliable</g></b> and <b><g>efficient</g></b> phishing detection.</p2>
+                    </div>
+                    <div id = "sect2" class = "sect">
+                        <img id = "dicon2" class = "dicon" src = "Efficiency1.svg">
+                        <p2 id = "p2b">Phishy's <b><g>advanced data-mining</g></b> techniques detect phishing cases before the email is even opened, <b><g>saving users from the need to wait</g></b> for a program to run upon opening emails.</p2>
+                    </div>
+                    <div id = "sect3" class = "sect">
+                        <img id = "dicon3" class = "dicon" src = "Userfriendly1.svg">
+                        <p2 id = "p2c">The Phishy extension is designed to be a <b><g>user-friendly</g></b> application, featuring <b><g>simple</g></b> toggles for activating key features and a <b><g>customizable</g></b> interface with light and dark modes.</p2>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class = "footer">
+                <a class ="footlink" href="https://www.google.com/maps">link text</a>
+                <a class ="footlink" href="https://www.google.com/maps">link text</a>
+                <a class ="footlink" href="https://www.google.com/maps">link text</a>
+                <a class ="footlink" href="https://www.google.com/maps">link text</a>
+                <img class = "footlogo" src = "favicon.ico">
+            </div> -->
+        </div>
+    </body>
+</html>
+<script src="script.js"></script>
