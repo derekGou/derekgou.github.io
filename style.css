@@ -553,6 +553,7 @@ headingholder {
   height: 55vh;
   background: rgb(50, 50, 50);
   top: 0;
+  text-align: center;
 }
 #sect1 {
   left: 0;
@@ -571,4 +572,17 @@ headingholder {
 #dicon2 {
   top: -7.2vw;
   scale: 25%;
+}
+p2 {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 25vh;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: inline-block;
+  font-size: 1.4vw;
+  font-weight: lighter;
+}
+g {
+  color: aquamarine;
 }
