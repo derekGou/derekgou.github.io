@@ -292,7 +292,7 @@ holder1 {
   width: 1vh;
   height: 15vh;
   border-radius: 20%;
-
+  transform: translateZ(0);
   animation: pingboing 3s linear infinite;
 }
 .pong1 {
@@ -304,7 +304,7 @@ holder1 {
   width: 1vh;
   height: 10.60660172vh;
   border-radius: 20%;
-
+  transform: translateZ(0);
   animation: pong1boing 3s linear infinite;
 }
 .pong2 {
@@ -316,6 +316,7 @@ holder1 {
   width: 1vh;
   height: 10.60660172vh;
   border-radius: 20%;
+  transform: translateZ(0);
   animation: pong2boing 3s linear infinite;
 }
 @keyframes pingboing {
