@@ -566,14 +566,16 @@ headingholder {
   left: 64vw;
 }
 .dicon {
-  top: -8vw;
+  top: 3vw;
+  left: 9.5vw;
   position: absolute;
-  width: 26vw;
+  width: 7vw;
   height: auto;
 }
 #dicon2 {
-  top: -7.2vw;
-  width: 22vw;
+  top: 3.5vw;
+  left: 10vw;
+  width: 6vw;
   height: auto;
 }
 p2 {
