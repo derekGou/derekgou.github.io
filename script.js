@@ -207,31 +207,46 @@ function flyout4() {
         }
     }
 }
+var slide = 0;
 var idC1 = null;
 function slideR1() {
-    var left1 = 77.5;
-    clearInterval(idC1);
-    id = setInterval(C1, 3);
-    function C1() {
-        if (left1>=87.5) {
-            clearInterval(idC1);
-        } else {
-            left1+=0.1;
-            text.style.marginLeft = left1 + 'vh';
+    if (slide == 0){
+        var done1 = 0;
+        var left1 = 77.5;
+        clearInterval(idC1);
+        id = setInterval(C1, 3);
+        function C1() {
+            if (left1>=87.5) {
+                clearInterval(idC1);
+                if (done1==0){
+                    slide = 1;
+                    done1 = 1;
+                }
+            } else {
+                left1+=0.1;
+                text.style.marginLeft = left1 + 'vh';
+           }
         }
     }
 }
 var idC2 = null;
 function slideL1() {
-    var left2 = 87.5;
-    clearInterval(idC2);
-    id = setInterval(C2, 3);
-    function C2() {
-        if (left2<=77.5) {
-            clearInterval(idC2);
-        } else {
-            left2-=0.1;
-            text.style.marginLeft = left2 + 'vh';
+    if (slide == 1){
+        var done2 = 1;
+        var left2 = 87.5;
+        clearInterval(idC2);
+        id = setInterval(C2, 3);
+        function C2() {
+            if (left2<=77.5) {
+                clearInterval(idC2);
+                if (done2==1){
+                    slide = 0;
+                    done2 = 0;
+                }
+            } else {
+                left2-=0.1;
+                text.style.marginLeft = left2 + 'vh';
+            }
         }
     }
 }
@@ -263,6 +278,7 @@ function visitPage5(){
     window.location='https://chrome.google.com/webstore';
 }
 var h = window.innerHeight;
+var w = window.innerWidth;
 overButton.addEventListener("click", visitPage1);
 SB1.addEventListener("click", visitPage2);
 SB2.addEventListener("click", visitPage3);
@@ -275,4 +291,19 @@ window.onscroll = function scrollBackground() {
     header1.style.color = 'rgb('+(255*(document.body.scrollTop/h))+', '+(125+(130*(document.body.scrollTop/h)))+', '+(125+(130*(document.body.scrollTop/h)))+')';
     header2.style.color = 'rgb('+(255*(document.body.scrollTop/h))+', '+(125+(130*(document.body.scrollTop/h)))+', '+(125+(130*(document.body.scrollTop/h)))+')';
     para1.style.color = 'rgb('+(255*(document.body.scrollTop/h))+', '+(125+(130*(document.body.scrollTop/h)))+', '+(125+(130*(document.body.scrollTop/h)))+')';
+}
+var infoTextA = document.getElementById('p2a');
+var infoTextB = document.getElementById('p2b');
+var infoTextC = document.getElementById('p2c');
+window.onresize = myFunction1();
+function myFunction1() {
+    if (h/w>0.425) {
+        infoTextA.style.fontSize = '1.4vw';
+            infoTextB.style.fontSize = '1.4vw';
+    infoTextC.style.fontSize = '1.4vw';
+    } else {
+        infoTextA.style.fontSize = '2.488vh';
+        infoTextB.style.fontSize = '2.488vh';
+        infoTextC.style.fontSize = '2.488vh';
+    }
 }
