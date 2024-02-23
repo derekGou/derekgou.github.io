@@ -1,167 +1,185 @@
 html {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow-x: hidden;
-  padding-bottom: 0;-ms-overflow-style: none;
-  scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+    padding-bottom: 0;-ms-overflow-style: none;
+    scrollbar-width: none;
 }
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-attachment: fixed;
-  margin: 0;
-  background: white;
-  overflow-x: hidden;
-  width: 100vw;
-  padding-bottom: 0;-ms-overflow-style: none;
-  scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed;
+    margin: 0;
+    background: white;
+    overflow-x: hidden;
+    width: 100vw;
+    padding-bottom: 0;-ms-overflow-style: none;
+    scrollbar-width: none;
 }
 html::-webkit-scrollbar { 
-  display: none;
+    display: none;
 }
 .body::-webkit-scrollbar { 
-  display: none;
+    display: none;
 }
 .hero {
-  display: flex;
-  flex-direction: column;
-  margin: 12.5vh;
-  height: 75vh;
-  width: 75vw;
-  background: transparent;
-  justify-content: center;
-  align-items: center;
-  background-attachment: fixed;
-  background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    margin: 12.5vh;
+    height: 75vh;
+    width: 75vw;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background: rgba(0, 0, 0, 0.25);
 }
 .textHolder {
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
 }
 .heroLogo {
-  width: 4vw;
-  margin-bottom: 6vh;
-  filter: none;
-  -webkit-filter: none;
-  transition: filter 0.5s, -webkit-filter 0.5s;
+    width: 4vw;
+    margin-bottom: 6vh;
+    filter: none;
+    -webkit-filter: none;
+    transition: filter 0.5s, -webkit-filter 0.5s;
 }
 .heroLogo:hover {
-  filter: drop-shadow(0px, 0px, 5px, rgba(255, 255, 255, 255));
-  -webkit-filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5));
-  transition: filter 0.5s, -webkit-filter 0.5s;
+    filter: drop-shadow(0px, 0px, 5px, rgba(255, 255, 255, 255));
+    -webkit-filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5));
+    transition: filter 0.5s, -webkit-filter 0.5s;
 }
 h1 {
-  color: white;
-  font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
-  font-size: 4vh;
-  margin: -1.5vh 1vw;
-  text-align: center;
-  cursor: default;
+    color: white;
+    font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
+    font-size: 5vh;
+    margin: -1.5vh 1vw;
+    text-align: center;
+    cursor: default;
 }
 h2 {
-  color: white;
-  font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
-  font-size: 8vh;
-  margin: 0 1vw;
-  text-align: center;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  cursor: default;
-  transition: text-shadow 0.5s;
+    color: white;
+    font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
+    font-size: 10vh;
+    margin: 0 1vw;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    cursor: default;
+    transition: text-shadow 0.5s;
 }
 h2:hover {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 1);
-  transition: text-shadow 0.5s;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    transition: text-shadow 0.5s;
 }
 h3 {
-  color: white;
-  font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
-  font-size: 2vh;
-  margin: 1vh 1vw;
-  text-align: center;
-  cursor: default;
-}
-pre {
-  color: white;
-  font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
-  font-size: 2vh;
-  margin: 0 1vw;
-  text-align: center;
+    color: white;
+    font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
+    font-size: 2.5vh;
+    margin: 1vh 1vw;
+    text-align: center;
+    cursor: default;
 }
 #canvas {
-  position: absolute;
-  z-index: -1;
-  position: fixed;
-  top: 0;
+    position: absolute;
+    z-index: -1;
+    position: fixed;
+    top: 0;
 }
 .down {
-  display: flex;
-  flex-direction: row;
-  background-color: transparent;
-  width: 30vh;
-  height: 5vh;
-  margin-top: 2.5vh;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2.5vh;
-  cursor: pointer;
-  border: 0.5vh solid #555;
-  transition: background-color 0.5s, border 0.5s;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    width: 30vh;
+    height: 5vh;
+    margin-top: 2.5vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.5vh;
+    cursor: pointer;
+    border: 0.5vh solid #555;
+    transition: background-color 0.5s, border 0.5s;
 }
 .more {
-  margin: 0 -0.2vh;
-  transition: margin 0.5s;
-  transition-delay: 0.3s;
-  cursor: pointer;
+    margin: 0 -0.2vh;
+    transition: margin 0.5s;
+    transition-delay: 0.3s;
+    cursor: pointer;
 }
 .arrow {
-  opacity: 0;
-  border: solid white;
-  border-width: 0 0.6vh 0.6vh 0;
-  padding: 0.6vh;
-  margin-bottom: 0.75vh;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  display: inline-block;
-  transition: 0.5s opacity;
+    opacity: 0;
+    border: solid white;
+    border-width: 0 0.6vh 0.6vh 0;
+    padding: 0.6vh;
+    margin-bottom: 0.75vh;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    display: inline-block;
+    transition: 0.5s opacity;
 }
 .down:hover {
-  background-color: rgba(0, 0, 0, 0.25);
-  border: 0.5vh solid #fff;
-  transition: background-color 0.5s, border 0.5s;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 0.5vh solid #fff;
+    transition: background-color 0.5s, border 0.5s;
 }
 .down:hover > .more {
-  margin: 0 0.75vw;
-  transition: margin 0.5s;
+    margin: 0 0.75vw;
+    transition: margin 0.5s;
 }
 .down:hover > .arrow {
-  opacity: 1;
-  transition: 0.5s opacity;
-  transition-delay: 0.3s;
+    opacity: 1;
+    transition: 0.5s opacity;
+    transition-delay: 0.3s;
 }
 .about {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
 }
-.aboutMe {
-  height: 75vh;
-  width: 75vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow-x: hidden;
-  margin: 12.5vh;
-  background: rgba(0, 0, 0, 0.25);
+.ab {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 96vw;
+    margin: 2vw;
+    flex-grow: 1;
 }
-.subT {
-
+#aba {
+    margin-bottom: 1vw;
+}
+#abb {
+    margin-top: 1vw;
+}
+.rect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    margin: 0;
+    background: white;
+    flex-grow: 1;
+    height: 100%;
+}
+#business {
+    margin-right: 1vw;
+}
+#math {
+    margin-left: 1vw;
+}
+#software {
+    margin-right: 1vw;
+}
+#education {
+    margin-left: 1vw;
 }
