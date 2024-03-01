@@ -278,13 +278,37 @@ hl {
 }
 .hlb {
     background-image: linear-gradient(to right, #C350CE, #CE70D7);
+    text-shadow: none;
+    transition: text-shadow 0.5s;
+}
+.hlb:hover {
+    text-shadow: 0 0 10px rgba(206,112,215, 0.75);
+    transition: text-shadow 0.5s;
 }
 .hlm {
     background-image: linear-gradient(to right, #81EC6D, #B1F3A4);
+    text-shadow: none;
+    transition: text-shadow 0.5s;
+}
+.hlm:hover {
+    text-shadow: 0 0 10px rgba(177,243,164, 0.75);
+    transition: text-shadow 0.5s;
 }
 .hls {
     background-image: linear-gradient(to right, #4589FA, #8CB6FA);
+    text-shadow: none;
+    transition: text-shadow 0.5s;
+}
+.hls:hover {
+    text-shadow: 0 0 10px rgba(140,182,250, 0.75);
+    transition: text-shadow 0.5s;
 }
 .hle {
     background-image: linear-gradient(to right, #FAA038, #FAC483);
+    text-shadow: none;
+    transition: text-shadow 0.5s;
+}
+.hle:hover {
+    text-shadow: 0 0 10px rgba(250, 196, 131, 0.75);
+    transition: text-shadow 0.5s;
 }
