@@ -3,6 +3,8 @@ explore = document.getElementsByClassName('down')[0];
 explore.onclick = function(){
     myMove();
 };
+subt = document.getElementsByClassName('subT')[0];
+subt.style.fontSize = ((0.02*$(window).height())+(0.02*$(window).width()))+'px';
 function myMove() {
     let id = null;
     let pos = 0;
@@ -104,6 +106,7 @@ window.onresize = function(){
     fillrands();
     render();
     updateBox();
+    subt.style.fontSize = ((0.02*$(window).height())+(0.02*$(window).width()))+'px';
 };
 body.onscroll = function(){
     backColor();
