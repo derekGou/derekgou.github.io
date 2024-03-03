@@ -319,6 +319,7 @@ li {
     text-align: left;
     font-size: 1.5vw;
     font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
+    margin-left: 1.5vw;
 }
 ul {
     white-space: pre-wrap;
@@ -341,7 +342,7 @@ li::before{
     overflow: hidden;
     margin: 0;
     flex-grow: 1;
-    width: 36vw;
+    width: 35vw;
     height: 100%;
 }
 .li1 {
