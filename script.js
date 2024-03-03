@@ -37,28 +37,133 @@ box1 = document.getElementById("box1");
 box2 = document.getElementById("box2");
 box3 = document.getElementById("box3");
 box4 = document.getElementById("box4");
+aba = document.getElementById("aba");
+abb = document.getElementById("abb");
+contents = document.getElementsByClassName("content");
+h4 = document.getElementsByTagName("h4");
+businesshead = document.getElementById("businesshead");
+mathhead = document.getElementById("mathhead");
+softwarehead = document.getElementById("softwarehead");
+educationhead = document.getElementById("educationhead");
+blocks = document.getElementsByClassName("block");
+rects = document.getElementsByClassName("rect");
+business = document.getElementById("business");
+math = document.getElementById("math");
+software = document.getElementById("software");
+education = document.getElementById("education");
+lis = document.getElementsByTagName("li");
 function updateBox(){
-    box1.style.right = (0.49*$(window).width())+'px';
-    box1.style.top = (1*$(window).height())+'px';
-    box1.style.borderTop = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(126, 20, 135, 0.4)';
-    box1.style.borderLeft = (0.075*$(window).width())+'px solid rgba(126, 20, 135, 0.4)';
-    box1.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
-    box2.style.left = (0.49*$(window).width())+'px';
-    box2.style.top = (1*$(window).height())+'px';
-    box2.style.borderTop = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(102, 232, 78, 0.4)';
-    box2.style.borderRight = (0.075*$(window).width())+'px solid rgba(102, 232, 78, 0.4)';
-    box2.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
-    box3.style.right = (0.49*$(window).width())+'px';
-    box3.style.top = (1.5*$(window).height())+'px';
-    box3.style.borderBottom = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(50, 125, 250, 0.4)';
-    box3.style.borderLeft = (0.075*$(window).width())+'px solid rgba(50, 125, 250, 0.4)';
-    box3.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
-    box4.style.left = (0.49*$(window).width())+'px';
-    box4.style.top = (1.5*$(window).height())+'px';
-    box4.style.borderBottom = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(250, 160, 56, 0.4)';
-    box4.style.borderRight = (0.075*$(window).width())+'px solid rgba(250, 160, 56, 0.4)';
-    box4.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
-    me.style.width = (0.77*$(window).width())+'px';
+    if ($(window).width()>$(window).height()){
+        me.style.position = "absolute";
+        box1.style.width = (0.395*$(window).width())+'px';
+        box1.style.right = (0.49*$(window).width())+'px';
+        box1.style.top = (1*$(window).height())+'px';
+        box1.style.borderTop = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(126, 20, 135, 0.4)';
+        box1.style.borderLeft = (0.075*$(window).width())+'px solid rgba(126, 20, 135, 0.4)';
+        box1.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
+        box2.style.width = (0.395*$(window).width())+'px';
+        box2.style.left = (0.49*$(window).width())+'px';
+        box2.style.top = (1*$(window).height())+'px';
+        box2.style.borderTop = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(102, 232, 78, 0.4)';
+        box2.style.borderRight = (0.075*$(window).width())+'px solid rgba(102, 232, 78, 0.4)';
+        box2.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
+        box3.style.width = (0.395*$(window).width())+'px';
+        box3.style.right = (0.49*$(window).width())+'px';
+        box3.style.top = (1.5*$(window).height())+'px';
+        box3.style.borderBottom = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(50, 125, 250, 0.4)';
+        box3.style.borderLeft = (0.075*$(window).width())+'px solid rgba(50, 125, 250, 0.4)';
+        box3.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
+        box4.style.width = (0.395*$(window).width())+'px';
+        box4.style.left = (0.49*$(window).width())+'px';
+        box4.style.top = (1.5*$(window).height())+'px';
+        box4.style.borderBottom = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(250, 160, 56, 0.4)';
+        box4.style.borderRight = (0.075*$(window).width())+'px solid rgba(250, 160, 56, 0.4)';
+        box4.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
+        me.style.width = (0.77*$(window).width())+'px';
+        aba.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
+        abb.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
+        for (i=0; i<contents.length; i++) {
+            contents[i].style.height = ((0.35*$(window).height())-(0.03*$(window).width()))+'px';
+        }
+        for (i=0; i<h4.length; i++) {
+            h4[i].style.writingMode = 'vertical-rl';
+        }
+        for (i=0; i<blocks.length; i++) {
+            blocks[i].style.height = '15vh';
+        }
+        businesshead.style.rotate = "180deg";
+        softwarehead.style.rotate = "180deg";
+        business.style.flexDirection = "row";
+        math.style.flexDirection = "row-reverse";
+        software.style.flexDirection = "row";
+        education.style.flexDirection = "row-reverse";
+        businesshead.style.width = "7.5vw";
+        mathhead.style.width = "7.5vw";
+        softwarehead.style.width = "7.5vw";
+        educationhead.style.width = "7.5vw";
+        businesshead.style.height = "inherit";
+        mathhead.style.height = "inherit";
+        softwarehead.style.height = "inherit";
+        educationhead.style.height = "inherit";
+        for (i=0; i<lis.length; i++) {
+            lis[i].style.fontSize = '1.5vw';
+        }
+    } else {
+        me.style.width = (0.94*$(window).width())+'px';
+        me.style.position = "static";
+        box1.style.width = (0.47*$(window).width())+'px';
+        box1.style.right = (0.49*$(window).width())+'px';
+        box1.style.top = (1*$(window).height())+'px';
+        box1.style.borderTop = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(126, 20, 135, 0.4)';
+        box1.style.borderLeft = '0px';
+        box1.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
+        box2.style.width = (0.47*$(window).width())+'px';
+        box2.style.left = (0.49*$(window).width())+'px';
+        box2.style.top = (1*$(window).height())+'px';
+        box2.style.borderTop = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(102, 232, 78, 0.4)';
+        box2.style.borderRight = '0px';
+        box2.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
+        box3.style.width = (0.47*$(window).width())+'px';
+        box3.style.right = (0.49*$(window).width())+'px';
+        box3.style.top = (1.5*$(window).height())+'px';
+        box3.style.borderBottom = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(50, 125, 250, 0.4)';
+        box3.style.borderLeft = '0px';
+        box3.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
+        box4.style.width = (0.47*$(window).width())+'px';
+        box4.style.left = (0.49*$(window).width())+'px';
+        box4.style.top = (1.5*$(window).height())+'px';
+        box4.style.borderBottom = ((0.35*$(window).height())-(0.03*$(window).width()))+'px solid rgba(250, 160, 56, 0.4)';
+        box4.style.borderRight = '0px';
+        box4.style.height = (0.15*$(window).height()-0.01*$(window).width())+'px';
+        for (i=0; i<contents.length; i++) {
+            contents[i].style.height = ((0.35*$(window).height())-(0.03*$(window).width()))+'px';
+        }
+        for (i=0; i<h4.length; i++) {
+            h4[i].style.writingMode = 'horizontal-tb';
+        }
+        for (i=0; i<blocks.length; i++) {
+            blocks[i].style.height = '0';
+        }
+        businesshead.style.rotate = "0deg";
+        softwarehead.style.rotate = "0deg";
+        aba.style.height = (0.10*$(window).height()-0.01*$(window).width())+'px';
+        abb.style.height = (0.10*$(window).height()-0.01*$(window).width())+'px';
+        business.style.flexDirection = "column";
+        math.style.flexDirection = "column";
+        software.style.flexDirection = "column-reverse";
+        education.style.flexDirection = "column-reverse";
+        businesshead.style.width = "100%";
+        mathhead.style.width = "100%";
+        softwarehead.style.width = "100%";
+        educationhead.style.width = "100%";
+        businesshead.style.height = "7.5vh";
+        mathhead.style.height = "7.5vh";
+        softwarehead.style.height = "7.5vh";
+        educationhead.style.height = "7.5vh";
+        for (i=0; i<lis.length; i++) {
+            lis[i].style.fontSize = '1.25vh';
+        }
+    }
 }
 updateBox()
 

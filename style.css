@@ -171,6 +171,7 @@ h3 {
     flex-grow: 1;
     height: 100%;
     overflow: hidden;
+    width: 39.5vw;
 }
 #business {
     margin-right: 1vw;
@@ -311,4 +312,51 @@ hl {
 .hle:hover {
     text-shadow: 0 0 10px rgba(250, 196, 131, 0.75);
     transition: text-shadow 0.5s;
+}
+li {
+    display: inline-flex;
+    color: white;
+    text-align: left;
+    font-size: 1.5vw;
+    font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
+}
+ul {
+    white-space: pre-wrap;
+    display: flex;
+    flex-direction: column;
+    list-style: none outside;
+    padding-left: 0;
+}
+li::before{ 
+    content: "\00BB"; 
+    margin-right: 0.5vw;
+    font-weight: 900;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    overflow: hidden;
+    margin: 0;
+    flex-grow: 1;
+    width: 36vw;
+    height: 100%;
+}
+.li1 {
+    padding-left: 2vw;
+}
+
+.purp::before {
+    color: rgb(175, 50, 190);
+}
+.gree::before {
+    color: rgb(102, 232, 78);
+}
+.blue::before {
+    color: rgb(70, 160, 255);
+}
+.oran::before {
+    color: rgb(250, 160, 56);
 }
