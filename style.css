@@ -370,6 +370,9 @@ li::before{
 }
 .hold {
     display: flex;
-    margin: 5vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
     background: rgba(0, 0, 0, 0.5);
 }

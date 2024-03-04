@@ -101,7 +101,9 @@ math = document.getElementById("math");
 software = document.getElementById("software");
 education = document.getElementById("education");
 lis = document.getElementsByTagName("li");
+hold = document.getElementsByClassName('hold')[0];
 function updateBox(){
+    hold.style.height = ($(window).height()-(0.4*$(window).width()))+'px';
     if ($(window).width()>$(window).height()){
         me.style.position = "absolute";
         box1.style.width = (0.395*$(window).width())+'px';
@@ -289,6 +291,8 @@ function backColor(){
     } else if (top<=(2*$(window).height())){
         base = [[48+86*(top1/$(window).height()), 48+63*(top1/$(window).height()), 48+168*(top1/$(window).height())], [90+18*(top1/$(window).height()), 90-4*(top1/$(window).height()), 90+96*(top1/$(window).height())]];
     } else if (top<=(3*$(window).height())){
+        base = [[134, 111, 216], [108, 86, 186]];
+    } else if (top<=(4*$(window).height())){
         base = [[134+93*(top1/$(window).height()), 111+82*(top1/$(window).height()), 216-105*(top1/$(window).height())], [108+93*(top1/$(window).height()), 86+75*(top1/$(window).height()), 186-124*(top1/$(window).height())]];
     }
     render();
