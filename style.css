@@ -3,7 +3,8 @@ html {
     flex-direction: column;
     justify-content: center;
     overflow-x: hidden;
-    padding-bottom: 0;-ms-overflow-style: none;
+    padding-bottom: 0;
+    -ms-overflow-style: none;
     scrollbar-width: none;
 }
 body {
@@ -42,9 +43,10 @@ html::-webkit-scrollbar {
     width: 50vw;
     justify-content: center;
     align-items: center;
+    padding: 5vh;
 }
 .heroLogo {
-    width: 4vw;
+    width: 8vh;
     margin-bottom: 6vh;
     filter: none;
     -webkit-filter: none;
@@ -59,7 +61,7 @@ h1 {
     color: white;
     font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
     font-size: 5vh;
-    margin: -1.5vh 1vw;
+    margin: 0 1vw;
     text-align: center;
     cursor: default;
 }
@@ -86,6 +88,7 @@ h3 {
     margin: 1vh 1vw;
     text-align: center;
     cursor: default;
+    font-weight: 100;
 }
 #canvas {
     position: absolute;
@@ -112,6 +115,7 @@ h3 {
     transition: margin 0.5s;
     transition-delay: 0.3s;
     cursor: pointer;
+    font-weight: initial;
 }
 .arrow {
     opacity: 0;
@@ -373,6 +377,6 @@ li::before{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60vw;
     background: rgba(0, 0, 0, 0.5);
+    padding: 5vh;
 }

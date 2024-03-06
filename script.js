@@ -35,30 +35,34 @@ mathhead = document.getElementById("mathhead");
 softwarehead = document.getElementById("softwarehead");
 educationhead = document.getElementById("educationhead");
 
-// function myMove1() {
-//     let id = null;
-//     let pos = 0;
-//     let inc = document.body.scrollTop;
-//     if (inc==0){
-//         inc = document.documentElement.scrollTop;
-//     }
-//     inc = 2*$(window).height()-inc;
-//     let init = document.body.scrollTop;
-//     if (init==0){
-//         init = document.documentElement.scrollTop;
-//     }
-//     clearInterval(id);
-//     id = setInterval(frame, 1);
-//     function frame() {
-//         if (pos == 251) {
-//             clearInterval(id);
-//         } else {
-//             pos++;
-//             document.body.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-$(window).height();
-//             document.documentElement.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-$(window).height();
-//         }
-//     }
-// }
+explore1 = document.getElementsByClassName('down')[1];
+explore1.onclick = function(){
+    myMove1();
+}
+function myMove1() {
+    let id = null;
+    let pos = 0;
+    let inc = document.body.scrollTop;
+    if (inc==0){
+        inc = document.documentElement.scrollTop;
+    }
+    inc = 3*$(window).height()-inc;
+    let init = document.body.scrollTop;
+    if (init==0){
+        init = document.documentElement.scrollTop;
+    }
+    clearInterval(id);
+    id = setInterval(frame, 1);
+    function frame() {
+        if (pos == 251) {
+            clearInterval(id);
+        } else {
+            pos++;
+            document.body.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-(1*$(window).height());
+            document.documentElement.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-(1*$(window).height());
+        }
+    }
+}
 // function myMove2() {
 //     let id = null;
 //     let pos = 0;
@@ -84,8 +88,15 @@ educationhead = document.getElementById("educationhead");
 //     }
 // }
 
-me = document.getElementsByClassName('me')[0];
+h2 = document.getElementsByTagName("h2");
+function updateFont(){
+    for (i=0; i<h2.length; i++){
+        h2[i].style.fontSize = (0.02*($(window).height()+$(window).width()))+'px';
+    }
+}
+updateFont()
 
+me = document.getElementsByClassName('me')[0];
 box1 = document.getElementById("box1");
 box2 = document.getElementById("box2");
 box3 = document.getElementById("box3");
@@ -101,9 +112,7 @@ math = document.getElementById("math");
 software = document.getElementById("software");
 education = document.getElementById("education");
 lis = document.getElementsByTagName("li");
-hold = document.getElementsByClassName('hold')[0];
 function updateBox(){
-    hold.style.height = ($(window).height()-(0.4*$(window).width()))+'px';
     if ($(window).width()>$(window).height()){
         me.style.position = "absolute";
         box1.style.width = (0.395*$(window).width())+'px';
@@ -221,8 +230,8 @@ updateBox();
 hold = document.getElementsByClassName("hold");
 function updateHold(){
     for (i=0; i<hold.length; i++){
-        hold[i].style.height = $(window).height()-(0.125*$(window).width()) + 'px';
-        hold[i].style.width = 0.875*$(window).width() + 'px';
+        hold[i].style.height = $(window).height()-(0.2*$(window).width()) + 'px';
+        hold[i].style.width = 0.8*$(window).width() + 'px';
     }
 }
 updateHold();
@@ -272,6 +281,7 @@ window.onresize = function(){
     render();
     updateBox();
     updateHold();
+    updateFont()
     subt.style.fontSize = ((0.02*$(window).height())+(0.02*$(window).width()))+'px';
 };
 body.onscroll = function(){
