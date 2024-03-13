@@ -5,7 +5,11 @@ subt.style.fontSize = ((0.02*$(window).height())+(0.02*$(window).width()))+'px';
 explore.onclick = function(){
     myMove();
 }
+explore.onmouseover = function(){
+
+}
 function myMove() {
+    bool = true
     let id = null;
     let pos = 0;
     let inc = document.body.scrollTop;
@@ -20,12 +24,13 @@ function myMove() {
     clearInterval(id);
     id = setInterval(frame, 1);
     function frame() {
-        if (pos == 251) {
+        if (pos == 101) {
             clearInterval(id);
+            bool = false
         } else {
             pos++;
-            document.body.scrollTop = init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005);
-            document.documentElement.scrollTop = init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005);
+            document.body.scrollTop = init+inc*(pos/100);
+            document.documentElement.scrollTop = init+inc*(pos/100);
         }
     }
 }
@@ -54,39 +59,15 @@ function myMove1() {
     clearInterval(id);
     id = setInterval(frame, 1);
     function frame() {
-        if (pos == 251) {
+        if (pos == 101) {
             clearInterval(id);
         } else {
             pos++;
-            document.body.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-(1*$(window).height());
-            document.documentElement.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-(1*$(window).height());
+            document.body.scrollTop = $(window).height()+init+inc*(pos/100)-(1*$(window).height());
+            document.documentElement.scrollTop = $(window).height()+init+inc*(pos/100)-(1*$(window).height());
         }
     }
 }
-// function myMove2() {
-//     let id = null;
-//     let pos = 0;
-//     let inc = document.body.scrollTop;
-//     if (inc==0){
-//         inc = document.documentElement.scrollTop;
-//     }
-//     inc = 3*$(window).height()-inc;
-//     let init = document.body.scrollTop;
-//     if (init==0){
-//         init = document.documentElement.scrollTop;
-//     }
-//     clearInterval(id);
-//     id = setInterval(frame, 1);
-//     function frame() {
-//         if (pos == 251) {
-//             clearInterval(id);
-//         } else {
-//             pos++;
-//             document.body.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-$(window).height();
-//             document.documentElement.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-$(window).height();
-//         }
-//     }
-// }
 
 h2 = document.getElementsByTagName("h2");
 function updateFont(){
@@ -236,100 +217,15 @@ function updateHold(){
     }
 }
 updateHold();
-
-var canvas = document.querySelector('canvas');
-canvas.width = $(window).width();
-canvas.height = $(window).height();
-size = [0, 0];
-size[1] = $(window).height()/100;
-size[0] = $(window).width()/Math.round($(window).width()/size[1]);
-
-var blinks = []
-
-function setup(){
-    for (var y = 0; y<$(window).height()/size[1]; y++) {
-        var blinks1 = []
-        for (var x = 0; x<($(window).width()/size[0]); x++) {
-            blinks1.push(0)
-        }
-        blinks.push(blinks1)
-        console.log(blinks1)
-    }
-}
-setup()
-
-canvas.style.backgroundAttachment = "fixed";
-var c = canvas.getContext('2d');
-var base = [25, 75];
-function colour(num2) {
-    return (base[0]+(base[1]-base[0])*num2);
-}
-
-function fill(x, y){
-    num = (x+y)/($(window).height()/size[1]+($(window).width()/size[0]));
-    var colour1 = colour(num)+(100*Math.sin(blinks[y][x]))
-    c.fillStyle = 'rgb('+(colour1)+', '+(colour1)+', '+(colour1)+')';
-    c.fillRect(x*size[0], y*size[1], size[0]+1, size[1]+1);
-}
-
-function blink(){
-    for (var y = 0; y<$(window).height()/size[1]; y++) {
-        for (var x = 0; x<($(window).width()/size[0]); x++) {
-            var rand = Math.random()
-            if (rand<0.000025 || blinks[y][x]!=0){
-                if (blinks[y][x]<=Math.PI){
-                    blinks[y][x]+=0.1
-                } else {
-                    blinks[y][x]=0
-                }
-                fill(x, y)
-                if (x>0){
-                    if (y>0){
-                        fill(x-1, y)
-                        fill(x-1, y-1)
-                        fill(x, y-1)
-                    }
-                    if ((y+1)<$(window).height()/size[1]){
-                        fill(x-1, y+1)
-                        fill(x, y+1)
-                    }
-                }
-                if ((x+1)<$(window).width()/size[0]){
-                    if (y>0){
-                        fill(x+1, y)
-                        fill(x+1, y-1)
-                    }
-                    if ((y+1)<$(window).height()/size[1]){
-                        fill(x+1, y+1)
-                    }
-                }
-            }
-        }
-    }
-    requestAnimationFrame(blink)
-}
-
-function render(){
-    for (var y = 0; y<$(window).height()/size[1]; y++) {
-        for (var x = 0; x<($(window).width()/size[0]); x++) {
-            fill(x, y)
-        }
-    }
-}
-render()
-
-requestAnimationFrame(blink)
 window.onresize = function(){
     canvas.width = $(window).width();
     canvas.height = $(window).height();
     size = [0, 0];
-    size[1] = $(window).height()/12;
+    size[1] = $(window).height()/50;
     size[0] = $(window).width()/Math.round($(window).width()/size[1]);
-    fillrands();
     render();
-    setup()
+    setup();
     updateBox();
     updateHold();
-    updateFont()
-    subt.style.fontSize = ((0.02*$(window).height())+(0.02*$(window).width()))+'px';
+    updateFont();
 };
