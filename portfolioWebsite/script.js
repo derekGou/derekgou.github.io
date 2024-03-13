@@ -206,14 +206,32 @@ function updateBox(){
 }
 updateBox();
 
+pdfholder = document.getElementById("pdfHolder");
+function updateCert(){
+    pdfholder.style.width = ($(window).width()-(0.05*$(window).height()))+'px';
+}
+updateCert();
+
 hold = document.getElementsByClassName("hold");
+embeds = document.getElementsByClassName("certjpg");
 function updateHold(){
     for (i=0; i<hold.length; i++){
         hold[i].style.height = $(window).height()-(0.2*$(window).width()) + 'px';
         hold[i].style.width = 0.8*$(window).width() + 'px';
     }
     for (i=0; i<rows.length; i++) {
-        rows[i].style.width = ($(window).width()-0.04*$(window).height())+'px';
+        rows[i].style.width = ($(window).width()-0.05*$(window).height())+'px';
+    }
+    for (i=0; i<embeds.length; i++) {
+        wide = ($(window).width()-(0.2*$(window).height()))
+        height = 0.8*$(window).height()
+        if ((wide/height)>=(11/8.5)){
+            embeds[i].style.width = ((height/8.5)*11)+'px';
+            embeds[i].style.height = height+'px';
+        } else {
+            embeds[i].style.width = wide+'px';
+            embeds[i].style.height = ((wide/11)*8.5)+'px';
+        }
     }
 }
 updateHold();
@@ -228,4 +246,5 @@ window.onresize = function(){
     updateBox();
     updateHold();
     updateFont();
+    updateCert();
 };
