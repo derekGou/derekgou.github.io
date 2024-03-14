@@ -12,9 +12,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
         <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     </head>
     <body>
         <canvas id="canvas"></canvas>
+        <script src="canvas.js"></script>
         <div class = "hero">
             <div class = "textHolder">
                 <img class = "heroLogo" src="LogoPF.svg">
@@ -59,6 +63,7 @@
                         <div class = "content">
                             <div class = "content1">
                                 <ul>
+                                    <li class = "gree">Certified data analyst</li>
                                     <li class = "gree">CEMC Math Contests</li>
                                     <li class = "gree li1">97th percentile since 2022</li>
                                     <li class = "gree li1">2 time honour roll recipient</li>
@@ -71,22 +76,22 @@
                 </div>
             </div>
             <div class = "me">
-                <h2 class = "subT">I'm passionate about <hl class = "hlb">business</hl>, <hl class = "hlm">math</hl>, <hl class = "hls">software development</hl>, and <hl class = "hle">accessible education</hl>.</h2>
+                <h2 class = "subT">I'm passionate about <hl class = "hlb">business</hl>, <hl class = "hlm">math</hl>, <hl class = "hls">data analysis</hl>, and <hl class = "hle">software development</hl>.</h2>
             </div>
             <div class = "ab" id = "abb">
                 <div class = "rect" id = "software">
                     <div class = "headhold1" id = "softwarehead">
-                        <h4 class = "vud">Software</h4>
+                        <h4 class = "vud">Data</h4>
                     </div>
                     <div class = "material" id = "sofmat">
                         <div class = "block"></div>
                         <div class = "content">
                             <div class = "content1">
                                 <ul>
-                                    <li class = "blue">Web development</li>
-                                    <li class = "blue">Chrome extension development</li>
-                                    <li class = "blue">Web scraping</li>
-                                    <li class = "blue">Python, HTML, CSS, JS, Processing, C++</li>
+                                    <li class = "blue">Web scraping algorithms</li>
+                                    <li class = "blue">Data analysis</li>
+                                    <li class = "blue li1">People analytics</li>
+                                    <li class = "blue li1">SQL, PowerBI, R, Excel, Tableau, Python</li>
                                 </ul>
                             </div>
                         </div>
@@ -94,22 +99,59 @@
                 </div>
                 <div class = "rect" id = "education">
                     <div class = "headhold1" id = "educationhead">
-                        <h4 class = "vdu">Education</h4>
+                        <h4 class = "vdu">Software</h4>
                     </div>
                     <div class = "material" id = "edumat">
                         <div class = "block"></div>
                         <div class = "content">
                             <div class = "content1">
                                 <ul>
-                                    <li class = "oran">Schoolhouse</li>
-                                    <li class = "oran li1">Math and physics tutor</li>
-                                    <li class = "oran li1">Peer reviewer</li>
-                                    <li class = "oran">WCI Tutoring Club</li>
-                                    <li class = "oran li1">Communication and outreach director</li>
-                                    <li class = "oran li1">Math tutor</li>
+                                    <li class = "oran">Web development</li>
+                                    <li class = "oran li1">HTML, CSS, JS, React, Node, SQL, NoSQL, RestAPIs</li>
+                                    <li class = "oran">Artificial intelligence</li>
+                                    <li class = "oran">Fluent in Python, C++, Processing, R</li>
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "section" id = "certifications">
+            <div class = "row">
+
+            </div>
+            <div class = "row">
+                <div class = "cert" id = "python"></div>
+            </div>
+            <div class = "row">
+                <div class = "cert certT"></div>
+            </div>
+            <div class = "row">
+                <div class = "cert certT"></div>
+            </div>
+            <div class = "row">
+
+            </div>
+            <div class = "row">
+
+            </div>
+            <div id = "certsHold">
+                <h2>My Certifications</h2>
+                <h3>Feel free to click around!</h3>
+            </div>
+            <div id = "pdfHolder">
+                <img class = "certjpg" id = "pycert" src = "CertificateOfCompletion_OpenEDG Python Institute Programming with Python Professional Certificate.jpg">
+                <img class = "certjpg" id = "csscert" src = "CertificateOfCompletion_CSS Essential Training.jpg">
+                <img class = "certjpg" id = "pacert" src = "CertificateOfCompletion_The Data Science of Using People Analytics.jpg">
+                <img class = "certjpg" id = "bicert" src = "CertificateOfCompletion_Advanced Power BI DAX Language Formulas and Calculations.jpg">
+                <img class = "certjpg" id = "aicert" src = "CertificateOfCompletion_Career Essentials in Generative AI by Microsoft and LinkedIn.jpg">
+                <img class = "certjpg" id = "jscert" src = "CertificateOfCompletion_JavaScript Essential Training.jpg">
+                <img class = "certjpg" id = "htmlcert" src = "CertificateOfCompletion_HTML Essential Training.jpg">
+                <div id = "closer">
+                    <div id = "closerX">
+                        <div class = "rectbar" id = "rectbar1"></div>
+                        <div class = "rectbar" id = "rectbar2"></div>
                     </div>
                 </div>
             </div>
@@ -128,7 +170,7 @@
         </div>
         <div class = "section" id = "project1">
             <div class = "hold" id = "projects1">
-                
+
             </div>
         </div>
         <div class = "section" id = "matsect">
@@ -137,5 +179,5 @@
             </div>
         </div>
     </body>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </html>

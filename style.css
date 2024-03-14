@@ -43,7 +43,7 @@ html::-webkit-scrollbar {
     width: 50vw;
     justify-content: center;
     align-items: center;
-    padding: 5vh;
+    padding: 1vh;
 }
 .heroLogo {
     width: 8vh;
@@ -86,12 +86,12 @@ h3 {
     font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
     font-size: 2.5vh;
     margin: 1vh 1vw;
+    margin-top: 2vh;
     text-align: center;
     cursor: default;
     font-weight: 100;
 }
 #canvas {
-    position: absolute;
     z-index: -1;
     position: fixed;
     top: 0;
@@ -379,4 +379,96 @@ li::before{
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     padding: 5vh;
+}
+#certifications {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    height: 13.75vh;
+    margin: 1.25vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.cert {
+    width: fit-content;
+    height: 13.75vh;
+    background-color: transparent;
+    margin: 0 2.5vh;
+}
+.certT {
+    width: 60vw;
+}
+#certsHold {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 30vh;
+    width: 60vw;
+    top: 235vh;
+    left: 20vw;
+    background: rgba(255, 255, 255, 0.5);
+}
+#pdfHolder {
+    position: absolute;
+    display: flex;
+    display: none;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    height: 95vh;
+    margin: 2.5vh;
+}
+#closer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    height: 5vh;
+    width: 5vh;
+    right: 2.5vh;
+    top: 2.5vh;
+    transition: background-color 0.5s;
+}
+#closer:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.5s;
+}
+.rectbar {
+    height: 3.5vh;
+    width: 0.7vh;
+    background-color: white;
+}
+#rectbar1 {
+    position: absolute;
+}
+#rectbar2 {
+    transform-origin: center;
+    transform: rotate(90deg);
+}
+#closerX {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5vh;
+    height: 3.5vh;
+    transform-origin: center;
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+}
+#closerX:hover {
+    transform-origin: center;
+    transform: rotate(225deg);
+    transition: transform 0.5s;
+}
+.certjpg  {
+    display: none;
 }

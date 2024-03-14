@@ -5,7 +5,11 @@ subt.style.fontSize = ((0.02*$(window).height())+(0.02*$(window).width()))+'px';
 explore.onclick = function(){
     myMove();
 }
+explore.onmouseover = function(){
+
+}
 function myMove() {
+    bool = true
     let id = null;
     let pos = 0;
     let inc = document.body.scrollTop;
@@ -20,12 +24,13 @@ function myMove() {
     clearInterval(id);
     id = setInterval(frame, 1);
     function frame() {
-        if (pos == 251) {
+        if (pos == 101) {
             clearInterval(id);
+            bool = false
         } else {
             pos++;
-            document.body.scrollTop = init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005);
-            document.documentElement.scrollTop = init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005);
+            document.body.scrollTop = init+inc*(pos/100);
+            document.documentElement.scrollTop = init+inc*(pos/100);
         }
     }
 }
@@ -46,7 +51,7 @@ function myMove1() {
     if (inc==0){
         inc = document.documentElement.scrollTop;
     }
-    inc = 3*$(window).height()-inc;
+    inc = 4*$(window).height()-inc;
     let init = document.body.scrollTop;
     if (init==0){
         init = document.documentElement.scrollTop;
@@ -54,39 +59,15 @@ function myMove1() {
     clearInterval(id);
     id = setInterval(frame, 1);
     function frame() {
-        if (pos == 251) {
+        if (pos == 101) {
             clearInterval(id);
         } else {
             pos++;
-            document.body.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-(1*$(window).height());
-            document.documentElement.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-(1*$(window).height());
+            document.body.scrollTop = $(window).height()+init+inc*(pos/100)-(1*$(window).height());
+            document.documentElement.scrollTop = $(window).height()+init+inc*(pos/100)-(1*$(window).height());
         }
     }
 }
-// function myMove2() {
-//     let id = null;
-//     let pos = 0;
-//     let inc = document.body.scrollTop;
-//     if (inc==0){
-//         inc = document.documentElement.scrollTop;
-//     }
-//     inc = 3*$(window).height()-inc;
-//     let init = document.body.scrollTop;
-//     if (init==0){
-//         init = document.documentElement.scrollTop;
-//     }
-//     clearInterval(id);
-//     id = setInterval(frame, 1);
-//     function frame() {
-//         if (pos == 251) {
-//             clearInterval(id);
-//         } else {
-//             pos++;
-//             document.body.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-$(window).height();
-//             document.documentElement.scrollTop = $(window).height()+init+inc*(1.01*(1/(1+(Math.exp(1)**(-(Math.log(1/40401)/(1000*Math.log(Math.exp(1))))*(-4*pos)+(Math.log(201)/Math.log(Math.exp(1)))))))-0.005)-$(window).height();
-//         }
-//     }
-// }
 
 h2 = document.getElementsByTagName("h2");
 function updateFont(){
@@ -112,6 +93,7 @@ math = document.getElementById("math");
 software = document.getElementById("software");
 education = document.getElementById("education");
 lis = document.getElementsByTagName("li");
+rows = document.getElementsByClassName("row");
 function updateBox(){
     if ($(window).width()>$(window).height()){
         me.style.position = "absolute";
@@ -201,9 +183,6 @@ function updateBox(){
         for (i=0; i<h4.length; i++) {
             h4[i].style.writingMode = 'horizontal-tb';
         }
-        for (i=0; i<blocks.length; i++) {
-            blocks[i].style.height = '0';
-        }
         businesshead.style.rotate = "0deg";
         softwarehead.style.rotate = "0deg";
         aba.style.height = (0.10*$(window).height()-0.01*$(window).width())+'px';
@@ -227,83 +206,45 @@ function updateBox(){
 }
 updateBox();
 
+pdfholder = document.getElementById("pdfHolder");
+function updateCert(){
+    pdfholder.style.width = ($(window).width()-(0.05*$(window).height()))+'px';
+}
+updateCert();
+
 hold = document.getElementsByClassName("hold");
+embeds = document.getElementsByClassName("certjpg");
 function updateHold(){
     for (i=0; i<hold.length; i++){
         hold[i].style.height = $(window).height()-(0.2*$(window).width()) + 'px';
         hold[i].style.width = 0.8*$(window).width() + 'px';
     }
+    for (i=0; i<rows.length; i++) {
+        rows[i].style.width = ($(window).width()-0.05*$(window).height())+'px';
+    }
+    for (i=0; i<embeds.length; i++) {
+        wide = ($(window).width()-(0.2*$(window).height()))
+        height = 0.8*$(window).height()
+        if ((wide/height)>=(11/8.5)){
+            embeds[i].style.width = ((height/8.5)*11)+'px';
+            embeds[i].style.height = height+'px';
+        } else {
+            embeds[i].style.width = wide+'px';
+            embeds[i].style.height = ((wide/11)*8.5)+'px';
+        }
+    }
 }
 updateHold();
-
-var canvas = document.querySelector('canvas');
-canvas.width = $(window).width();
-canvas.height = $(window).height();
-size = [0, 0];
-size[1] = $(window).height()/12;
-size[0] = $(window).width()/Math.round($(window).width()/size[1]);
-canvas.style.backgroundAttachment = "fixed";
-var c = canvas.getContext('2d');
-var base = [[56, 123, 55], [20, 151, 189]];
-var rands = [];
-function fillrands(){
-    rands = [];
-    for (var y = 0; y<12; y++) {
-         var rand = [];
-        for (var x = 0; x<($(window).width()/size[0]); x++) {
-            rand.push(8*(Math.random()-0.5));
-        }
-        rands.push(rand);
-    }
-}
-fillrands();
-function colour(num1, num2, x, y) {
-    return (247/255)*(base[0][num1]+(base[1][num1]-base[0][num1])*num2)+4+rands[y][x];
-}
-function render(){
-    for (var y = 0; y<12; y++) {
-        for (var x = 0; x<($(window).width()/size[0]); x++) {
-            num = (x+y)/(12+($(window).width()/size[0]));
-            c.fillStyle = 'rgb('+(colour(0, num, x, y))+', '+(colour(1, num, x, y))+', '+(colour(2, num, x, y))+')';
-            c.fillRect(x*size[0], y*size[1], size[0]+1, size[1]+1);
-        }
-    }
-}
-backColor();
-render();
 window.onresize = function(){
     canvas.width = $(window).width();
     canvas.height = $(window).height();
     size = [0, 0];
-    size[1] = $(window).height()/12;
+    size[1] = $(window).height()/50;
     size[0] = $(window).width()/Math.round($(window).width()/size[1]);
-    fillrands();
     render();
+    setup();
     updateBox();
     updateHold();
-    updateFont()
-    subt.style.fontSize = ((0.02*$(window).height())+(0.02*$(window).width()))+'px';
-};
-body.onscroll = function(){
-    backColor();
-};
-function backColor(){
-    let top = document.body.scrollTop;
-    if (top==0) {
-        top = document.documentElement.scrollTop;
-    }
-    top1 = top%$(window).height();
-    if (top1==0 && top!=0) {
-        top1+=$(window).height();
-    }
-    if (top<=$(window).height()){
-        base = [[56-8*(top1/$(window).height()), 123-75*(top1/$(window).height()), 55-7*(top1/$(window).height())], [20+70*(top1/$(window).height()), 151-61*(top1/$(window).height()), 189-99*(top1/$(window).height())]];
-    } else if (top<=(2*$(window).height())){
-        base = [[48+86*(top1/$(window).height()), 48+63*(top1/$(window).height()), 48+168*(top1/$(window).height())], [90+18*(top1/$(window).height()), 90-4*(top1/$(window).height()), 90+96*(top1/$(window).height())]];
-    } else if (top<=(3*$(window).height())){
-        base = [[134, 111, 216], [108, 86, 186]];
-    } else if (top<=(4*$(window).height())){
-        base = [[134+93*(top1/$(window).height()), 111+82*(top1/$(window).height()), 216-105*(top1/$(window).height())], [108+93*(top1/$(window).height()), 86+75*(top1/$(window).height()), 186-124*(top1/$(window).height())]];
-    }
-    render();
+    updateFont();
+    updateCert();
 };
