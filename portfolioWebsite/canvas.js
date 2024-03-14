@@ -62,9 +62,11 @@ function blink(){
                     if (y>0){
                         fill(x+1, y)
                         fill(x+1, y-1)
+                        fill(x, y-1)
                     }
                     if ((y+1)<$(window).height()/size[1]){
                         fill(x+1, y+1)
+                        fill(x, y+1)
                     }
                 }
             }
