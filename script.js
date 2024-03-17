@@ -70,9 +70,25 @@ function myMove1() {
 }
 
 h2 = document.getElementsByTagName("h2");
+cmall = document.getElementsByClassName("cmall");
+hmall = document.getElementsByClassName("hmall");
 function updateFont(){
     for (i=0; i<h2.length; i++){
         h2[i].style.fontSize = (0.02*($(window).height()+$(window).width()))+'px';
+    }
+    for (i=0; i<cmall.length; i++){
+        if ($(window).height()<$(window).width()){
+            cmall[i].style.fontSize = (0.03*($(window).height()))+'px';
+        } else {
+            cmall[i].style.fontSize = (0.03*($(window).width()))+'px';
+        }
+    }
+    for (i=0; i<hmall.length; i++){
+        if ($(window).height()<$(window).width()){
+            hmall[i].style.fontSize = (0.025*($(window).height()))+'px';
+        } else {
+            hmall[i].style.fontSize = (0.025*($(window).width()))+'px';
+        }
     }
 }
 updateFont()
@@ -209,12 +225,10 @@ function updateBox(){
 }
 updateBox();
 
-pdfholder = document.getElementById("pdfHolder");
 certT = document.getElementsByClassName("certT");
 embeds = document.getElementsByClassName("certjpg");
 certsHold = document.getElementById("certsHold");
 function updateCert(){
-    pdfholder.style.width = ($(window).width()-(0.05*$(window).height()))+'px';
     for (i=0; i<embeds.length; i++) {
         wide = ($(window).width()-(0.2*$(window).height()))
         height = 0.8*$(window).height()
@@ -227,7 +241,7 @@ function updateCert(){
         }
     }
     for (i=0; i<rows.length; i++) {
-        rows[i].style.width = ($(window).width()-0.02*$(window).height())+'px';
+        rows[i].style.width = ($(window).width()-0.02*$(window).width())+'px';
     }
 }
 updateCert();

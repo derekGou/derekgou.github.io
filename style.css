@@ -387,7 +387,7 @@ li::before{
 .row {
     display: flex;
     height: 12vh;
-    margin: 1vh;
+    margin: 1vh 0;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -401,7 +401,7 @@ li::before{
     width: fit-content;
     height: 12vh;
     background-color: transparent;
-    margin: 1vh;
+    margin: 1vw;
     flex-grow: 1;
     background-color: rgba(255, 255, 255, 0.3);
     transition: background-color 1s;
@@ -418,7 +418,7 @@ li::before{
     justify-content: center;
     width: fit-content;
     height: 12vh;
-    margin: 1vh;
+    margin: 1vw;
     flex-grow: 1;
     background: rgba(255, 255, 255, 0.6);
 }
@@ -431,8 +431,9 @@ li::before{
     justify-content: center;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.75);
-    height: 95vh;
+    height: 96vh;
     margin: 2.5vh;
+    width: 96vw;
 }
 #closer {
     position: absolute;
