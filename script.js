@@ -202,26 +202,19 @@ function updateBox(){
         for (i=0; i<lis.length; i++) {
             lis[i].style.fontSize = '1.5vh';
         }
+        for (i=0; i<blocks.length; i++) {
+            blocks[i].style.height = '0vh';
+        }
     }
 }
 updateBox();
 
 pdfholder = document.getElementById("pdfHolder");
+certT = document.getElementsByClassName("certT");
+embeds = document.getElementsByClassName("certjpg");
+certsHold = document.getElementById("certsHold");
 function updateCert(){
     pdfholder.style.width = ($(window).width()-(0.05*$(window).height()))+'px';
-}
-updateCert();
-
-hold = document.getElementsByClassName("hold");
-embeds = document.getElementsByClassName("certjpg");
-function updateHold(){
-    for (i=0; i<hold.length; i++){
-        hold[i].style.height = $(window).height()-(0.2*$(window).width()) + 'px';
-        hold[i].style.width = 0.8*$(window).width() + 'px';
-    }
-    for (i=0; i<rows.length; i++) {
-        rows[i].style.width = ($(window).width()-0.05*$(window).height())+'px';
-    }
     for (i=0; i<embeds.length; i++) {
         wide = ($(window).width()-(0.2*$(window).height()))
         height = 0.8*$(window).height()
@@ -233,8 +226,99 @@ function updateHold(){
             embeds[i].style.height = ((wide/11)*8.5)+'px';
         }
     }
+    for (i=0; i<rows.length; i++) {
+        rows[i].style.width = ($(window).width()-0.02*$(window).height())+'px';
+    }
+}
+updateCert();
+
+hold = document.getElementsByClassName("hold");
+function updateHold(){
+    for (i=0; i<hold.length; i++){
+        hold[i].style.height = $(window).height()-(0.2*$(window).width()) + 'px';
+        hold[i].style.width = 0.8*$(window).width() + 'px';
+    }
 }
 updateHold();
+
+function opac() {
+    bool = true
+    let id = null;
+    let pos = 0;
+    clearInterval(id);
+    id = setInterval(frame, 1);
+    function frame() {
+        if (pos == 101) {
+            pdfHolder.style.opacity = 1;
+            bool = false
+            clearInterval(id);
+        } else {
+            pos++;
+            pdfHolder.style.opacity = pos/100;
+        }
+    }
+}
+
+document.getElementById("tab").onclick = function(){
+    open("tab");
+}
+document.getElementById("web").onclick = function(){
+    open("web");
+}
+document.getElementById("abi").onclick = function(){
+    open("abi");
+}
+document.getElementById("pa").onclick = function(){
+    open("pa");
+}
+document.getElementById("dev").onclick = function(){
+    open("dev");
+}
+document.getElementById("css").onclick = function(){
+    open("css");
+}
+document.getElementById("py").onclick = function(){
+    open("py");
+}
+document.getElementById("ai").onclick = function(){
+    open("ai");
+}
+document.getElementById("js").onclick = function(){
+    open("js");
+}
+document.getElementById("sql").onclick = function(){
+    open("sql");
+}
+document.getElementById("html").onclick = function(){
+    open("html");
+}
+document.getElementById("dat").onclick = function(){
+    open("dat");
+}
+document.getElementById("min").onclick = function(){
+    open("min");
+}
+document.getElementById("pbi").onclick = function(){
+    open("pbi");
+}
+
+document.getElementById("pdfHolder");
+function open(str){
+    pdfHolder.style.display = "flex";
+    opac();
+    myString = str+'cert';
+    document.getElementById(myString).style.display = "block";
+}
+
+document.getElementById("closer").onclick = function(){
+    pdfHolder.style.opacity = 0;
+    pdfHolder.style.display = "none";
+    certjpg = document.getElementsByClassName("certjpg");
+    for (i=0; i<certjpg.length; i++){
+        certjpg[i].style.display = "none";
+    }
+}
+
 window.onresize = function(){
     canvas.width = $(window).width();
     canvas.height = $(window).height();

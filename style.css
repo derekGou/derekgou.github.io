@@ -53,7 +53,7 @@ html::-webkit-scrollbar {
     transition: filter 0.5s, -webkit-filter 0.5s;
 }
 .heroLogo:hover {
-    filter: drop-shadow(0px, 0px, 5px, rgba(255, 255, 255, 255));
+    filter: drop-shadow(0px, 0px, 5px, rgba(255, 255, 255, 0.5));
     -webkit-filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5));
     transition: filter 0.5s, -webkit-filter 0.5s;
 }
@@ -386,32 +386,41 @@ li::before{
 }
 .row {
     display: flex;
-    height: 13.75vh;
-    margin: 1.25vh;
+    height: 12vh;
+    margin: 1vh;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 100vw;
 }
 .cert {
-    width: fit-content;
-    height: 13.75vh;
-    background-color: transparent;
-    margin: 0 2.5vh;
-}
-.certT {
-    width: 60vw;
-}
-#certsHold {
-    position: absolute;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    height: 12vh;
+    background-color: transparent;
+    margin: 1vh;
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 1s;
+    cursor: pointer;
+}
+.cert:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: background-color 0.5s;
+}
+.cent {
+    display: flex;
     flex-direction: column;
-    height: 30vh;
-    width: 60vw;
-    top: 235vh;
-    left: 20vw;
-    background: rgba(255, 255, 255, 0.5);
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 12vh;
+    margin: 1vh;
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.6);
 }
 #pdfHolder {
     position: absolute;
@@ -421,7 +430,7 @@ li::before{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.75);
     height: 95vh;
     margin: 2.5vh;
 }
@@ -437,6 +446,7 @@ li::before{
     right: 2.5vh;
     top: 2.5vh;
     transition: background-color 0.5s;
+    cursor: pointer;
 }
 #closer:hover {
     background-color: rgba(255, 255, 255, 0.7);
@@ -471,4 +481,16 @@ li::before{
 }
 .certjpg  {
     display: none;
+}
+.cmall {
+    font-size: 3vh;
+    cursor: pointer;
+}
+.hmall {
+    margin-top: 0;
+    cursor: pointer;
+}
+.central {
+    filter: drop-shadow(0px, 0px, 5px, rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
 }
