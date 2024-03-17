@@ -420,7 +420,7 @@ li::before{
     height: 12vh;
     margin: 1vw;
     flex-grow: 1;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.75);
 }
 #pdfHolder {
     position: absolute;
@@ -492,6 +492,6 @@ li::before{
     cursor: pointer;
 }
 .central {
-    filter: drop-shadow(0px, 0px, 5px, rgba(0, 0, 0, 0.5));
-    -webkit-filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px, 0px, 5px, rgba(0, 0, 0, 0.6));
+    -webkit-filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.6));
 }
