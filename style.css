@@ -420,7 +420,7 @@ li::before{
     height: 12vh;
     margin: 1vw;
     flex-grow: 1;
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.9);
 }
 #pdfHolder {
     position: absolute;
