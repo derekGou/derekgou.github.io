@@ -19,31 +19,19 @@ body {
     padding-bottom: 0;-ms-overflow-style: none;
     scrollbar-width: none;
 }
+.section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 html::-webkit-scrollbar { 
     display: none;
 }
 .body::-webkit-scrollbar { 
     display: none;
-}
-.hero {
-    display: flex;
-    flex-direction: column;
-    margin: 12.5vh;
-    height: 75vh;
-    width: 75vw;
-    background: transparent;
-    justify-content: center;
-    align-items: center;
-    background-attachment: fixed;
-    background: rgba(0, 0, 0, 0.25);
-}
-.textHolder {
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
-    justify-content: center;
-    align-items: center;
-    padding: 1vh;
 }
 .heroLogo {
     width: 8vh;
@@ -89,7 +77,7 @@ h3 {
     margin-top: 2vh;
     text-align: center;
     cursor: default;
-    font-weight: 100;
+    font-weight: 200;
 }
 #canvas {
     z-index: -1;
@@ -142,236 +130,6 @@ h3 {
     transition: 0.5s opacity;
     transition-delay: 0.3s;
 }
-.about {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-}
-.ab {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 96vw;
-    margin: 2vw;
-    flex-grow: 1;
-}
-#aba {
-    margin-bottom: 1vw;
-}
-#abb {
-    margin-top: 1vw;
-}
-.rect {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    flex-grow: 1;
-    height: 100%;
-    overflow: hidden;
-    width: 39.5vw;
-}
-#business {
-    margin-right: 1vw;
-    flex-direction: row;
-}
-#math {
-    margin-left: 1vw;
-    flex-direction: row-reverse;
-}
-#software {
-    margin-right: 1vw;
-    flex-direction: row;
-}
-#education {
-    margin-left: 1vw;
-    flex-direction: row-reverse;
-}
-.me {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin: 0;
-    background: rgba(255, 255, 255, 0.25);
-    height: 28%;
-    padding: 1vh 1vw;
-}
-.headhold1 {
-    height: inherit;
-    width: 7.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 0;
-    overflow: hidden;
-}
-h4 {
-    font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
-    writing-mode: vertical-rl;
-    text-align: center;
-    letter-spacing: 0;
-    font-size: 3vw;
-    margin: 1.5vw;
-    color: white;
-}
-#businesshead {
-    rotate: 180deg;
-    background: rgb(126, 20, 135);
-}
-#mathhead {
-    background: rgb(102, 232, 78);
-}
-#softwarehead {
-    rotate: 180deg;
-    background: rgb(50, 125, 250);
-}
-#educationhead {
-    background: rgb(250, 160, 56);
-}
-.material {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    margin: 0;
-    flex-grow: 1;
-    height: 100%;
-    z-index: -1;
-}
-.block {
-    width: 100%;
-    height: 15vh;
-}
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    margin: 0;
-    flex-grow: 1;
-    width: 100%;
-    height: 100%;
-}
-.box {
-    position: absolute;
-    width: 39.5vw;
-    height: 15vh;
-    background: transparent;
-    margin: 2vw;
-    z-index: -1;
-}
-.subT {
-    font-size: 3vw;
-}
-hl {
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-}
-.hlb {
-    background-image: linear-gradient(to right, #C350CE, #CE70D7);
-    text-shadow: none;
-    transition: text-shadow 0.5s;
-}
-.hlb:hover {
-    text-shadow: 0 0 10px rgba(206,112,215, 0.75);
-    transition: text-shadow 0.5s;
-}
-.hlm {
-    background-image: linear-gradient(to right, #81EC6D, #B1F3A4);
-    text-shadow: none;
-    transition: text-shadow 0.5s;
-}
-.hlm:hover {
-    text-shadow: 0 0 10px rgba(177,243,164, 0.75);
-    transition: text-shadow 0.5s;
-}
-.hls {
-    background-image: linear-gradient(to right, #4589FA, #8CB6FA);
-    text-shadow: none;
-    transition: text-shadow 0.5s;
-}
-.hls:hover {
-    text-shadow: 0 0 10px rgba(140,182,250, 0.75);
-    transition: text-shadow 0.5s;
-}
-.hle {
-    background-image: linear-gradient(to right, #FAA038, #FAC483);
-    text-shadow: none;
-    transition: text-shadow 0.5s;
-}
-.hle:hover {
-    text-shadow: 0 0 10px rgba(250, 196, 131, 0.75);
-    transition: text-shadow 0.5s;
-}
-li {
-    display: inline-flex;
-    color: white;
-    text-align: left;
-    font-size: 1.5vw;
-    font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
-    margin-left: 1.5vw;
-}
-ul {
-    white-space: pre-wrap;
-    display: flex;
-    flex-direction: column;
-    list-style: none outside;
-    padding-left: 0;
-}
-li::before{ 
-    content: "\00BB"; 
-    margin-right: 0.5vw;
-    font-weight: 900;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.content1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: baseline;
-    overflow: hidden;
-    margin: 0;
-    flex-grow: 1;
-    width: 35vw;
-    height: 100%;
-}
-.li1 {
-    padding-left: 2vw;
-}
-
-.purp::before {
-    color: rgb(175, 50, 190);
-}
-.gree::before {
-    color: rgb(102, 232, 78);
-}
-.blue::before {
-    color: rgb(70, 160, 255);
-}
-.oran::before {
-    color: rgb(250, 160, 56);
-}
-.section {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .hold {
     display: flex;
     flex-direction: column;
@@ -380,126 +138,12 @@ li::before{
     background: rgba(0, 0, 0, 0.5);
     padding: 5vh;
 }
-#certifications {
-    display: flex;
-    flex-direction: column;
-}
-.row {
-    display: flex;
-    height: 12vh;
-    margin: 1vh 0;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-}
-.cert {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    height: 12vh;
-    background-color: transparent;
-    margin: 1vw;
-    flex-grow: 1;
-    background-color: rgba(255, 255, 255, 0.3);
-    transition: background-color 1s;
-    cursor: pointer;
-}
-.cert:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-    transition: background-color 0.5s;
-}
-.cent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    height: 12vh;
-    margin: 1vw;
-    flex-grow: 1;
-    background: rgba(255, 255, 255, 0.9);
-}
-#pdfHolder {
-    position: absolute;
-    display: flex;
-    display: none;
-    opacity: 0;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.75);
-    height: 96vh;
-    margin: 2.5vh;
-    width: 96vw;
-}
-#closer {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    height: 5vh;
-    width: 5vh;
-    right: 2.5vh;
-    top: 2.5vh;
-    transition: background-color 0.5s;
-    cursor: pointer;
-}
-#closer:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-    transition: background-color 0.5s;
-}
-.rectbar {
-    height: 3.5vh;
-    width: 0.7vh;
-    background-color: white;
-}
-#rectbar1 {
-    position: absolute;
-}
-#rectbar2 {
-    transform-origin: center;
-    transform: rotate(90deg);
-}
-#closerX {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.5vh;
-    height: 3.5vh;
-    transform-origin: center;
-    transform: rotate(45deg);
-    transition: transform 0.5s;
-}
-#closerX:hover {
-    transform-origin: center;
-    transform: rotate(225deg);
-    transition: transform 0.5s;
-}
-.certjpg  {
-    display: none;
-}
-.cmall {
-    font-size: 3vh;
-    cursor: pointer;
-}
-.hmall {
-    margin-top: 0;
-    cursor: pointer;
-}
-.central {
-    filter: drop-shadow(0px, 0px, 5px, rgba(0, 0, 0, 0.6));
-    -webkit-filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.6));
-}
+
 .proT {
     font-size: 3.5vh;
     font-weight: 300;
 }
-.proBo {
+.substance {
     margin-top: 3vh;
     display: flex;
     flex-direction: row;
