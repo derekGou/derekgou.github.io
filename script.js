@@ -164,7 +164,7 @@ function updateBox(){
         softwarehead.style.height = "inherit";
         educationhead.style.height = "inherit";
         for (i=0; i<lis.length; i++) {
-            lis[i].style.fontSize = (0.01*$(window).width()+0.005*$(window).height())+'px';
+            lis[i].style.fontSize = (0.01*$(window).width()+0.01*$(window).height())+'px';
         }
     } else {
         me.style.width = (0.94*$(window).width())+'px';
@@ -216,7 +216,7 @@ function updateBox(){
         softwarehead.style.height = "7.5vh";
         educationhead.style.height = "7.5vh";
         for (i=0; i<lis.length; i++) {
-            lis[i].style.fontSize = '1.5vh';
+            lis[i].style.fontSize = '2vh';
         }
         for (i=0; i<blocks.length; i++) {
             blocks[i].style.height = '0vh';
