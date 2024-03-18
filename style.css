@@ -495,3 +495,37 @@ li::before{
     filter: drop-shadow(0px, 0px, 5px, rgba(0, 0, 0, 0.6));
     -webkit-filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.6));
 }
+.proT {
+    font-size: 3.5vh;
+    font-weight: 300;
+}
+.proBo {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+.proLo {
+    width: 30vh;
+    border-radius: 5vh;
+    margin: 4vh 4vh 4vh 2vh;
+}
+hr {
+    width: 70vw;
+}
+.proTo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h5 {
+    color: white;
+    font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
+    font-size: 1.9vh;
+    margin: 0 1vw;
+    text-align: left;
+    font-weight: 300;
+}
