@@ -1,24 +1,24 @@
 body = document.getElementsByTagName('body')[0];
 explore = document.getElementsByClassName('down')[0];
 explore.onclick = function(){
-    myMove();
+    Move(1, 1);
 }
-explore.onmouseover = function(){
-
-}
-function myMove() {
+function Move(num, current) {
     bool = true
     let id = null;
     let pos = 0;
-    let inc = document.body.scrollTop;
-    if (inc==0){
-        inc = document.documentElement.scrollTop;
+    let curr = document.body.scrollTop;
+    if (curr==0){
+        curr = document.documentElement.scrollTop;
     }
-    inc = $(window).height()-inc;
-    let init = document.body.scrollTop;
-    if (init==0){
-        init = document.documentElement.scrollTop;
+    let targ = 0
+    if (current!=0){
+        targ = current-1
+    } else {
+        targ = Math.round(curr/$(window).height())
     }
+    let target = $(window).height()*(targ+num)
+    let inc = target-curr
     clearInterval(id);
     id = setInterval(frame, 1);
     function frame() {
@@ -27,8 +27,9 @@ function myMove() {
             bool = false
         } else {
             pos++;
-            document.body.scrollTop = init+inc*(pos/100);
-            document.documentElement.scrollTop = init+inc*(pos/100);
+            let mult = Math.sin((Math.PI*(pos-50))/100)/2+0.5
+            document.body.scrollTop = curr+(inc*mult);
+            document.documentElement.scrollTop = curr+(inc*mult);
         }
     }
 }
@@ -40,31 +41,7 @@ educationhead = document.getElementById("educationhead");
 
 explore1 = document.getElementsByClassName('down')[1];
 explore1.onclick = function(){
-    myMove1();
-}
-function myMove1() {
-    let id = null;
-    let pos = 0;
-    let inc = document.body.scrollTop;
-    if (inc==0){
-        inc = document.documentElement.scrollTop;
-    }
-    inc = 4*$(window).height()-inc;
-    let init = document.body.scrollTop;
-    if (init==0){
-        init = document.documentElement.scrollTop;
-    }
-    clearInterval(id);
-    id = setInterval(frame, 1);
-    function frame() {
-        if (pos == 101) {
-            clearInterval(id);
-        } else {
-            pos++;
-            document.body.scrollTop = $(window).height()+init+inc*(pos/100)-(1*$(window).height());
-            document.documentElement.scrollTop = $(window).height()+init+inc*(pos/100)-(1*$(window).height());
-        }
-    }
+    Move(1, 3);
 }
 
 hold = document.getElementsByClassName("hold");
