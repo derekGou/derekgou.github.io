@@ -149,7 +149,6 @@ h3 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
     width: 70vw;
 }
 .proLo {
@@ -160,7 +159,7 @@ h3 {
 .face {
     width: 30vh;
     border-radius: 5vh;
-    margin: 4vh 4vh 10vh 0;
+    margin: 0 4vh 6vh 0;
     filter: drop-shadow(0px, 0px, 5px, white);
     -webkit-filter: drop-shadow(0px 0px 15px white);
 }
@@ -173,15 +172,49 @@ hr {
     align-items: left;
     justify-content: center;
 }
-h5 {
+hl {
+    color: rgb(50,225,225);
+    font-weight: 600;
+}
+p {
     color: white;
     font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
-    font-size: 1.9vh;
+    font-size: 2.25vh;
     margin: 0 1vw;
     text-align: left;
     font-weight: 300;
 }
-hl {
-    color: rgb(50,225,225);
-    font-weight: 600;
+br {
+    display: block;
+    content: "";
+    margin-top: 1vh;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.25vh solid white;
+    border-radius: 2vh;
+    width: 20vh;
+    margin: 0 1vh;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.25s;
+}
+button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.25s;
+}
+a {
+    text-decoration: none;
+}
+.icon {
+    height: 3vh;
+    filter: brightness(0) invert(1);
 }
