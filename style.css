@@ -201,6 +201,7 @@ button {
     justify-content: center;
     border: 0.25vh solid white;
     border-radius: 2vh;
+    height: 4vh;
     width: 20vh;
     margin: 0 1vh;
     cursor: pointer;
@@ -215,6 +216,8 @@ a {
     text-decoration: none;
 }
 .icon {
-    height: 3vh;
+    height: 4vh;
     filter: brightness(0) invert(1);
+    position: absolute;
+    margin-right: 16vh;
 }
