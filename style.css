@@ -202,22 +202,42 @@ button {
     border: 0.25vh solid white;
     border-radius: 2vh;
     height: 4vh;
-    width: 20vh;
+    width: 4vh;
     margin: 0 1vh;
     cursor: pointer;
     background-color: transparent;
-    transition: background-color 0.25s;
+    transition: background-color 0.25s, width 0.5s;
+    transition-delay: 0.15s;
 }
 button:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: background-color 0.25s;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 20vh;
+    transition: background-color 0.25s, width 0.5s;
+    transition-delay: 0.15s;
 }
-a {
-    text-decoration: none;
+.buttext {
+    opacity: 0;
+    transition: opacity 0.25s;
+    transition-delay: 0.15s;
+}
+button:hover > .buttext {
+    opacity: 1;
+    transition: opacity 0.5s;
+    transition-delay: 0.4s;
 }
 .icon {
     height: 4vh;
     filter: brightness(0) invert(1);
     position: absolute;
+    margin-right: 0;
+    transition: margin-right 0.5s;
+    transition-delay: 0.15s;
+}
+button:hover > .icon {
     margin-right: 16vh;
+    transition: margin-right 0.5s;
+    transition-delay: 0.15s;
+}
+a {
+    text-decoration: none;
 }
