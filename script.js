@@ -46,13 +46,57 @@ explore1.onclick = function(){
 
 hold = document.getElementsByClassName("hold");
 function updateHold(){
-    for (i=0; i<hold.length; i++){
-        hold[i].style.height = $(window).height()-(0.2*$(window).width()) + 'px';
-        hold[i].style.width = 0.8*$(window).width() + 'px';
+    if ($(window).height()>$(window).width()){
+        for (i=0; i<hold.length; i++){
+            hold[i].style.height = 0.8*$(window).height() + 'px';
+            hold[i].style.width = $(window).width()-(0.2*$(window).height()) + 'px';
+        }
+    } else {
+        for (i=0; i<hold.length; i++){
+            hold[i].style.height = $(window).height()-(0.2*$(window).width()) + 'px';
+            hold[i].style.width = 0.8*$(window).width() + 'px';
+        }
     }
 }
 updateHold();
 
+substance = document.getElementsByClassName("substance");
+face = document.getElementsByClassName("face")[0];
+proLo = document.getElementsByClassName("proLo")[0];
+p = document.getElementsByTagName("p");
+hr = document.getElementsByTagName("hr");
+function updateIntro(){
+    if ($(window).height()>$(window).width()){
+        face.style.width = "20vh";
+        face.style.margin = "0vh 1vh 4vh 1vh";
+        proLo.style.width = "20vh";
+        proLo.style.margin = "0 1vh 4vh 1vh";
+        for (i=0; i<substance.length; i++){
+            substance[i].style.flexDirection = "column";
+        }
+        for (i=0; i<p.length; i++){
+            p[i].style.textAlign = "center";
+        }
+        for (i=0; i<hr.length; i++){
+            hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';
+        }
+    } else {
+        face.style.width = "30vh";
+        face.style.margin = "0 4vh 6vh 0";
+        proLo.style.width = "30vh";
+        proLo.style.margin = "4vh 4vh 4vh 0";
+        for (i=0; i<substance.length; i++){
+            substance[i].style.flexDirection = "row";
+        }
+        for (i=0; i<p.length; i++){
+            p[i].style.textAlign = "left";
+        }
+        for (i=0; i<hr.length; i++){
+            hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';
+        }
+    }
+}
+updateIntro()
 
 window.onresize = function(){
     canvas.width = $(window).width();
@@ -63,4 +107,5 @@ window.onresize = function(){
     render();
     setup();
     updateHold();
+    updateIntro()
 };
