@@ -238,3 +238,10 @@ button:hover > .icon {
 a {
     text-decoration: none;
 }
+.perma {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 2.5vh;
+}
