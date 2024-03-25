@@ -72,7 +72,7 @@ h2 {
 h3 {
     color: white;
     font-family: "IBM Plex Mono", "PT Sans", Calibri, Tahoma, sans-serif;
-    font-size: 2.4vh;
+    font-size: 2.5vh;
     margin: 1vh 4vw;
     text-align: center;
     cursor: default;
@@ -121,7 +121,7 @@ h3 {
     transition: background-color 0.5s, border 0.5s;
 }
 .down:hover > .more {
-    margin: 0 0.75vw;
+    margin: 0 2vh;
     transition: margin 0.5s;
 }
 .down:hover > .arrow {
@@ -139,7 +139,7 @@ h3 {
 }
 
 .proT {
-    font-size: 3.5vh;
+    font-size: 3.25vh;
     font-weight: 300;
 }
 .substance {
@@ -151,9 +151,17 @@ h3 {
     width: 70vw;
 }
 .proLo {
-    width: 30vh;
     border-radius: 5vh;
     margin: 4vh 4vh 4vh 0;
+    cursor: pointer;
+    background-color: #ddd;
+    overflow: none;
+    transform: scale(1);
+    transition: transform 0.25s;
+}
+.proLo:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s;
 }
 .face {
     width: 30vh;
@@ -161,6 +169,13 @@ h3 {
     margin: 0 4vh 0 0;
     filter: drop-shadow(0px, 0px, 5px, white);
     -webkit-filter: drop-shadow(0px 0px 15px white);
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.25s;
+}
+.face:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s;
 }
 .proTo {
     display: flex;
@@ -170,12 +185,12 @@ h3 {
 }
 hl {
     color: rgb(50,225,225);
-    font-weight: 600;
+    font-weight: 400;
 }
 p {
     color: white;
     font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
-    font-size: 2vh;
+    font-size: 2.3vh;
     margin: 0 1vw;
     text-align: left;
     font-weight: 300;
@@ -200,7 +215,7 @@ button {
     border-radius: 2vh;
     height: 4vh;
     width: 4vh;
-    margin: 0 1vh;
+    margin: 0 0.75vw;
     cursor: pointer;
     background-color: transparent;
     transition: background-color 0.25s, width 0.5s;
@@ -208,7 +223,7 @@ button {
 }
 button:hover {
     background-color: rgba(255, 255, 255, 0.25);
-    width: 20vh;
+    width: 18vh;
     transition: background-color 0.25s, width 0.5s;
     transition-delay: 0.15s;
 }
@@ -216,6 +231,7 @@ button:hover {
     opacity: 0;
     transition: opacity 0.25s;
     transition-delay: 0.15s;
+    margin-left: 3.25vh;
 }
 button:hover > .buttext {
     opacity: 1;
@@ -230,8 +246,11 @@ button:hover > .buttext {
     transition: margin-right 0.5s;
     transition-delay: 0.15s;
 }
+.i1 {
+    position: relative;
+}
 button:hover > .icon {
-    margin-right: 16vh;
+    margin-right: 14vh;
     transition: margin-right 0.5s;
     transition-delay: 0.15s;
 }
@@ -241,7 +260,107 @@ a {
 .perma {
     position: fixed;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    bottom: 2.5vh;
+    right: 1vw;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1vh;
+    border-radius: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+.arrow1 {
+    border: solid #aaa;
+    border-width: 0 0.6vh 0.6vh 0;
+    display: inline-block;
+    padding: 0.6vh;
+    transition: border 0.25s;
+}
+.upArrow {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+.downArrow {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.arrowHolder {
+    margin: 1vh;
+    cursor: pointer;
+}
+.arrowHolder:hover > .arrow1 {
+    border: solid #fff;
+    border-width: 0 0.6vh 0.6vh 0;
+    transition: border 0.25s;
+}
+bullet {
+    color: #E3AA24;
+    font-weight: 500;
+}
+blitz {
+    color: #FAD541;
+    font-weight: 500;
+}
+rapid {
+    color: #94D157;
+    font-weight: 500;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 49.25vh;
+    overflow: hidden;
+    background-color: rgba(10, 10, 10, 0.7);
+    border-top: white 0.75vh solid;
+}
+.titl {
+    background: rgba(100, 100, 100, 0.4);
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.25));
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.25));
+}
+.footsect {
+    width: fit-content;
+    padding: 4vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+}
+.smallh2 {
+    font-size: 2.5vh;
+    margin: 0.5vh 1vh;
+}
+.smallh3 {
+    font-size: 1.75vh;
+    text-align: left;
+    margin: 0.5vh 1vh;
+}
+.holder {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+}
+h4 {
+    font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
+    font-weight: 300;
+    margin: 1vh;
+    color: rgb(150, 150, 150);
+}
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 0.1vh 1vh;
+    font-weight: 400;
 }
