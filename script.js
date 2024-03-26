@@ -168,7 +168,7 @@ updateIntro()
 
 window.onresize = function(){
     canvas.width = $(window).width();
-    canvas.height = $(window).innerHeight();
+    canvas.height = "100dvh";
     size = [0, 0];
     size[1] = $(window).innerHeight()/50;
     size[0] = $(window).width()/Math.round($(window).width()/size[1]);
@@ -179,7 +179,7 @@ window.onresize = function(){
 };
 $(window).on('resize touchmove', function () {
     canvas.width = $(window).width();
-    canvas.height = $(window).innerHeight();
+    canvas.height = "100dvh";
     size = [0, 0];
     size[1] = $(window).innerHeight()/50;
     size[0] = $(window).width()/Math.round($(window).width()/size[1]);
