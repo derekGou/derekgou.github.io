@@ -125,11 +125,11 @@ p = document.getElementsByTagName("p");
 hr = document.getElementsByTagName("hr");
 function updateIntro(){
     if ($(window).height()>$(window).width()){
-        face.style.width = "20vh";
-        face.style.margin = "-2vh 1vh 2vh 1vh";
+        face.style.width = "20dvh";
+        face.style.margin = "-2dvh 1dvh 2dvh 1dvh";
         for (i=0; i<proLo.length; i++){
-            proLo[i].style.width = "20vh";
-            proLo[i].style.margin = "0 1vh 4vh 1vh";
+            proLo[i].style.width = "20dvh";
+            proLo[i].style.margin = "0 1dvh 4dvh 1dvh";
         }
         for (i=0; i<substance.length; i++){
             substance[i].style.flexDirection = "column";
@@ -141,11 +141,11 @@ function updateIntro(){
             hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).innerHeight()) + 'px';
         }
     } else {
-        face.style.width = "30vh";
-        face.style.margin = "0 4vh 6vh 0";
+        face.style.width = "30dvh";
+        face.style.margin = "0 4dvh 6dvh 0";
         for (i=0; i<proLo.length; i++){
-            proLo[i].style.width = "30vh";
-            proLo[i].style.margin = "4vh 4vh 4vh 0";
+            proLo[i].style.width = "30dvh";
+            proLo[i].style.margin = "4dvh 4dvh 4dvh 0";
         }
         for (i=0; i<substance.length; i++){
             substance[i].style.flexDirection = "row";
