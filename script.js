@@ -10,11 +10,13 @@ function tops(){
 }
 
 function Move(num) {
+    bool = true
     curr = Math.round(2*(tops()/$(window).height()))/2;
     if (curr%1){
         num=(num/Math.abs(num))*(Math.abs(num)-0.5)
     }
     docList[parseInt((curr+num))].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    bool = false
 }
 explore = document.querySelectorAll(".down");
 explore.forEach(function(elem) {
