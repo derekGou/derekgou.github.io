@@ -23,7 +23,7 @@ body {
     height: 100dvh;
     width: 100dvw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -94,7 +94,7 @@ h3 {
     align-items: center;
     border-radius: 2.5dvh;
     cursor: pointer;
-    border: 0.5dvh solid #555;
+    border: 0.5dvh solid #333;
     transition: background-color 0.5s, border 0.5s;
 }
 .more {
@@ -136,8 +136,10 @@ h3 {
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     padding: 5dvh;
+    margin: 10vh;
+    flex-grow: 1;
+    height: 70dvh;
 }
-
 .proT {
     font-size: 3.25dvh;
     font-weight: 300;
@@ -267,8 +269,11 @@ a {
     top: 50%;
     transform: translateY(-50%);
     padding: 1dvh;
+    border: 0.5vh #ccc solid;
     border-radius: 100dvh;
     background: rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.25));
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.25));
 }
 .arrow1 {
     border: solid #aaa;

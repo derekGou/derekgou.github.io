@@ -1,74 +1,51 @@
-window.addEventListener("load",function() {
-    setTimeout(function(){
-        window.scrollTo(0, 1);
-    }, 0);
-});
-
+docList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("project1"), document.getElementById("project2"), document.getElementById("hobby0"), document.getElementById("hobby1"), document.getElementById("footer")]
 body = document.getElementsByTagName('body')[0];
-explore = document.getElementsByClassName('down')[0];
-explore.onclick = function(){
-    Move(1, 1);
+
+function tops(){
+    let t = document.body.scrollTop;
+    if (!t){
+        t = document.documentElement.scrollTop;
+    }
+    return t
 }
-function Move(num, current) {
-    bool = true
-    let id = null;
-    let pos = 0;
-    let curr = document.body.scrollTop;
-    if (curr==0){
-        curr = document.documentElement.scrollTop;
+
+function Move(num) {
+    curr = Math.round(2*(tops()/$(window).height()))/2;
+    if (curr%1){
+        num=(num/Math.abs(num))*(Math.abs(num)-0.5)
     }
-    let targ = 0;
-    if (current!=0){
-        targ = current-1;
-    } else {
-        if (num==0){
-            targ = Math.round(curr/$(window).innerHeight());
-        } else if (num>0) {
-            targ = Math.floor(1.025*curr/$(window).innerHeight());
-        } else {
-            targ = Math.ceil(0.975*curr/$(window).innerHeight());
-        }
-    }
-    let target = $(window).height()*(targ+num);
-    let inc = target-curr;
-    clearInterval(id);
-    id = setInterval(frame, 1);
-    function frame() {
-        if (pos == 101) {
-            clearInterval(id);
-            bool = false;
-        } else {
-            pos++;
-            let mult = Math.sin((Math.PI*(pos-50))/100)/2+0.5;
-            document.body.scrollTop = curr+(inc*mult);
-            document.documentElement.scrollTop = curr+(inc*mult);
-        }
-    }
+    docList[parseInt((curr+num))].scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+explore = document.querySelectorAll(".down");
+explore.forEach(function(elem) {
+    elem.addEventListener("click", function() {
+        Move(1);
+    });
+});
+upArrow = document.getElementById("upA");
+upArrow.onclick = function(){
+    Move(-1);
+}
+downArrow = document.getElementById("downA");
+downArrow.onclick = function(){
+    Move(1);
 }
 
 perma = document.getElementsByClassName("perma")[0];
 
-scrollN = document.body.scrollTop;
-if (scrollN==0){
-    scrollN = document.documentElement.scrollTop;
-}
-if (scrollN<0.5*$(window).innerHeight()){
+if (tops()<0.5*$(window).height()){
     $(".perma").hide();
 }
-if (scrollN>=($(document).height()-1.5*$(window).innerHeight())){
+if (tops()>=($(document).height()-1.5*$(window).height())){
     $(".hold").hide();
     $(".perma").hide();
 }
 
-window.onscroll = function(){
-    scrollN = document.body.scrollTop;
-    if (scrollN==0){
-        scrollN = document.documentElement.scrollTop;
-    }
-    if (scrollN<0.5*$(window).innerHeight()){
+function redo(){
+    if (tops()<0.5*$(window).height()){
         $(".perma").fadeOut(600);
         $(".hold").fadeIn();
-    } else if (scrollN>=($(document).innerHeight()-1.5*$(window).innerHeight())){
+    } else if (tops()>=($(document).height()-1.5*$(window).height())){
         $(".perma").fadeOut(600);
         $(".hold").fadeOut();
     } else {
@@ -76,53 +53,14 @@ window.onscroll = function(){
         $(".hold").fadeIn();
     }
     canvas.width = $(window).width();
-    canvas.height = $(window).innerHeight();
+    canvas.height = $(window).height();
     size = [0, 0];
-    size[1] = $(window).innerHeight()/50;
+    size[1] = $(window).height()/40;
     size[0] = $(window).width()/Math.round($(window).width()/size[1]);
     render();
     setup();
-    updateHold();
     updateIntro();
 }
-
-upArrow = document.getElementById("upA");
-upArrow.onclick = function(){
-    Move(-1, 0);
-}
-downArrow = document.getElementById("downA");
-downArrow.onclick = function(){
-    Move(1, 0);
-}
-
-businesshead = document.getElementById("businesshead");
-mathhead = document.getElementById("mathhead");
-softwarehead = document.getElementById("softwarehead");
-educationhead = document.getElementById("educationhead");
-
-explore1 = document.getElementsByClassName('down')[1];
-explore1.onclick = function(){
-    Move(1, 3);
-}
-
-arrow1 = document.getElementsByClassName("arrow1");
-hold = document.getElementsByClassName("hold");
-function updateHold(){
-    if ($(window).height()>$(window).width()){
-        for (i=0; i<hold.length; i++){
-            hold[i].style.height = 0.8*$(window).innerHeight() + 'px';
-            hold[i].style.width = $(window).width()-(0.2*$(window).innerHeight()) + 'px';
-        }
-        perma.style.backgroundColor = "rgba(200, 200, 200, 0.25)";
-    } else {
-        for (i=0; i<hold.length; i++){
-            hold[i].style.height = $(window).innerHeight()-(0.2*$(window).width()) + 'px';
-            hold[i].style.width = 0.8*$(window).width() + 'px';
-        }
-        perma.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-    }
-}
-updateHold();
 
 substance = document.getElementsByClassName("substance");
 face = document.getElementsByClassName("face")[0];
@@ -144,7 +82,7 @@ function updateIntro(){
             p[i].style.textAlign = "center";
         }
         for (i=0; i<hr.length; i++){
-            hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).innerHeight()) + 'px';
+            hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';
         }
     } else {
         face.style.width = "30dvh";
@@ -160,30 +98,15 @@ function updateIntro(){
             p[i].style.textAlign = "left";
         }
         for (i=0; i<hr.length; i++){
-            hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).innerHeight()) + 'px';
+            hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';
         }
     }
 }
 updateIntro()
 
+window.onscroll = function(){
+    redo()
+}
 window.onresize = function(){
-    canvas.width = $(window).width();
-    canvas.height = "100dvh";
-    size = [0, 0];
-    size[1] = $(window).innerHeight()/50;
-    size[0] = $(window).width()/Math.round($(window).width()/size[1]);
-    render();
-    setup();
-    updateHold();
-    updateIntro();
-};
-$(window).on('resize touchmove', function () {
-    canvas.width = $(window).width();
-    canvas.height = "100dvh";
-    size = [0, 0];
-    size[1] = $(window).innerHeight()/50;
-    size[0] = $(window).width()/Math.round($(window).width()/size[1]);
-    render();
-    setup();
-    updateHold();
-});
+    redo()
+}
