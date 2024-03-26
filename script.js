@@ -1,3 +1,9 @@
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        window.scrollTo(0, 1);
+    }, 0);
+});
+
 body = document.getElementsByTagName('body')[0];
 explore = document.getElementsByClassName('down')[0];
 explore.onclick = function(){
