@@ -69,6 +69,15 @@ window.onscroll = function(){
         $(".perma").fadeIn(600);
         $(".hold").fadeIn();
     }
+    canvas.width = $(window).width();
+    canvas.height = $(window).innerHeight();
+    size = [0, 0];
+    size[1] = $(window).innerHeight()/50;
+    size[0] = $(window).width()/Math.round($(window).width()/size[1]);
+    render();
+    setup();
+    updateHold();
+    updateIntro();
 }
 
 upArrow = document.getElementById("upA");
