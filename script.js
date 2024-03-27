@@ -1,3 +1,5 @@
+loader = document.getElementsByTagName("loader")[0];
+setTimeout(function(){loader.remove()}, 1000);
 docList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("project1"), document.getElementById("project2"), document.getElementById("hobby0"), document.getElementById("hobby1"), document.getElementById("footer")]
 body = document.getElementsByTagName('body')[0];
 
@@ -10,13 +12,11 @@ function tops(){
 }
 
 function Move(num) {
-    bool = true
     curr = Math.round(2*(tops()/$(window).height()))/2;
     if (curr%1){
         num=(num/Math.abs(num))*(Math.abs(num)-0.5)
     }
     docList[parseInt((curr+num))].scrollIntoView({ behavior: 'smooth', block: 'center' });
-    bool = false
 }
 explore = document.querySelectorAll(".down");
 explore.forEach(function(elem) {
@@ -43,32 +43,13 @@ if (tops()>=($(document).height()-1.5*$(window).height())){
     $(".perma").hide();
 }
 
-function redo(){
-    if (tops()<0.5*$(window).height()){
-        $(".perma").fadeOut(600);
-        $(".hold").fadeIn();
-    } else if (tops()>=($(document).height()-1.5*$(window).height())){
-        $(".perma").fadeOut(600);
-        $(".hold").fadeOut();
-    } else {
-        $(".perma").fadeIn(600);
-        $(".hold").fadeIn();
-    }
-    canvas.width = $(window).width();
-    canvas.height = $(window).height();
-    size = [0, 0];
-    size[1] = $(window).height()/40;
-    size[0] = $(window).width()/Math.round($(window).width()/size[1]);
-    render();
-    setup();
-    updateIntro();
-}
-
 substance = document.getElementsByClassName("substance");
 face = document.getElementsByClassName("face")[0];
 proLo = document.getElementsByClassName("proLo");
 p = document.getElementsByTagName("p");
 hr = document.getElementsByTagName("hr");
+footer = document.getElementById("footer");
+holder = document.getElementsByClassName("holder")[0];
 function updateIntro(){
     if ($(window).height()>$(window).width()){
         face.style.width = "20dvh";
@@ -107,8 +88,37 @@ function updateIntro(){
 updateIntro()
 
 window.onscroll = function(){
-    redo()
+    
+    windowTop = tops()
+    if (windowTop<0.5*$(window).height()){
+        $(".perma").fadeOut(600);
+        $(".hold").fadeIn(600);
+    } else if (windowTop>=($(document).height()-1.25*$(window).height())){
+        $(".perma").fadeOut(600);
+        $(".hold").fadeOut(600);
+    } else {
+        $(".perma").fadeIn(600);
+        $(".hold").fadeIn(600);
+    }
 }
 window.onresize = function(){
-    redo()
+    windowTop = tops()
+    if (windowTop<0.5*$(window).height()){
+        $(".perma").fadeOut(600);
+        $(".hold").fadeIn();
+    } else if (windowTop>=($(document).height()-1.5*$(window).height())){
+        $(".perma").fadeOut(600);
+        $(".hold").fadeOut();
+    } else {
+        $(".perma").fadeIn(600);
+        $(".hold").fadeIn();
+    }
+    canvas.width = $(window).width();
+    canvas.height = $(window).height();
+    size = [0, 0];
+    size[1] = $(window).height()/40;
+    size[0] = $(window).width()/Math.round($(window).width()/size[1]);
+    render();
+    setup();
+    updateIntro();
 }
