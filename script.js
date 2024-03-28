@@ -1,7 +1,7 @@
 loader = document.getElementsByTagName("loader")[0];
 setTimeout(function(){loader.remove()}, 1000);
 docList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("project1"), document.getElementById("project2"), document.getElementById("hobby0"), document.getElementById("hobby1"), document.getElementById("award0"), document.getElementById("award1"), document.getElementById("award2"), document.getElementById("footer")]
-sectList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("hobby0"), document.getElementById("award0")]
+sectList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("hobby0"), document.getElementById("award0")];
 body = document.getElementsByTagName('body')[0];
 
 function tops(){
@@ -39,7 +39,7 @@ perma = document.getElementsByClassName("perma")[0];
 if (tops()<0.5*$(window).height()){
     $(".perma").hide();
 }
-if (tops()>=($(document).height()-1.5*$(window).height())){
+if (tops()>=($(document).height()-1.25*$(window).height())){
     $(".hold").hide();
     $(".perma").hide();
 }
@@ -48,6 +48,7 @@ substance = document.getElementsByClassName("substance");
 face = document.getElementsByClassName("face")[0];
 proLo = document.getElementsByClassName("proLo");
 p = document.getElementsByTagName("p");
+li = document.getElementsByTagName("li");
 hr = document.getElementsByTagName("hr");
 footer = document.getElementById("footer");
 holder = document.getElementsByClassName("holder")[0];
@@ -65,6 +66,9 @@ function updateIntro(){
         for (i=0; i<p.length; i++){
             p[i].style.textAlign = "center";
         }
+        for (i=0; i<li.length; i++){
+            li[i].style.textAlign = "center";
+        }
         for (i=0; i<hr.length; i++){
             hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';
         }
@@ -80,6 +84,9 @@ function updateIntro(){
         }
         for (i=0; i<p.length; i++){
             p[i].style.textAlign = "left";
+        }
+        for (i=0; i<li.length; i++){
+            li[i].style.textAlign = "left";
         }
         for (i=0; i<hr.length; i++){
             hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';

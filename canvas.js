@@ -3,7 +3,7 @@ var canvas = document.querySelector('canvas');
 canvas.width = $(window).width();
 canvas.height = $(window).height();
 size = [0, 0];
-size[1] = $(window).height()/40;
+size[1] = $(window).height()/50;
 size[0] = $(window).width()/Math.round($(window).width()/size[1]);
 
 var phase = 0
@@ -34,39 +34,39 @@ function fill(x, y){
     c.fillRect(x*size[0], y*size[1], size[0]+1, size[1]+1);
 }
 
+
+
 function blink(){
-    if (phase==0) {
-        for (var y = 0; y<$(window).height()/size[1]; y++) {
-            for (var x = 0; x<($(window).width()/size[0]); x++) {
-                var rand = Math.random()
-                if ((rand<0.00005 || blinks[y][x]!=0) && bool==false){
-                    if (blinks[y][x]<=Math.PI){
-                        blinks[y][x]+=0.25
-                    } else {
-                        blinks[y][x]=0
+    if (phase==0)for (var y = 0; y<$(window).height()/size[1]; y++) {
+        for (var x = 0; x<($(window).width()/size[0]); x++) {
+            var rand = Math.random()
+            if ((rand<0.00005 || blinks[y][x]!=0) && bool==false){
+                if (blinks[y][x]<=Math.PI){
+                    blinks[y][x]+=0.2
+                } else {
+                    blinks[y][x]=0
+                }
+                fill(x, y)
+                if (x>0){
+                    if (y>0){
+                        fill(x-1, y)
+                        fill(x-1, y-1)
+                        fill(x, y-1)
                     }
-                    fill(x, y)
-                    if (x>0){
-                        if (y>0){
-                            fill(x-1, y)
-                            fill(x-1, y-1)
-                            fill(x, y-1)
-                        }
-                        if ((y+1)<$(window).height()/size[1]){
-                            fill(x-1, y+1)
-                            fill(x, y+1)
-                        }
+                    if ((y+1)<$(window).height()/size[1]){
+                        fill(x-1, y+1)
+                        fill(x, y+1)
                     }
-                    if ((x+1)<$(window).width()/size[0]){
-                        if (y>0){
-                            fill(x+1, y)
-                            fill(x+1, y-1)
-                            fill(x, y-1)
-                        }
-                        if ((y+1)<$(window).height()/size[1]){
-                            fill(x+1, y+1)
-                            fill(x, y+1)
-                        }
+                }
+                if ((x+1)<$(window).width()/size[0]){
+                    if (y>0){
+                        fill(x+1, y)
+                        fill(x+1, y-1)
+                        fill(x, y-1)
+                    }
+                    if ((y+1)<$(window).height()/size[1]){
+                        fill(x+1, y+1)
+                        fill(x, y+1)
                     }
                 }
             }
