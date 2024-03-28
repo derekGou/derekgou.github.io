@@ -4,6 +4,14 @@ docList = [document.getElementById("hero"), document.getElementById("about"), do
 sectList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("hobby0"), document.getElementById("award0")];
 body = document.getElementsByTagName('body')[0];
 
+navs = document.getElementsByClassName("nav");
+for (let i = 0; i<navs.length; i++){
+    navs[i].addEventListener("click", function(){
+        console.log(sectList[i])
+        sectList[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    })
+}
+
 function tops(){
     let t = document.body.scrollTop;
     if (!t){
@@ -56,39 +64,39 @@ function updateIntro(){
     if ($(window).height()>$(window).width()){
         face.style.width = "20dvh";
         face.style.margin = "-2dvh 1dvh 2dvh 1dvh";
-        for (i=0; i<proLo.length; i++){
+        for (let i=0; i<proLo.length; i++){
             proLo[i].style.width = "20dvh";
             proLo[i].style.margin = "0 1dvh 4dvh 1dvh";
         }
-        for (i=0; i<substance.length; i++){
+        for (let i=0; i<substance.length; i++){
             substance[i].style.flexDirection = "column";
         }
-        for (i=0; i<p.length; i++){
+        for (let i=0; i<p.length; i++){
             p[i].style.textAlign = "center";
         }
-        for (i=0; i<li.length; i++){
+        for (let i=0; i<li.length; i++){
             li[i].style.textAlign = "center";
         }
-        for (i=0; i<hr.length; i++){
+        for (let i=0; i<hr.length; i++){
             hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';
         }
     } else {
         face.style.width = "30dvh";
         face.style.margin = "0 4dvh 6dvh 0";
-        for (i=0; i<proLo.length; i++){
+        for (let i=0; i<proLo.length; i++){
             proLo[i].style.width = "30dvh";
             proLo[i].style.margin = "4dvh 4dvh 4dvh 0";
         }
-        for (i=0; i<substance.length; i++){
+        for (let i=0; i<substance.length; i++){
             substance[i].style.flexDirection = "row";
         }
-        for (i=0; i<p.length; i++){
+        for (let i=0; i<p.length; i++){
             p[i].style.textAlign = "left";
         }
-        for (i=0; i<li.length; i++){
+        for (let i=0; i<li.length; i++){
             li[i].style.textAlign = "left";
         }
-        for (i=0; i<hr.length; i++){
+        for (let i=0; i<hr.length; i++){
             hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';
         }
     }

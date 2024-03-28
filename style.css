@@ -376,18 +376,17 @@ loader {
     width: 100dvw;
     background-color: black;
     z-index: 2;
+    align-items: center;
+    justify-content: center;
 }
 .circly {
     position: absolute;
-    left: 50%;
-    top: 50%;
     z-index: 1;
-    width: 120px;
-    height: 120px;
-    margin: -76px 0 0 -76px;
+    width: 10vh;
+    height: 10vh;
     border: 16px solid transparent;
     border-radius: 50%;
-    border-top: 16px solid #3498db;
+    border-top: 16px solid rgb(50,225,225);
     -webkit-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
 }
