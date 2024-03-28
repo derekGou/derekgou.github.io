@@ -1,6 +1,7 @@
 loader = document.getElementsByTagName("loader")[0];
 setTimeout(function(){loader.remove()}, 1000);
-docList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("project1"), document.getElementById("project2"), document.getElementById("hobby0"), document.getElementById("hobby1"), document.getElementById("footer")]
+docList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("project1"), document.getElementById("project2"), document.getElementById("hobby0"), document.getElementById("hobby1"), document.getElementById("award0"), document.getElementById("award1"), document.getElementById("award2"), document.getElementById("footer")]
+sectList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("hobby0"), document.getElementById("award0")]
 body = document.getElementsByTagName('body')[0];
 
 function tops(){
