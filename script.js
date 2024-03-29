@@ -1,13 +1,13 @@
 loader = document.getElementsByTagName("loader")[0];
 setTimeout(function(){loader.remove()}, 1000);
-docList = ["hero", "about", "project0", "project1", "project2", "hobby0", "hobby1", "award0", "award1", "award2", "award3", "footer"]
-sectList = ["hero", "about", "project0", "hobby0", "award0"];
+docList = ["hero", "about", "project0", "project1", "project2", "hobby0", "hobby1", "award0", "award1", "award2", "award3", "footer"];
+sectList = ["hero", "about", "project0", "hobby0", "award0", "footer"];
+section = [1, 1, 3, 2, 4, 1]
 body = document.getElementsByTagName('body')[0];
 
 navs = document.getElementsByClassName("nav");
 for (let i = 0; i<navs.length; i++){
     navs[i].addEventListener("click", function(){
-        console.log(sectList[i])
         document.getElementById(sectList[i]).scrollIntoView({ behavior: 'smooth', block: 'center' });
     })
 }
@@ -17,15 +17,17 @@ function tops(){
     if (!t){
         t = document.documentElement.scrollTop;
     }
-    return t
+    return t;
 }
 
 function Move(num) {
     curr = Math.round(2*(tops()/$(window).height()))/2;
     if (curr%1){
-        num=(num/Math.abs(num))*(Math.abs(num)-0.5)
+        num=(num/Math.abs(num))*(Math.abs(num)-0.5);
     }
-    document.getElementById(docList[parseInt((curr+num))]).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (curr+num>=0){
+        document.getElementById(docList[parseInt((curr+num))]).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
 }
 explore = document.querySelectorAll(".down");
 explore.forEach(function(elem) {
@@ -33,13 +35,47 @@ explore.forEach(function(elem) {
         Move(1);
     });
 });
+function Move2(num){
+    things = [0, 0, 0]
+    curr = tops()/$(window).height()
+    if (curr%1>0.9 || curr%1<0.1){
+        curr = Math.round(curr)
+    } else {
+        curr = Math.round(curr)+0.5
+    }
+    sum = 0
+    for (let i=0; i<section.length; i++){
+        if (curr==sum){
+            things[1]=i+1
+            things[-1]=i-1
+            break;
+        } else if (curr<sum){
+            things[-1]=i-1
+            things[1]=i
+            break;
+        }
+        sum+=section[i]
+    }
+    if (curr+num>=0){
+        document.getElementById(sectList[things[num]]).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
 upArrow = document.getElementById("upA");
 upArrow.onclick = function(){
     Move(-1);
 }
+upArrows = document.getElementById("upB");
+upArrows.onclick = function(){
+    Move2(-1);
+}
 downArrow = document.getElementById("downA");
 downArrow.onclick = function(){
     Move(1);
+}
+downArrows = document.getElementById("downB");
+downArrows.onclick = function(){
+    Move2(1);
 }
 
 perma = document.getElementsByClassName("perma")[0];
@@ -60,6 +96,7 @@ li = document.getElementsByTagName("li");
 hr = document.getElementsByTagName("hr");
 footer = document.getElementById("footer");
 holder = document.getElementsByClassName("holder")[0];
+hold = document.getElementsByClassName("hold");
 function updateIntro(){
     if ($(window).height()>$(window).width()){
         holder.style.flexDirection = "column";
@@ -81,6 +118,10 @@ function updateIntro(){
         for (let i=0; i<hr.length; i++){
             hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';
         }
+        for (let i=0; i<hold.length; i++){
+            hold[i].style.width = ($(window).width()-(0.2*$(window).height())) + 'px';
+            hold[i].style.height = (0.8*$(window).height()) + 'px';
+        }
     } else {
         holder.style.flexDirection = "row";
         face.style.width = "30dvh";
@@ -101,9 +142,13 @@ function updateIntro(){
         for (let i=0; i<hr.length; i++){
             hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';
         }
+        for (let i=0; i<hold.length; i++){
+            hold[i].style.width = (0.8*$(window).width()) + 'px';
+            hold[i].style.height = ($(window).height()-(0.2*$(window).width())) + 'px';
+        }
     }
 }
-updateIntro()
+updateIntro();
 
 window.onscroll = function(){
     
@@ -120,7 +165,7 @@ window.onscroll = function(){
     }
 }
 window.onresize = function(){
-    windowTop = tops()
+    windowTop = tops();
     if (windowTop<0.5*$(window).height()){
         $(".perma").fadeOut(600);
         $(".hold").fadeIn();

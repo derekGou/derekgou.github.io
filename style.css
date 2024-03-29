@@ -56,7 +56,7 @@ h1 {
 h2 {
     color: white;
     font-family: "Open Sans", "PT Sans", Calibri, Tahoma, sans-serif;
-    font-size: 10dvh;
+    font-size: 7.5dvh;
     margin: 0 5dvw;
     text-align: center;
     cursor: default;
@@ -136,9 +136,6 @@ h3 {
     justify-content: center;
     background: rgba(0, 0, 0, 0.5);
     padding: 5dvh;
-    margin: 10vh;
-    flex-grow: 1;
-    height: 70dvh;
 }
 .proT {
     font-size: 3.25dvh;
@@ -290,11 +287,29 @@ a {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
+#upA {
+    margin-bottom: 2vh;
+}
+#downA {
+    margin-top: 2vh;
+}
 .arrowHolder {
+    display: flex;
+    flex-direction: column;
     margin: 1dvh;
     cursor: pointer;
 }
 .arrowHolder:hover > .arrow1 {
+    border: solid #fff;
+    border-width: 0 0.6dvh 0.6dvh 0;
+    transition: border 0.25s;
+}
+.arrowHolder:hover > div > .arrow1 {
+    border: solid #fff;
+    border-width: 0 0.6dvh 0.6dvh 0;
+    transition: border 0.25s;
+}
+.arrowHolder:hover > div > .arrow1 {
     border: solid #fff;
     border-width: 0 0.6dvh 0.6dvh 0;
     transition: border 0.25s;
