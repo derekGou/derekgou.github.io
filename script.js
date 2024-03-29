@@ -1,14 +1,14 @@
 loader = document.getElementsByTagName("loader")[0];
 setTimeout(function(){loader.remove()}, 1000);
-docList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("project1"), document.getElementById("project2"), document.getElementById("hobby0"), document.getElementById("hobby1"), document.getElementById("award0"), document.getElementById("award1"), document.getElementById("award2"), document.getElementById("footer")]
-sectList = [document.getElementById("hero"), document.getElementById("about"), document.getElementById("project0"), document.getElementById("hobby0"), document.getElementById("award0")];
+docList = ["hero", "about", "project0", "project1", "project2", "hobby0", "hobby1", "award0", "award1", "award2", "award3", "footer"]
+sectList = ["hero", "about", "project0", "hobby0", "award0"];
 body = document.getElementsByTagName('body')[0];
 
 navs = document.getElementsByClassName("nav");
 for (let i = 0; i<navs.length; i++){
     navs[i].addEventListener("click", function(){
         console.log(sectList[i])
-        sectList[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        document.getElementById(sectList[i]).scrollIntoView({ behavior: 'smooth', block: 'center' });
     })
 }
 
@@ -25,7 +25,7 @@ function Move(num) {
     if (curr%1){
         num=(num/Math.abs(num))*(Math.abs(num)-0.5)
     }
-    docList[parseInt((curr+num))].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    document.getElementById(docList[parseInt((curr+num))]).scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 explore = document.querySelectorAll(".down");
 explore.forEach(function(elem) {
@@ -62,6 +62,7 @@ footer = document.getElementById("footer");
 holder = document.getElementsByClassName("holder")[0];
 function updateIntro(){
     if ($(window).height()>$(window).width()){
+        holder.style.flexDirection = "column";
         face.style.width = "20dvh";
         face.style.margin = "-2dvh 1dvh 2dvh 1dvh";
         for (let i=0; i<proLo.length; i++){
@@ -81,6 +82,7 @@ function updateIntro(){
             hr[i].style.width = (0.8*$(window).width())-(0.2*$(window).height()) + 'px';
         }
     } else {
+        holder.style.flexDirection = "row";
         face.style.width = "30dvh";
         face.style.margin = "0 4dvh 6dvh 0";
         for (let i=0; i<proLo.length; i++){
