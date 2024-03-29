@@ -230,7 +230,7 @@ button:hover {
     opacity: 0;
     transition: opacity 0.25s;
     transition-delay: 0.15s;
-    margin-left: 4.75dvh;
+    margin-left: 4dvh;
 }
 button:hover > .buttext {
     opacity: 1;
