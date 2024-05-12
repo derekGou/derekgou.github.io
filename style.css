@@ -1,0 +1,448 @@
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+    padding-bottom: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-attachment: fixed;
+    margin: 0;
+    background: black;
+    overflow-x: hidden;
+    width: 100dvw;
+    padding-bottom: 0;
+}
+loader {
+    display: flex;
+    position: fixed;
+    height: 100dvh;
+    width: 100dvw;
+    background-color: black;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+.circly {
+    position: absolute;
+    z-index: 101;
+    width: 10vh;
+    height: 10vh;
+    border: 16px solid transparent;
+    border-radius: 50%;
+    border-top: 16px solid rgb(50,225,225);
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#canvas {
+    position: fixed;
+    z-index: -1;
+}
+#name {
+    z-index: 1;
+}
+.wing {
+    width: 6vh;
+    height: 12vh;
+}
+#wingLeft {
+    animation: left 3s infinite ease-in-out;
+    transform-origin: center right;
+}
+#wingRight {
+    animation: right 3s infinite ease-in-out;  
+    transform-origin: center left;
+}
+@keyframes left {
+    0% {
+        transform: perspective(1000px) rotateY(0);
+    }
+    20% {
+        transform: perspective(1000px) rotateY(60deg);
+    }
+    40% {
+        transform: perspective(1000px) rotateY(0);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0);
+    }
+}
+@keyframes right {
+    0% {
+        transform: perspective(1000px) rotateY(0);
+    }
+    20% {
+        transform: perspective(1000px) rotateY(-60deg);
+    }
+    40% {
+        transform: perspective(1000px) rotateY(0);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0);
+    }
+}
+#introButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    animation: pulse-animation 3s 1.5s infinite;
+}
+#title {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+h2 {
+    opacity: 0;
+    display: none;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0 2.5vw;
+}
+background {
+    z-index: -2;
+    background-image: radial-gradient(circle at center bottom, rgb(100, 100, 100) 0%, rgb(20, 5, 60) 60%,  rgb(10, 5, 15)100%);
+    position: fixed;
+    width: 100dvw;
+    height: 150dvh;
+    opacity: 0;
+}
+background1 {
+    z-index: 10;
+    background-image: radial-gradient(circle at center bottom, rgb(100, 100, 100) 0%, rgb(20, 5, 60) 60%,  rgb(10, 5, 15)100%);
+    position: fixed;
+    width: 100dvw;
+    height: 150dvh;
+    opacity: 0;
+    display: none;
+}
+#canvas {
+    display: none;
+    opacity: 0;
+}
+h3 {
+    opacity: 0;
+    display: none;
+    font-family: "IBM Plex Mono";
+    color: white;
+    margin: 2vh 2.5vw;
+    font-weight: 300;
+}
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 5vh rgba(255, 255, 255, 0);
+    }
+}
+.horz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vert {
+    display: flex;
+    flex-direction: column;
+}
+#description {
+    width: 0;
+    height: 0;
+    justify-content: center;
+}
+hl1 {
+    color: #F87171;
+}
+hl2 {
+    color: #4ADE80;
+}
+hl3 {
+    color: #60A5FA;
+}
+.moreButtons {
+    opacity: 0;
+    display: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 2.5vw;
+}
+.moreButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin: 0 3vh 0 0;
+    border: 0.75vh solid rgba(255, 255, 255, 0.925);
+    border-radius: 1vh;
+    cursor: pointer;
+}
+h4 {
+    color: black;
+	mix-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.925);
+    width: 16vh;
+    font-size: 1em;
+    margin: 0;
+    font-weight: 800;
+    font-family: "Open Sans";
+    text-align: center;
+    cursor: pointer;
+}
+.moreButton:hover {
+    border: 0.75vh solid rgba(255, 255, 255, 1);
+}
+.moreButton:hover>h4 {
+    background-color: rgba(255, 255, 255, 1);
+}
+#options {
+    z-index: 12;
+}
+.extra {
+    opacity: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 0vw;
+    height: 0vh;
+    z-index: 100;
+}
+#resumeHold {
+    flex-direction: column;
+}
+.resumeholder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.downloadsHolder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.page {
+    opacity: 0;
+    z-index: 100;
+    display: none;
+    height: 66vh;
+    aspect-ratio: 8.5/11;
+}
+.backButton {
+    position: absolute;
+    opacity: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2.5px white solid;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.25);
+    z-index: 1000;
+    left: 2.5vh;
+    top: 2.5vh;
+    transition: background-color 0.5s;
+}
+.backButton:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.5s;
+}
+.leftArrow {
+    display: block;
+    width: 20px;
+    height: 20px;
+    transform: translateX(5px) rotate(-45deg);
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+}
+label {
+    color: white;
+    font-family: "IBM Plex Mono";
+}
+input[type=text], input[type=email], textarea {
+    width: 60vh;
+    padding: 1vh 1.5vh;
+    margin: 1vh 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 0.5vh;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 60vh;
+    background-color: #2A8294;
+    color: white;
+    padding: 1vh 1.5vh;
+    margin: 1vh 0;
+    border: none;
+    border-radius: 0.5vh;
+    cursor: pointer;
+}
+::-ms-input-placeholder {
+    font-family: "Open Sans";
+}
+  
+::placeholder {
+    font-family: "Open Sans";
+}
+#contactHold {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#emailForm {
+    padding: 2.5vh;
+    margin: 1vh;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    outline: 2.5px solid #3A92A4;
+}
+textarea {
+    resize: none;
+    height: 25vh;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centered {
+    text-align: center !important;
+}
+#link {
+    color: #6AB2C4;
+}
+.icon {
+    filter: brightness(0) invert(1);
+    height: 5vh;
+}
+#contactLinks {
+    background-color: rgba(255, 255, 255, 0.25);
+    margin: 2.5vh;
+    border-radius: 5vh;
+    padding: 0.5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.download {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 100vh;
+    border: 0.25vh white solid;
+    padding: 1.5vh;
+    margin: 2.5vh 10vh 0 10vh;
+    transition: background-color 0.5s;
+}
+.download:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.5s;
+}
+.marg {
+    margin: 0 !important;
+}
+.linkButtonWrapper {
+    margin: 1.25vh;
+    border-radius: 50%;
+    height: 5vh;
+    width: 5vh;
+}
+#projectHold {
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.projectholder {
+    position: absolute;
+    top: 10vh;
+    height: fit-content;
+    width: 90vw;
+    display: grid;
+    gap: 5vh 5vh;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
+    padding-bottom: 10vh;
+    justify-items: center;
+    align-items: center;
+}
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 2.5vh;
+    border-radius: 2.5vh;
+    height: 90%;
+}
+.prologo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10%;
+    cursor: pointer;
+}
+h5 {
+    font-family: "IBM Plex Mono";
+    color: white;
+    font-weight: 300;
+    margin-bottom: 0;
+    font-size: 1em;
+}
+.notop {
+    margin-top: 0 !important;
+}
+.aprologo {
+    width: 75%;
+}
+b {
+    color: #6CB2C4;
+}
+.cool {
+    color: #CCE0F0;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+.cool:hover {
+    color: #EEFFFF;
+    transition: color 0.5s;
+}

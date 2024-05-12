@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <title>Derek Gou</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images/LogoPF.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="scripts/script.js" defer></script>
+        <script src="scripts/eventListeners.js" defer></script>
+        <script src="scripts/canvas.js" defer></script>
+        <script src="scripts/name.js" defer></script>
+        <script src="scripts/onload.js" defer></script>
+    </head>
+    <body>
+        <background></background>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <canvas id = "canvas"></canvas>
+        <div id = "title">
+            <div class = "horz">
+                <canvas id="name"></canvas>
+                <div class = "button" id = "introButton"></div>
+                <div class = "vert" id = "description">
+                    <h2>Hi, I'm Derek</h2>
+                    <h3>
+                        I'm a <hl1>software developer</hl1>, <hl1>hackathon organizer</hl1>, and <hl1>high school student</hl1> from Waterloo, Ontario. 
+                        I enjoy <hl2>web developing</hl2>, <hl2>web scraping</hl2>, and <hl2>competitive coding</hl2>. 
+                        I'm currently seeking cool <hl3>opportunities</hl3> and <hl3>internships</hl3>! 
+                    </h3>
+                    <div class = "moreButtons">
+                        <div class = "moreButton" id = "projects">
+                            <h4>Experiences</h4>
+                        </div>
+                        <div class = "moreButton" id = "resume">
+                            <h4>Resume</h4>
+                        </div>
+                        <div class = "moreButton" id = "contact">
+                            <h4>Contact Me!</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "extra" id = projectHold>
+                <div class = "projectholder">
+                    <div class = "project">
+                        <h3 class = "notop">SproutHacks</h3>
+                        <a class = "aprologo" style = "text-decoration: none;" href = "https://sprouthacks.ca" target = "_blank">
+                            <img class = "prologo" src = "images/Sprouthacks Logo PNG Transparent.jpg">
+                        </a>
+                        <h5>As <b>co-founder and co-lead</b>, I have <b class = "cool">raised over $1,300</b> for the event, while also aiding with <b>graphic design</b>, <b>web-dev</b>, and <b>logistics</b>.</h5>
+                    </div>
+                    <div class = "project">
+                        <h3 class = "notop">RythmHacks</h3>
+                        <a class = "aprologo" style = "text-decoration: none;" href = "https://rythmhacks.ca" target = "_blank">
+                            <img class = "prologo" src = "images/rythm.jpg">
+                        </a>
+                        <h5>As <b>finance team lead</b>, I manage RythmHacks's finance team in seeking sponsorships, budgeting, and applying for grants.</h5>
+                    </div>
+                    <div class = "project">
+                        <h3 class = "notop">WRSSCC</h3>
+                        <a class = "aprologo" style = "text-decoration: none;" href = "" target = "_blank">
+                            <img class = "prologo" src = "images/WRSSCC.jpg">
+                        </a>
+                        <h5>I am the <b>co-founder and finance director</b> of <b class = "cool">Waterloo's biggest high school chess tournament</b>. I'm responsible for managing sponsorships for the event.</h5>
+                    </div>
+                    <div class = "project">
+                        <h3 class = "notop">WCI Math Team</h3>
+                        <a class = "aprologo" style = "text-decoration: none;" href = "https://cemc.uwaterloo.ca/contests/ctmc.html" target = "_blank">
+                            <img class = "prologo" src = "images/cemc.jpg">
+                        </a>
+                        <h5>As a member of Waterloo Collegiate Institute's Math Team, I helped my team to a <b class = "cool">fourth-place finish nationally</b> at the <b>Canadian Team Mathematics Contest</b> this past year.</h5>
+                    </div>
+                    <div class = "project">
+                        <h3 class = "notop">Portfolio Website</h3>
+                        <a class = "aprologo" style = "text-decoration: none;" href = "https://github.com/derekGou/derekgou.github.io/" target = "_blank">
+                            <img class = "prologo" src = "images/LogoPFJPG.jpg">
+                        </a>
+                        <h5>The <b class = "cool">website you're viewing</b> right now! Built from scratch with <b>HTML5</b>, <b>CSS3</b>, <b>JavaScript</b>, <b>jQuery</b>, and <b>Web3Forms</b>. All icons and canvases are <b class = "cool">designed by me</b>.</h5>
+                    </div>
+                    <div class = "project">
+                        <h3 class = "notop">WebStylus</h3>
+                        <a class = "aprologo" style = "text-decoration: none;" href = "https://chromewebstore.google.com/detail/webstylus/bkofepamgipmidolgcfajlaclgnfmpij" target = "_blank">
+                            <img class = "prologo" src = "images/webstylus.jpg">
+                        </a>
+                        <h5>A <b>QOL Chrome Extension</b> with features such as Dark/Light Mode and AI alt-text generation. Submitted to RythmHacks 2023.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class = "extra" id = "resumeHold">
+                <div class = "resumeholder">
+                    <iframe class = "page" id = "page1" src="media/Derek Gou - Resume - UPDATED 5_03_24 - Page 1.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                    <iframe class = "page" id = "page2" src="media/Derek Gou - Resume - UPDATED 5_03_24 - One Page.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                    <iframe class = "page" id = "page3" src="media/Derek Gou - Resume - UPDATED 5_03_24 - Page 2.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                </div>
+                <div class = "downloadsHolder">
+                    <a style = "text-decoration: none;" href = "media/Derek Gou - Resume - UPDATED 5_03_24 - One Page.pdf" target = "_blank">
+                        <div class = "download" id = "onePage">
+                            <h3 class = "marg">Download one-page resume</h3>
+                        </div>
+                    </a>
+                    <a style = "text-decoration: none;" href = "media/Derek Gou - Resume - UPDATED 5_03_24 - Two Pages.pdf" target = "_blank">
+                        <div class = "download" id = "twoPage">
+                            <h3 class = "marg">Download two-page resume</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class = "extra" id = "contactHold">
+                <div id = "emailForm">
+                    <h2>Email me:</h2>
+                    <h3 class = "centered">Reach out to me using the form below. Spamming is prohibited. Alternatively, reach me at <a id = "link" href = "mailto:derekgou19@gmail.com" target = "_blank">derekgou19@gmail.com</a></h3>
+                    <form id = "emailer" action = "https://api.web3forms.com/submit" method = "POST">
+                        <input class = "formwidth" type = "hidden" name = "apikey" value = "db4b95b0-b98c-4e07-b484-1429e8f1e9da">
+                        <label for = "name" class = "form-label formwidth">Name</label>
+                        <input class = "formwidth" id = "name" type = "text" name = "name" placeholder = "Your name" value = "" required>
+                        <label for = "email" class = "form-label formwidth">Email</label>
+                        <input class = "formwidth" id = "email" type = "email" name = "email" placeholder = "Your email" value = "" required>
+                        <label for = "message" class = "form-label formwidth">Message</label>
+                        <textarea class = "formwidth" id = "message" name = "message" placeholder = "Your message" value = "" required></textarea>
+                        <input type = "hidden" name = "redirect" value = "https://web3forms.com/success">
+                        <input class = "formwidth" type = "submit"></input>
+                    </form>
+                </div>
+                <div id = "contactLinks">
+                    <a class = "linkButtonWrapper" style = "text-decoration: none;" href = "https://github.com/derekGou/" target = "_blank">
+                        <img class = "icon" src = "images/github.svg">
+                    </a>
+                    <a class = "linkButtonWrapper" style = "text-decoration: none;" href = "https://www.instagram.com/go.u_de/" target = "_blank">
+                        <img class = "icon" src = "images/insta.svg">
+                    </a>
+                    <a class = "linkButtonWrapper" style = "text-decoration: none;" href = "https://leetcode.com/u/DerekG19/" target = "_blank">
+                        <img class = "icon" src = "images/leetcode.svg">
+                    </a>
+                    <a class = "linkButtonWrapper" style = "text-decoration: none;" href = "https://www.linkedin.com/in/derek-gou/" target = "_blank">
+                        <img class = "icon" src = "images/linkedin.svg">
+                    </a>
+                </div>
+            </div>
+            <div class = "backButton">
+                <div class = "leftArrow"></div>
+            </div>
+        </div>
+        <background1></background1>
+    </body>
+    <loader>
+        <div class = "circly"></div>
+    </loader>
+</html>
