@@ -411,7 +411,7 @@ textarea {
     justify-content: center;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.25);
-    padding: 2.5vh;
+    padding: 5vh;
     border-radius: 2.5vh;
     height: 90%;
 }
