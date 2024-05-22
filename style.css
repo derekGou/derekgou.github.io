@@ -296,6 +296,9 @@ input[type=text], input[type=email], textarea {
     border-radius: 0.5vh;
     box-sizing: border-box;
 }
+textarea {
+    height: 20vh;
+}
 input[type=submit] {
     width: 60vh;
     background-color: #2A8294;
@@ -411,7 +414,7 @@ textarea {
     justify-content: center;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.25);
-    padding: 5vh;
+    padding: 3vh;
     border-radius: 2.5vh;
     height: 90%;
 }
