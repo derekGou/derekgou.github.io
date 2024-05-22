@@ -93,9 +93,6 @@ function resume(){
             $('#page3').animate({
                 "opacity": "1"
             }, "slow");
-            $('.downloadsHolder').css({
-                "flex-direction": "row"
-            });
         } else {
             $('#page1').css({
                 "display": "none",
@@ -110,9 +107,6 @@ function resume(){
             $('#page3').css({
                 "display": "none",
                 "opacity": "0"
-            });
-            $('.downloadsHolder').css({
-                "flex-direction": "column"
             });
         }
         $('#resumeHold').css({
