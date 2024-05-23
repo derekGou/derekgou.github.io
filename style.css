@@ -243,7 +243,7 @@ h4 {
 }
 .downloadsHolder {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -394,7 +394,6 @@ textarea {
     display: none;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 .projectholder {
     position: absolute;
