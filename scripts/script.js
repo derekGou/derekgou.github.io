@@ -76,39 +76,12 @@ function resume(){
             });
         }, 1000);
     } else {
-        if ($(window).height()<=($(window).width()-(0.12*$(window).height()))){
-            $('#page1').css({
-                "display": "block"
-            });
-            $('#page1').animate({
-                "opacity": "1"
-            }, "slow");
-            $('#page2').css({
-                "display": "none",
-                "opacity": "0"
-            });
-            $('#page3').css({
-                "display": "block"
-            });
-            $('#page3').animate({
-                "opacity": "1"
-            }, "slow");
-        } else {
-            $('#page1').css({
-                "display": "none",
-                "opacity": "0"
-            });
-            $('#page2').css({
-                "display": "block"
-            });
-            $('#page2').animate({
-                "opacity": "1"
-            }, "slow");
-            $('#page3').css({
-                "display": "none",
-                "opacity": "0"
-            });
-        }
+        $('.page').css({
+            "display": "block"
+        });
+        $('.page').animate({
+            "opacity": "1"
+        }, "slow");
         $('#resumeHold').css({
             "display": "flex", 
             "height": "100vh", 
