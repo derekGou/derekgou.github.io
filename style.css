@@ -350,12 +350,20 @@ textarea {
     color: #6AB2C4;
 }
 .icon {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(0.5);
     height: 5vh;
+    transition: filter 0.5s;
 }
-#contactLinks {
-    background-color: rgba(255, 255, 255, 0.25);
-    margin: 2.5vh;
+.icon:hover {
+    filter: brightness(0) invert(1);
+    transition: filter 0.5s;
+}
+.contactLinks {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5vh;
+    background-color: rgba(125, 125, 125, 0.25);
     border-radius: 5vh;
     padding: 0.5vh;
     display: flex;
@@ -428,6 +436,7 @@ h5 {
     font-family: "IBM Plex Mono";
     color: white;
     font-weight: 300;
+    margin-top: 1.5vh;
     margin-bottom: 0;
     font-size: 1em;
 }
@@ -448,4 +457,24 @@ b {
 .cool:hover {
     color: #EEFFFF;
     transition: color 0.5s;
+}
+.tags {
+    margin-top: 1.5vh;
+    display: flex;
+    flex-direction: row;
+}
+.tag {
+    border-radius: 100vh;
+}
+.ttag {
+    background-color: rgba(240, 160, 255, 0.925);
+    width: fit-content;
+    font-size: 0.75em;
+    font-weight: 600;
+    font-family: "Open Sans";
+    cursor: default;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    white-space: nowrap;
+    margin: 0.25em;
 }
