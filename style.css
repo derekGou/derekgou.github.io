@@ -185,18 +185,18 @@ hl3 {
 .moreButtons {
     opacity: 0;
     display: none;
-    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 2.5vw;
+    padding: 0 2.5vw;
+    width: inherit;
+    flex-wrap: wrap;
 }
 .moreButton {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    margin: 0 3vh 0 0;
+    margin: 0 3vh 3vh 0;
     border: 0.75vh solid rgba(255, 255, 255, 0.925);
     border-radius: 1vh;
     cursor: pointer;
@@ -295,6 +295,8 @@ input[type=text], input[type=email], textarea {
     border: 1px solid #ccc;
     border-radius: 0.5vh;
     box-sizing: border-box;
+    font-family: "Open Sans";
+    font-size: 1em;
 }
 textarea {
     height: 20vh;
@@ -402,16 +404,19 @@ textarea {
     display: none;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    width: 90vw;
+    height: fit-content;
+    margin: 0 5vw;
+    top: 10vh;
 }
 .projectholder {
-    position: absolute;
     top: 10vh;
     height: fit-content;
     width: 90vw;
     display: grid;
-    gap: 5vh 5vh;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 5vh 2.5vw;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 0.5fr));
     padding-bottom: 10vh;
     justify-items: center;
     align-items: center;
@@ -477,4 +482,18 @@ b {
     border-radius: 0.25em;
     white-space: nowrap;
     margin: 0.25em;
+}
+#myInput {
+    width: max(100%, 350px);
+}
+.searchHolder {
+    margin-bottom: 5vh;
+    padding: 1vh 1vw;
+    border-radius: 0.5vh;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 68vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

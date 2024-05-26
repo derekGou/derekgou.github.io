@@ -143,8 +143,8 @@ function resizeMyName(){
             "height": phase*50+"vh",
             "align-items": "flex-start"
         });
-        $('.moreButton').css({"margin": "0 3vh 0 0"});
-        $('.moreButtons').css({"flex-direction": "row"});
+        $('.moreButton').css({"margin": "0 3vh 3vh 0"});
+        $('.moreButtons').css({"justify-content": "flex-start"});
         $('.vert').css({"justify-content": "center"});
     } else {
         myName.width = 0.50*$(window).width();
@@ -171,7 +171,7 @@ function resizeMyName(){
             "align-items": "center"
         });
         $('.moreButton').css({"margin": "1.5vh"});
-        $('.moreButtons').css({"flex-direction": "column"});
+        $('.moreButtons').css({"justify-content": "center"});
         $('.vert').css({"justify-content": "flex-start"});
     }
     spheres = [];
