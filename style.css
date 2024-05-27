@@ -411,15 +411,15 @@ textarea {
     top: 10vh;
 }
 .projectholder {
-    top: 10vh;
     height: fit-content;
     width: 90vw;
     display: grid;
     gap: 5vh 2.5vw;
     grid-template-columns: repeat(auto-fit, minmax(350px, 0.5fr));
+    grid-template-rows: auto;
     padding-bottom: 10vh;
-    justify-items: center;
-    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 .project {
     display: flex;
@@ -496,4 +496,73 @@ b {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+#myInput {
+    flex-grow: 1;
+    height: 5vh;
+    z-index: 100;
+}
+#searchMenu {
+    appearance: none;
+    -webkit-appearance: none;
+    outline-style: none;
+    box-shadow: none;
+    border: none;
+    font-family: "Open Sans";
+    font-size: 1em;
+    padding-right: 2.5vh;
+}
+#selectTags::-ms-expand {
+    display: none;
+}
+.select {
+    height: 5vh;
+    outline-style: none;
+    box-shadow: none;
+    border-radius: 0.5vh;
+    padding: 1vh 1.5vh;
+    margin: 1vh 0;
+    margin-right: 1%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: "select";
+    background-color: white;
+    position: relative;
+    align-items: center;
+}
+.select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: #000;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    pointer-events: none;
+}
+#searchMenu::-ms-expand {
+    display: none;
+}
+
+select, .select:after {
+    grid-area: select;
+}
+.select {
+    align-items: center;
+}
+.select:after {
+    justify-self: end;
+    margin-left: 2.5vh;
+}
+.focus {
+    position: absolute;
+    top: -1.5px;
+    left: -1.5px;
+    right: -1.5px;
+    bottom: -1.5px;
+    border: 2.5px solid transparent;
+    border-radius: inherit;
+    pointer-events: none;
+}
+select:focus + .focus {
+    border: 2.5px solid #3A92A4;
 }
