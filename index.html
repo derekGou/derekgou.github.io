@@ -19,6 +19,7 @@
         <script src="scripts/eventListeners.js" defer></script>
         <script src="scripts/canvas.js" defer></script>
         <script src="scripts/name.js" defer></script>
+        <script src="scripts/drop.js" defer></script>
         <script src="scripts/onload.js" defer></script>
     </head>
     <body>
@@ -68,23 +69,24 @@
             </div>
             <div class = "extra" id = projectHold>
                 <div class = "searchHolder">
-                    <div class = "select">
+                    <div class="select">
                         <select id = "searchMenu">
                             <option value="0">Search by tag</option>
                             <option value="1">Search by keyword</option>
                         </select>
-                        <span class="focus"></span>
                     </div>
-                    <input type = "text" id = "myInput" placeholder = "Your query" value = "">
+                    <div class="autocomplete" style="flex-grow: 1;">
+                        <input autocomplete="off" type = "text" id = "myInput" placeholder = "Your query" value = "">
+                    </div>
                 </div>
                 <div class = "projectholder"></div>
             </div>
             <div class = "extra" id = "resumeHold">
                 <div class = "resumeholder">
-                    <iframe class = "page" src="media/Derek Gou - Resume - UPDATED 5_23_24 - One Page.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+                    <iframe class = "page" src="media/Derek Gou - Resume - UPDATED 5_23_24.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
                 </div>
                 <div class = "downloadsHolder">
-                    <a style = "text-decoration: none;" href = "media/Derek Gou - Resume - UPDATED 5_23_24 - One Page.pdf" target = "_blank">
+                    <a style = "text-decoration: none;" href = "media/Derek Gou - Resume - UPDATED 5_23_24.pdf" target = "_blank">
                         <div class = "download">
                             <h3 class = "marg">Download resume</h3>
                         </div>

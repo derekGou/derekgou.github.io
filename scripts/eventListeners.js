@@ -11,4 +11,5 @@ window.addEventListener("resize", function(){
         }
     }, 1000);
     update();
+    document.getElementById('myInputautocomplete-list').style.width = $('#myInput').width()+"px";
 });
