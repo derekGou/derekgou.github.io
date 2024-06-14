@@ -334,7 +334,7 @@ input[type=submit] {
     justify-content: center;
 }
 input[type=text]:focus, input[type=email]:focus, textarea:focus {
-    outline: 2.5px solid #3A92A4;
+    outline: 2.5px solid #3A92A4 !important;
 }
 textarea {
     resize: none;
@@ -495,11 +495,13 @@ b {
     justify-content: center;
 }
 #myInput {
+    position: relative;
     flex-grow: 1;
     height: 5vh;
     z-index: 100;
     width: max(100%, 350px);
     margin: 0;
+    outline: 2.5px solid white;
 }
 #selectTags::-ms-expand {
     display: none;
@@ -527,6 +529,7 @@ b {
     padding-right: 1vh !important;
     width: 18vh;
     z-index: 51;
+    outline: 2.5px solid white;
 }
 .select-selected:after {
     position: absolute;
@@ -562,6 +565,8 @@ b {
     right: 0;
     z-index: 50;
     width: fit-content;
+    border-radius: 0 0 1vh 1vh;
+    overflow: hidden;
 }
 .select-hide {
     display: none;
@@ -604,5 +609,9 @@ b {
     text-align: left;
 }
 .select-selected:focus {
-    outline: 2.5px solid #3A92A4;
+    outline: 2.5px solid #3A92A4 !important;
+}
+#myInputautocomplete-list {
+    border-radius: 0 0 1vh 1vh;
+    overflow: hidden;
 }
