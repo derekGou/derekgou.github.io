@@ -1,13 +1,14 @@
-var x, i, j, l, ll, selElmnt, a, b, car;
+var x, i, j, l, ll, selElmnt, ar, b, car;
 x = document.getElementsByClassName("select");
 l = x.length;
 for (i = 0; i < l; i++) {
     selElmnt = x[i].getElementsByTagName("select")[0];
     ll = selElmnt.length;
-    a = document.createElement("DIV");
-    a.setAttribute("class", "select-selected");
-    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-    x[i].appendChild(a);
+    ar = document.createElement("DIV");
+    ar.setAttribute("class", "select-selected");
+    ar.setAttribute("tabindex", "1");
+    ar.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    x[i].appendChild(ar);
     b = document.createElement("DIV");
     b.setAttribute("class", "select-items select-hide");
     for (j = 0; j < 2; j++) {
@@ -36,7 +37,7 @@ for (i = 0; i < l; i++) {
         b.appendChild(car);
     }
     x[i].appendChild(b);
-    a.addEventListener("click", function(e) {
+    ar.addEventListener("click", function(e) {
         e.stopPropagation();
         closeAllSelect(this);
         this.nextSibling.classList.toggle("select-hide");

@@ -517,6 +517,7 @@ b {
     display: none;
 }
 .select-selected {
+    position: relative;
     background-color: white;
     height: 4vh;
     border-radius: 0.5vh;
@@ -524,7 +525,8 @@ b {
     align-items: center;
     justify-content: flex-start;
     padding-right: 1vh !important;
-    width: 18vh
+    width: 18vh;
+    z-index: 51;
 }
 .select-selected:after {
     position: absolute;
@@ -550,6 +552,7 @@ b {
     cursor: pointer;
     user-select: none;
     text-align: left;
+    width: 18vh;
 }
 .select-items {
     position: absolute;
@@ -557,7 +560,8 @@ b {
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 99;
+    z-index: 50;
+    width: fit-content;
 }
 .select-hide {
     display: none;
@@ -583,20 +587,22 @@ b {
     right: 0;
 }
 .autocomplete-items div {
-    padding: 10px;
+    padding: 1vh 1.5vh;
     cursor: pointer;
     background-color: #fff; 
     border-bottom: 1px solid #d4d4d4; 
+    font-family: "Open Sans";
 }
-
 .autocomplete-items div:hover {
     background-color: #e9e9e9; 
 }
-
 .autocomplete-active {
     background-color: #ddd !important; 
     color: #ffffff; 
 }
 #text {
     text-align: left;
+}
+.select-selected:focus {
+    outline: 2.5px solid #3A92A4;
 }

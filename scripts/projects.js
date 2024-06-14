@@ -1,8 +1,9 @@
 var lst = [
+    ["TouchUp", "https://dorahacks.io/buidl/13414", "images/touchUp (1).png", ["python", "hackathon", "project", "ai"], "A project that can <b> turn any computer into a touch-screen</b>, or let users to <b>control their device using hand gestures</b>. Placed <b class = 'cool'>First Overall at JamHacks8</b>."],
     ["SproutHacks", "https://sprouthacks.ca", "images/Sprouthacks Logo PNG Transparent.jpg", ["hackathon", "finance", "nonprofit", "event org"], "As <b>co-founder and co-lead</b>, I have <b class = 'cool'>raised over $1,300</b> for the event, while also aiding with <b>graphic design</b>, <b>web-dev</b>, and <b>logistics</b>."],
     ["RythmHacks", "https://rythmhacks.ca", "images/rythm.jpg", ["hackathon", "finance", "nonprofit", "event org"], "As <b>finance team lead</b>, I manage RythmHacks's finance team in seeking sponsorships, budgeting, and applying for grants."],
     ["WRSSCC", "https://wrsscc.vercel.app/", "images/WRSSCC.jpg", ["chess", "finance", "event org"], "I am the <b>co-founder and finance director</b> of <b class = 'cool'>Waterloo's biggest high school chess tournament</b>. I'm responsible for managing sponsorships for the event."],
-    ["WCI Math Team", "https://cemc.uwaterloo.ca/contests/ctmc.html", "images/ctmc.jpg", ["math"], "As a member of Waterloo Collegiate Institute's Math Team, I helped my team to a <b class = 'cool'>fourth-place finish nationally</b> at the <b>Canadian Team Mathematics Contest</b> this past year."],
+    ["WCI Math Team", "https://www.instagram.com/p/C7oves8OGzL/?hl=en&img_index=1", "images/ctmc.jpg", ["math"], "As a member of Waterloo Collegiate Institute's Math Team, I helped my team to a <b class = 'cool'>fourth-place finish nationally</b> at the <b>Canadian Team Mathematics Contest</b> this past year."],
     ["Portfolio Website", "https://github.com/derekGou/derekgou.github.io/", "images/LogoPFJPG.jpg", ["html+css", "js", "jquery", "webdev", "project"], "The <b class = 'cool'>website you're viewing</b> right now! Built from scratch with <b>HTML5</b>, <b>CSS3</b>, <b>JavaScript</b>, <b>jQuery</b>, and <b>Web3Forms</b>. All icons and canvases are <b class = 'cool'>designed by me</b>."],
     ["WebStylus", "https://devpost.com/software/webstylus", "images/webstylus.jpg", ["html+css", "js", "hackathon", "extension", "project"], "A <b>QOL Chrome Extension</b> with features such as Dark/Light Mode and AI alt-text generation. Submitted to RythmHacks 2023."],
     ["Emoɉion", "https://devpost.com/software/emo-ion", "images/emojion.jpg", ["html+css", "js", "hackathon", "extension", "project"], "A <b>speech-to-text Chrome extension</b> that <b>annotates the speaker's emotion</b> through an animated emoji."],
@@ -46,6 +47,7 @@ function proj(input){
     project.setAttribute("filter", [name].concat(tags, [description]).flat().toString().replaceAll("<b>", "").replaceAll("<b class = 'cool'>").replaceAll("</b>", ""));
     document.getElementsByClassName("projectholder")[0].appendChild(project);
     searchTags.push(...tags);
+    project.setAttribute("searchTags", tags)
 }
 
 for (let i = 0; i<lst.length; i++){
@@ -53,49 +55,58 @@ for (let i = 0; i<lst.length; i++){
 }
 $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    $(".projectholder .project").filter(function() {
-        $(this).toggle($(this).attr("filter").toLowerCase().indexOf(value) > -1);
-    });
+    if ($("#searchMenu")[0].value == "0"){
+        $(".projectholder .project").filter(function() {
+            $(this).toggle($(this).attr("searchTags").toString().indexOf(value) > -1);
+        });
+    } else {
+        $(".projectholder .project").filter(function() {
+            $(this).toggle($(this).attr("filter").toLowerCase().indexOf(value) > -1);
+        });
+    }
 });
 
 function autocomplete(inp, arr) {
     var currentFocus;
     inp.addEventListener("input", function(e) {
-        var a, b, i, val = this.value;
-        closeAllLists();
-        if (!val) { return false;}
-        currentFocus = -1;
-        a = document.createElement("DIV");
-        a.setAttribute("id", this.id + "autocomplete-list");
-        a.setAttribute("class", "autocomplete-items");
-        this.parentNode.appendChild(a);
-        for (i = 0; i < arr.length; i++) {
-            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                b = document.createElement("DIV");
-                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                b.innerHTML += arr[i].substr(val.length);
-                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                b.addEventListener("click", function(e) {
-                    inp.value = this.getElementsByTagName("input")[0].value;
-                    closeAllLists();
-                });
-                a.appendChild(b);
+        if ($("#searchMenu")[0].value == "0"){var a, b, i, val = this.value;
+            closeAllLists();
+            if (!val) { return false;}
+            currentFocus = -1;
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            this.parentNode.appendChild(a);
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    b = document.createElement("DIV");
+                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(val.length);
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    b.addEventListener("click", function(e) {
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
             }
         }
     });
     inp.addEventListener("keydown", function(e) {
-        var x = document.getElementById(this.id + "autocomplete-list");
-        if (x) x = x.getElementsByTagName("div");
-        if (e.keyCode == 40) {
-            currentFocus++;
-            addActive(x);
-        } else if (e.keyCode == 38) {
-            currentFocus--;
-            addActive(x);
-        } else if (e.keyCode == 13) {
-            e.preventDefault();
-            if (currentFocus > -1) {
-                if (x) x[currentFocus].click();
+        if ($("#searchMenu")[0].value == "0"){
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+                currentFocus++;
+                addActive(x);
+            } else if (e.keyCode == 38) {
+                currentFocus--;
+                addActive(x);
+            } else if (e.keyCode == 13) {
+                e.preventDefault();
+                if (currentFocus > -1) {
+                    if (x) x[currentFocus].click();
+                }
             }
         }
     });
