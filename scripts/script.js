@@ -43,6 +43,7 @@ function projects(){
             "opacity": "1"
         }, "slow");
     }
+    searchResize();
 }
 function resume(){
     if (showing[1]==0){

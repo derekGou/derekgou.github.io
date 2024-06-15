@@ -12,3 +12,4 @@ for (let i=0; i<50; i++){
     dist = Math.pow(Math.random(), 0.75)*(num-$(window).height())+($(window).height());
     stars.push([dist, Math.PI*Math.random(), speed]);
 }
+searchResize()

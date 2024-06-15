@@ -1,11 +1,12 @@
 var lst = [
     ["TouchUp", "https://dorahacks.io/buidl/13414", "images/touchUp (1).png", ["python", "hackathon", "project", "ai"], "A project that can <b> turn any computer into a touch-screen</b>, or let users to <b>control their device using hand gestures</b>. Placed <b class = 'cool'>First Overall at JamHacks8</b>."],
     ["SproutHacks", "https://sprouthacks.ca", "images/Sprouthacks Logo PNG Transparent.jpg", ["hackathon", "finance", "nonprofit", "event org"], "As <b>co-founder and co-lead</b>, I have <b class = 'cool'>raised over $1,300</b> for the event, while also aiding with <b>graphic design</b>, <b>web-dev</b>, and <b>logistics</b>."],
-    ["RythmHacks", "https://rythmhacks.ca", "images/rythm.jpg", ["hackathon", "finance", "nonprofit", "event org"], "As <b>finance team lead</b>, I've <b class = 'cool'>led my team in raising $20k+</b> in sponsorships for our event."],
+    ["RythmHacks", "https://rythmhacks.ca", "images/rythm.jpg", ["hackathon", "finance", "nonprofit", "event org"], "As <b>finance team lead</b>, I manage RythmHacks's finance team in seeking sponsorships, budgeting, and applying for grants."],
     ["WRSSCC", "https://wrsscc.vercel.app/", "images/WRSSCC.jpg", ["chess", "finance", "event org"], "I am the <b>co-founder and finance director</b> of <b class = 'cool'>Waterloo's biggest high school chess tournament</b>. I'm responsible for managing sponsorships for the event."],
     ["WCI Math Team", "https://www.instagram.com/p/C7oves8OGzL/?hl=en&img_index=1", "images/ctmc.jpg", ["math"], "As a member of Waterloo Collegiate Institute's Math Team, I helped my team to a <b class = 'cool'>fourth-place finish nationally</b> at the <b>Canadian Team Mathematics Contest</b> this past year."],
     ["Portfolio Website", "https://github.com/derekGou/derekgou.github.io/", "images/LogoPFJPG.jpg", ["html+css", "js", "jquery", "webdev", "project"], "The <b class = 'cool'>website you're viewing</b> right now! Built from scratch with <b>HTML5</b>, <b>CSS3</b>, <b>JavaScript</b>, <b>jQuery</b>, and <b>Web3Forms</b>. All icons and canvases are <b class = 'cool'>designed by me</b>."],
     ["WebStylus", "https://devpost.com/software/webstylus", "images/webstylus.jpg", ["html+css", "js", "hackathon", "extension", "project"], "A <b>QOL Chrome Extension</b> with features such as Dark/Light Mode and AI alt-text generation. Submitted to RythmHacks 2023."],
+    ["Hoohle", "https://chromewebstore.google.com/detail/hoohle-search-google-sear/jmjckdfpipjhodceglcomigogkodllbe", "images/hoohle.jpg", ["html+css", "js", "extension", "project"], "An <b>advanced search chrome extension</b>, which also allows for advanced image and file search."],
     ["Emoɉion", "https://devpost.com/software/emo-ion", "images/emojion.jpg", ["html+css", "js", "hackathon", "extension", "project"], "A <b>speech-to-text Chrome extension</b> that <b>annotates the speaker's emotion</b> through an animated emoji."],
     ["Phishy", "https://devpost.com/software/phishy/", "images/Phishy.jpg", ["html+css", "js", "hackathon", "extension", "project", "ai"], "A <b>ML-powered Chrome Extension</b> that detects and flags phishing emails. Winner of <b><b class = 'cool'>Best Beginner Hack</b> and <b class = 'cool'>4th overall</b> at JamHacks7</b>."]
 ];
@@ -136,4 +137,35 @@ function autocomplete(inp, arr) {
     });
 }
 
+function searchResize(){
+    if ($(window).width()>$(window).height()){
+        $('.searchHolder').css({
+            "flex-direction": "row",
+            "align-items": "center"
+        })
+        $('.select').css({
+            "width": "25vh",
+            "margin-right": "3vh"
+        })
+        $('.select-selected').css({
+            "width": "23vh"
+        })
+    } else {
+        $('.searchHolder').css({
+            "flex-direction": "column",
+            "align-items": "flex-start"
+        })
+        console.log($('#myInput').width())
+        $('.select').css({
+            "width": $('#myInput').width()+"px",
+            "flex-grow": "1",
+            "margin-right": "0"
+        })
+        $('.select-selected').css({
+            "width": "100%"
+        })
+    }
+}
+
 autocomplete(document.getElementById("myInput"), [...new Set(searchTags)]);
+searchResize()

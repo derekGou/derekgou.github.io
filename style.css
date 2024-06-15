@@ -499,7 +499,7 @@ b {
     flex-grow: 1;
     height: 5vh;
     z-index: 100;
-    width: max(100%, 350px);
+    width: 100%;
     margin: 0;
     outline: 2.5px solid white;
 }
@@ -512,8 +512,9 @@ b {
     height: 100%;
     margin: 1vh 0;
     border-radius: 0.5vh;
-    margin-right: 2vh !important;
+    margin-right: 2vh;
     width: 20vh;
+    z-index: 100;
 }
 .select select {
     display: none;
@@ -526,9 +527,9 @@ b {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-right: 1vh !important;
+    padding: 1vh 1.5vh;
     width: 18vh;
-    z-index: 51;
+    z-index: 100;
     outline: 2.5px solid white;
 }
 .select-selected:after {
@@ -549,7 +550,7 @@ b {
 }
 .select-items div,.select-selected {
     color: #000;
-    padding: 0.5vh 1vh;
+    padding: 0.5vh 1.5vh;
     border: 1px solid transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
@@ -563,7 +564,7 @@ b {
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 50;
+    z-index: 99;
     width: fit-content;
     border-radius: 0 0 1vh 1vh;
     overflow: hidden;
@@ -580,13 +581,15 @@ b {
 .autocomplete {
     position: relative;
     display: inline-block;
+    width: 100%;
+    z-index: 98;
 }
 .autocomplete-items {
     position: absolute;
     border: 1px solid #d4d4d4;
     border-bottom: none;
     border-top: none;
-    z-index: 99;
+    z-index: 97;
     top: 100%;
     left: 0;
     right: 0;
