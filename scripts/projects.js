@@ -10,9 +10,39 @@ var lst = [
     ["Emoɉion", "https://devpost.com/software/emo-ion", "images/emojion.jpg", ["html+css", "js", "hackathon", "extension", "project"], "A <b>speech-to-text Chrome extension</b> that <b>annotates the speaker's emotion</b> through an animated emoji."],
     ["Phishy", "https://devpost.com/software/phishy/", "images/Phishy.jpg", ["html+css", "js", "hackathon", "extension", "project", "ai"], "A <b>ML-powered Chrome Extension</b> that detects and flags phishing emails. Winner of <b><b class = 'cool'>Best Beginner Hack</b> and <b class = 'cool'>4th overall</b> at JamHacks7</b>."]
 ];
+
+var tagStore = [];
+
+function renderTags(textInput){
+    let root = document.getElementsByClassName("myInput")[0];
+    let div = document.createElement("div");
+    div.classList.add("tagHolder");
+    let h4 = document.createElement("h4");
+    h4.innerHTML = textInput;
+    h4.classList.add("ttag");
+    h4.classList.add("searchItem");
+    div.appendChild(h4);
+    let closeButton = document.createElement("div");
+    closeButton.classList.add("closeButton");
+    closeButton.setAttribute("valeur", textInput);
+    closeButton.innerHTML = "×";
+    closeButton.addEventListener("click", function(){
+        const index = tagStore.indexOf(this.getAttribute("valeur"));
+        if (index!=-1){
+            tagStore.splice(index, 1);
+        }
+        console.log(tagStore);
+        console.log(index)
+        this.parentElement.remove();
+    })
+    div.appendChild(closeButton);
+    root.append(div);
+    tagStore.push(textInput);
+}
+
 var searchTags = [];
 function proj(input){
-    let [name, url, logo, tags, description] = input
+    let [name, url, logo, tags, description] = input;
     let project = document.createElement("div");
     project.classList.add("project");
     let h3 = document.createElement("h3");
@@ -21,7 +51,7 @@ function proj(input){
     h3.classList.add("notop");
     project.appendChild(h3);
     let wrap = document.createElement("a");
-    wrap.classList.add("aprologo")
+    wrap.classList.add("aprologo");
     wrap.style.textDecoration = "none";
     wrap.href = url;
     wrap.target = "_blank";
@@ -48,7 +78,7 @@ function proj(input){
     project.setAttribute("filter", [name].concat(tags, [description]).flat().toString().replaceAll("<b>", "").replaceAll("<b class = 'cool'>").replaceAll("</b>", ""));
     document.getElementsByClassName("projectholder")[0].appendChild(project);
     searchTags.push(...tags);
-    project.setAttribute("searchTags", tags)
+    project.setAttribute("searchTags", tags);
 }
 
 for (let i = 0; i<lst.length; i++){
@@ -72,7 +102,9 @@ function autocomplete(inp, arr) {
     inp.addEventListener("input", function(e) {
         if ($("#searchMenu")[0].value == "0"){var a, b, i, val = this.value;
             closeAllLists();
-            if (!val) { return false;}
+            if (!val) {
+                return false;
+            }
             currentFocus = -1;
             a = document.createElement("DIV");
             a.setAttribute("id", this.id + "autocomplete-list");
@@ -85,8 +117,9 @@ function autocomplete(inp, arr) {
                     b.innerHTML += arr[i].substr(val.length);
                     b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                     b.addEventListener("click", function(e) {
-                        inp.value = this.getElementsByTagName("input")[0].value;
                         closeAllLists();
+                        renderTags(this.getElementsByTagName("input")[0].value);
+                        inp.value = "";
                     });
                     a.appendChild(b);
                 }
@@ -142,30 +175,30 @@ function searchResize(){
         $('.searchHolder').css({
             "flex-direction": "row",
             "align-items": "center"
-        })
+        });
         $('.select').css({
             "width": "25vh",
             "margin-right": "3vh"
-        })
+        });
         $('.select-selected').css({
             "width": "23vh"
-        })
+        });
     } else {
         $('.searchHolder').css({
             "flex-direction": "column",
             "align-items": "flex-start"
-        })
+        });
         console.log($('#myInput').width())
         $('.select').css({
             "width": $('#myInput').width()+"px",
             "flex-grow": "1",
             "margin-right": "0"
-        })
+        });
         $('.select-selected').css({
             "width": "100%"
-        })
+        });
     }
 }
 
 autocomplete(document.getElementById("myInput"), [...new Set(searchTags)]);
-searchResize()
+searchResize();

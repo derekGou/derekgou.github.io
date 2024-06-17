@@ -495,6 +495,18 @@ b {
     justify-content: center;
 }
 #myInput {
+    flex-grow: 1 !important;
+    border-radius: 0.25vh !important;
+}
+.myInput {
+    background-color: white;
+    padding: 1vh 0.25vh;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 0.5vh;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    font-size: 1em;
     position: relative;
     flex-grow: 1;
     height: 5vh;
@@ -502,6 +514,8 @@ b {
     width: 100%;
     margin: 0;
     outline: 2.5px solid white;
+    align-items: center;
+    flex-direction: row-reverse;
 }
 #selectTags::-ms-expand {
     display: none;
@@ -556,7 +570,7 @@ b {
     cursor: pointer;
     user-select: none;
     text-align: left;
-    width: 18vh;
+    width: 23vh;
 }
 .select-items {
     position: absolute;
@@ -580,9 +594,12 @@ b {
 }
 .autocomplete {
     position: relative;
-    display: inline-block;
+    display: flex;
     width: 100%;
     z-index: 98;
+    vertical-align: middle;
+    align-items: center;
+    flex-direction: row-reverse;
 }
 .autocomplete-items {
     position: absolute;
@@ -617,4 +634,36 @@ b {
 #myInputautocomplete-list {
     border-radius: 0 0 1vh 1vh;
     overflow: hidden;
+}
+.searchItem {
+    mix-blend-mode: darken !important;
+    margin-right: 0.75vh;
+    border-radius: 0 !important;
+    margin: 0 0 0 auto;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+}
+.closeButton {
+    background-color: rgba(240, 130, 240, 1);
+    width: 2vh;
+    height: 2vh;
+    border-radius: 0.5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1vh;
+    cursor: pointer;
+}
+.tagHolder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(240, 160, 255, 0.75);
+    border-radius: 0.5vh !important;
+    border: none;
+    margin: auto 1vh;
 }
