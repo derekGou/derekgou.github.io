@@ -1,5 +1,6 @@
 # Derek's Website
 ![sunset5in](https://github.com/derekGou/derekgou.github.io/assets/134746288/6069d122-8014-44e0-bc12-7b92b710fc3a)\
+\
 Welcome to my portfolio website, inspired by ([whatismissing.org](https://whatismissing.org))!
 
 ## Built With:
