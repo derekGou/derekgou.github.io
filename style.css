@@ -497,6 +497,8 @@ b {
 #myInput {
     flex-grow: 1 !important;
     border-radius: 0.25vh !important;
+    padding-top: 0.25vh !important;
+    padding-bottom: 0.25vh !important;
 }
 .myInput {
     background-color: white;
@@ -516,6 +518,7 @@ b {
     outline: 2.5px solid white;
     align-items: center;
     flex-direction: row-reverse;
+    flex-wrap: initial;
 }
 #selectTags::-ms-expand {
     display: none;
@@ -639,7 +642,7 @@ b {
     mix-blend-mode: darken !important;
     margin-right: 0.75vh;
     border-radius: 0 !important;
-    margin: 0 0 0 auto;
+    margin: 0 !important;
     font-size: 1em;
     display: flex;
     flex-direction: row;
