@@ -497,12 +497,13 @@ b {
 #myInput {
     flex-grow: 1 !important;
     border-radius: 0.25vh !important;
-    padding-top: 0.25vh !important;
-    padding-bottom: 0.25vh !important;
+    width: auto !important;
+    height: 4.6vh;
+    width: 92%;
 }
 .myInput {
     background-color: white;
-    padding: 1vh 0.25vh;
+    padding: 0 0.25vh;
     display: flex;
     border: 1px solid #ccc;
     border-radius: 0.5vh;
@@ -511,14 +512,13 @@ b {
     font-size: 1em;
     position: relative;
     flex-grow: 1;
-    height: 5vh;
+    height: 5.5vh;
     z-index: 100;
     width: 100%;
     margin: 0;
     outline: 2.5px solid white;
     align-items: center;
     flex-direction: row-reverse;
-    flex-wrap: initial;
 }
 #selectTags::-ms-expand {
     display: none;
@@ -642,11 +642,14 @@ b {
     mix-blend-mode: darken !important;
     margin-right: 0.75vh;
     border-radius: 0 !important;
-    margin: 0 !important;
+    margin: auto;
+    margin-right: 0;
     font-size: 1em;
     display: flex;
     flex-direction: row;
     background: transparent;
+    height: 100%;
+    position: relative;
 }
 .closeButton {
     background-color: rgba(240, 130, 240, 1);

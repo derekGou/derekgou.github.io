@@ -63,6 +63,13 @@ function closeAllSelect(elmnt) {
             x[i].classList.add("select-hide");
         }
     }
+    if ($("#searchMenu")[0].value == "1"){
+        tagStore = [];
+        tagsRemove = document.getElementsByClassName('tagHolder');
+        for (let i = 0; i<tagsRemove.length; i++){
+            tagsRemove[i].remove();
+        }
+    }
 }
 
 document.addEventListener("click", closeAllSelect);

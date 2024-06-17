@@ -88,7 +88,11 @@ $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     if ($("#searchMenu")[0].value == "0"){
         $(".projectholder .project").filter(function() {
-            $(this).toggle($(this).attr("searchTags").toString().indexOf(value) > -1);
+            const all = (arr, fn = Boolean) => arr.every(fn);
+            let tempTags = tagStore.slice();
+            tempTags.push(document.getElementById("myInput").value);
+            let myBool = all(tempTags.map((x) => $(this).attr("searchTags").toString().indexOf(x)>-1));
+            $(this).toggle(myBool);
         });
     } else {
         $(".projectholder .project").filter(function() {
@@ -100,7 +104,8 @@ $("#myInput").on("keyup", function() {
 function autocomplete(inp, arr) {
     var currentFocus;
     inp.addEventListener("input", function(e) {
-        if ($("#searchMenu")[0].value == "0"){var a, b, i, val = this.value;
+        if ($("#searchMenu")[0].value == "0"){
+            var a, b, i, val = this.value;
             closeAllLists();
             if (!val) {
                 return false;
@@ -188,14 +193,12 @@ function searchResize(){
             "flex-direction": "column",
             "align-items": "flex-start"
         });
-        console.log($('#myInput').width())
         $('.select').css({
-            "width": $('#myInput').width()+"px",
             "flex-grow": "1",
             "margin-right": "0"
         });
         $('.select-selected').css({
-            "width": "100%"
+            "width": ($('.myInput').width()-0.03*$(window).height()+3.5)+"px",
         });
     }
 }
