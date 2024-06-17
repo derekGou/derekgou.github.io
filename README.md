@@ -8,7 +8,7 @@ Welcome to my portfolio website, inspired by ([whatismissing.org](https://whatis
 <code><img height="40" src="https://cdn.worldvectorlogo.com/logos/jquery-4.svg"></code>
 
 ## Credits:
-### All graphics are made by me, with the exception of:
+### All graphics are made by me (including icons, images, Javascript canvases, etc.), with the exception of:
 + SproutHacks logo ([SproutHacks website](https://sprouthacks.ca/))
 + RythmHacks logo ([RythmHacks website](https://rythmhacks.ca/))
 + CTMC photo ([Waterloo Region District School Board Instagram](https://www.instagram.com/p/C7oves8OGzL/?img_index=1))
