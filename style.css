@@ -374,6 +374,7 @@ textarea {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: fit-content;
 }
 .download {
     background-color: rgba(255, 255, 255, 0.25);

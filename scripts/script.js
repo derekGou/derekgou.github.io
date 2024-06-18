@@ -188,12 +188,15 @@ function contactLink(){
         document.getElementsByClassName("contactLinks")[0].style.scale = "0.75";
         $(".contactLinks").css({
             "bottom": "2.5vh",
-            "right": $(window).width()/2+'px'
+            "right": $(window).width()/2+'px',
+            "transform": "translateX(-62.5%)"
         })
     } else {
         document.getElementsByClassName("contactLinks")[0].style.scale = "1";
         $(".contactLinks").css({
-            "bottom": "5vh"
+            "bottom": "5vh",
+            "right": "auto",
+            "transform": "translateX(-50%)"
         })
     }
 }

@@ -31,8 +31,6 @@ function renderTags(textInput){
         if (index!=-1){
             tagStore.splice(index, 1);
         }
-        console.log(tagStore);
-        console.log(index)
         this.parentElement.remove();
     })
     div.appendChild(closeButton);
