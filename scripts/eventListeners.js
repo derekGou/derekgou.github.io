@@ -14,5 +14,7 @@ window.addEventListener("resize", function(){
     $('#myInputautocomplete-list').css({
         "wdith": $('#myInput').width()+"px"
     });
-    searchResize()
+    searchResize();
+    h4Buttons();
+    contactLink();
 });

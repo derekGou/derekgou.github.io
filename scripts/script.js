@@ -173,3 +173,27 @@ function unclear(){
         $('.backButton').css("display", "none");
     }, 1500);
 }
+function h4Buttons(){
+    let h4Butts = document.getElementsByClassName("h4Button");
+    let h4Widths = []
+    for (let i = 0; i<3; i++){
+        h4Widths.push(h4Butts[i].style.width);
+    }
+    for (let i = 0; i<3; i++){
+        h4Butts[i].style.width = Math.max(h4Widths);
+    }
+}
+function contactLink(){
+    if ($(window).width()<$(window).height()){
+        document.getElementsByClassName("contactLinks")[0].style.scale = "0.75";
+        $(".contactLinks").css({
+            "bottom": "2.5vh",
+            "right": $(window).width()/2+'px'
+        })
+    } else {
+        document.getElementsByClassName("contactLinks")[0].style.scale = "1";
+        $(".contactLinks").css({
+            "bottom": "5vh"
+        })
+    }
+}

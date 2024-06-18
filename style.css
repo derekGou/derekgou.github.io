@@ -205,7 +205,9 @@ h4 {
     color: black;
 	mix-blend-mode: lighten;
     background-color: rgba(255, 255, 255, 0.925);
-    width: 16vh;
+    width: fit-content;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
     font-size: 1em;
     margin: 0;
     font-weight: 800;

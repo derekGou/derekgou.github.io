@@ -76,6 +76,7 @@ introButton.onclick = function(){
             opacity: "1"
         }, "slow");
     }, 2000);
+    h4Buttons();
 }
 class star {
     constructor(){
