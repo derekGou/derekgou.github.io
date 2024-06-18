@@ -15,6 +15,5 @@ window.addEventListener("resize", function(){
         "wdith": $('#myInput').width()+"px"
     });
     searchResize();
-    h4Buttons();
     contactLink();
 });

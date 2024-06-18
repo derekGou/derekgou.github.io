@@ -13,5 +13,4 @@ for (let i=0; i<50; i++){
     stars.push([dist, Math.PI*Math.random(), speed]);
 }
 searchResize();
-h4Buttons();
 contactLink();
