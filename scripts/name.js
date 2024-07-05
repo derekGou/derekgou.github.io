@@ -35,6 +35,9 @@ introButton.onclick = function(){
             "display": "none",
             "z-index": "-2"
         })
+        $('.part2').css({
+            "display": "flex"
+        })
     }, 500);
     setTimeout(function(){
         $('background').animate({

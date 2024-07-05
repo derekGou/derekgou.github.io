@@ -121,6 +121,9 @@ h2 {
     font-size: 2.5em;
     font-weight: 600;
     margin: 0 2.5vw;
+    @media only screen and (max-width: 768px) {
+        font-size: 1.5em;
+    }
 }
 background {
     z-index: -2;
@@ -150,6 +153,9 @@ h3 {
     color: white;
     margin: 2vh 2.5vw;
     font-weight: 300;
+    @media only screen and (max-width: 768px) {
+        font-size: 1em;
+    }
 }
 @keyframes pulse-animation {
     0% {
@@ -675,4 +681,17 @@ b {
     border-radius: 0.5vh !important;
     border: none;
     margin: auto 1vh;
+}
+.part2 {
+    opacity: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 100vh;
 }
