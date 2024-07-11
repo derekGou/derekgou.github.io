@@ -17,7 +17,7 @@ function calculate(lst){
 }
 
 function generate(){
-    if (Math.random()>0.98&&phase==1){
+    if (Math.random()>0.90&&phase==1){
         speed = (Math.random()+1)*0.0006;
         dist = Math.pow(Math.random(), 0.75)*(num-$(window).height())+($(window).height());
         stars.push([dist, 0, speed]);

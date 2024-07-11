@@ -16,8 +16,8 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
         <script src="scripts/script.js" defer></script>
         <script src="scripts/eventListeners.js" defer></script>
-        <script src="scripts/canvas.js" defer></script>
         <script src="scripts/name.js" defer></script>
+        <script src="scripts/canvas.js" defer></script>
         <script src="scripts/drop.js" defer></script>
         <script src="scripts/projects.js" defer></script>
         <script src="scripts/onload.js" defer></script>
@@ -34,8 +34,7 @@
                     <h2>Hi, I'm Derek</h2>
                     <h3>
                         I'm a <hl1>software developer</hl1> and <hl1>high school student</hl1> from Waterloo, Ontario. 
-                        I enjoy <hl2>web developing</hl2>, <hl2>web scraping</hl2>, and <hl2>competitive coding</hl2>. 
-                        I'm currently seeking cool <hl3>opportunities</hl3> and <hl3>internships</hl3>! 
+                        <hl2>Click around below</hl2>, or <hl3>scroll down</hl3> for more information!
                     </h3>
                     <div class = "moreButtons">
                         <div class = "moreButton" id = "projects" tabindex="1" >
@@ -116,18 +115,32 @@
         <background1></background1>
         <div class = "part2">
             <div class = "infoHold">
-                <div class = "infos bio">
-                    <div class = "photo">
-                        <img id = "photo" src = "images/Copy of IMG_1077.jpg">
-                        <img id = "overlay" src = "images/Copy of IMG_1077.png">
+                <div style = "display: flex; flex-direction: column;">
+                    <h2 class = "infoTitle">More About Me</h2>
+                    <hr>
+                    <div style = "display: flex; flex-direction: row;">
+                        <div class = "infos bio">
+                            <div class = "photo">
+                                <img id = "overlay" src = "images/Copy of IMG_1077.png">
+                                <img id = "photo" src = "images/Copy of IMG_1077.jpg">
+                            </div>
+                            <h3 class = "infoBio">I'm a <hl1>software developer</hl1>, and <hl1>student</hl1> @ Waterloo Collegiate Institute.</h3>
+                            <h3 class = "infoBio">Here are some of the things I'm currently up to:</h3>
+                            <ul>
+                                <li>As a <hl2>web-dev intern @ the <a style = "color: #4ADE80 !important;" href = "https://cilc.ca">CILC</a></hl2>, I'm building a website from scratch using <hl3></hl3>ReactJS</hl3>, as well as a <hl3>CMS</hl3> for the website.</li>
+                                <li>In September 2023, I <hl2>co-founded <a style = "color: #4ADE80 !important;" href = "https://sprouthacks.ca">SproutHacks</a></hl2>. So far, we've <hl3>raised thousands</hl3> for our November event @ EPAM Systems Kitchener.</li>
+                                <li>I'm currently the <hl2>finance team lead @ <a style = "color: #4ADE80 !important;" href = "https://rythmhacks.ca">RythmHacks</a></hl2>, where I've led my team in raising <hl3>over $20k in sponsorships</hl3> in preparation for our event this fall.</li>
+                                <li>A few peers and I are working on building a <hl2>modular home-use drone</hl2> with instant charging capabilities. <hl3>More info coming soon</hl3>!</li>
+                            </ul>
+                        </div>
+                        <div class = "infos skills">
+                            <h3 class = "infoSub">As an experienced software developer, some of my skill include:</h3>
+                            <div class = "skillsList"></div>
+                        </div>
+                        <div class = "infos exp">
+        
+                        </div>
                     </div>
-                    <h3></h3>
-                </div>
-                <div class = "infos skills">
-
-                </div>
-                <div class = "infos exp">
-
                 </div>
             </div>
         </div>

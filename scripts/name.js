@@ -23,6 +23,7 @@ function pixelsize(){
     }
 }
 introButton.onclick = function(){
+    window.scrollTo(0, 0);
     phase = 1;
     for (let i=0; i<spheres.length; i++){
         spheres[i].update();
@@ -150,8 +151,8 @@ function resizeMyName(){
         $('.moreButtons').css({"justify-content": "flex-start"});
         $('.vert').css({"justify-content": "center"});
     } else {
-        myName.width = 0.50*$(window).width();
-        myName.height = 0.50*$(window).width();
+        myName.width = 0.40*$(window).width();
+        myName.height = 0.40*$(window).width();
         $('#introButton').css({
             "width": 0.50*$(window).width()+"px", 
             "height": 0.50*$(window).width()+"px"
