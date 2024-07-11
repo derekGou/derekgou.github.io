@@ -16,4 +16,5 @@ window.addEventListener("resize", function(){
     });
     searchResize();
     contactLink();
+    renderSkills();
 });

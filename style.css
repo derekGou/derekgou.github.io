@@ -191,6 +191,10 @@ hl3 {
     color: #77BBFF !important;
     font-weight: 400;
 }
+hl4 {
+    color: #999 !important;
+    font-weight: 400;
+}
 .moreButtons {
     opacity: 0;
     display: none;
@@ -717,14 +721,14 @@ b {
 }
 .photo {
     position: relative;
-    width: 26vw;
+    width: 24vw;
     aspect-ratio: 3/2;
     overflow: hidden;
     cursor: pointer;
 }
 .infos {
     flex-grow: 1;
-    width: 26vw;
+    width: 24vw;
 }
 #overlay {
     position: absolute;
@@ -732,7 +736,7 @@ b {
     top: 0;
     opacity: 0;
     transition: opacity 1s;
-    width: 26vw;
+    width: 24vw;
     aspect-ratio: 3/2;
     z-index: 100;
 }
@@ -743,7 +747,7 @@ b {
     -webkit-filter: brightness(100%) grayscale(100%);
     filter: brightness(100%) grayscale(100%);
     transition: filter 1s, -webkit-filter 1s;
-    width: 26vw;
+    width: 24vw;
     aspect-ratio: 3/2;
     cursor: pointer;
 }
@@ -751,6 +755,7 @@ b {
     margin: 0 !important;
     font-size: 2em;
     font-family: "IBM Plex Mono";
+    text-align: center !important;
 }
 .photo:hover #overlay {
     opacity: 1;
@@ -764,22 +769,69 @@ b {
 .infoBio {
     margin-left: 0 !important;
     margin-right: 0 !important;
-    width: 26vw;
+    width: 24vw;
+    text-align: left !important;
 }
 .skills {
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
 }
 ul {
     font-family: "IBM Plex Mono";
-    list-style-type: circle;
+    list-style-type: disc;
     color: white;
-    width: 26vw;
+    width: 24vw;
     box-sizing: border-box;
     font-weight: 200;
     font-size: 1em;
 }
+li::marker {
+    color: #ffcc00 !important;
+}
 hr {
     width: 100%;
     margin-bottom: 25px;
+}
+.infoSub {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+    opacity: 1 !important;
+    display: block !important;
+}
+.pBar {
+    width: 24vw;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 10px;
+}
+.skillName {
+    margin-bottom: 5px !important;
+}
+.White {
+    position: absolute;
+    background-color: white !important;
+}
+@media only screen and (max-width: 900px) {
+    .photo, .infos, #overlay, #photo, ul, .pBar, .infoBio {
+        width: 36vw;
+    }
+    .skills {
+        margin-left: 8vw;
+        margin-right: 0;
+    }
+    .ul2, .exp, .infoSub2 {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .photo, .infos, #overlay, #photo, ul, .pBar, .ul2, .exp, .infoSub2, .infoBio {
+        width: 100%;
+    }
+    .skills {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
