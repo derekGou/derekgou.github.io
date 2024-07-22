@@ -1,7 +1,7 @@
 # Derek's Website
 ![sunset5in](https://github.com/derekGou/derekgou.github.io/assets/134746288/6069d122-8014-44e0-bc12-7b92b710fc3a)\
 \
-Welcome to my portfolio website, inspired by ([whatismissing.org](https://whatismissing.org))!
+Welcome to Derek Gou's portfolio website, inspired by ([whatismissing.org](https://whatismissing.org))!
 
 ## Built With:
 <code><img height="40" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png"></code>
