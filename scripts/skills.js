@@ -1,15 +1,16 @@
 var skills = [
     ["Python", 90],
     ["HTML", 95],
-    ["CSS", 90],
+    ["CSS", 95],
     ["Javascript", 80],
     ["Typescript", 50],
     ["Processing", 60],
     ["C++", 10],
     ["ChartJS", 80],
-    ["React", 70],
+    ["React", 80],
+    ["Vite", 50],
     ["Scrapy", 50],
-    ["Tailwind", 10],
+    ["Tailwind", 60],
 ]
 function renderSkills(){
     let root = document.getElementById("skillsList");
