@@ -14,8 +14,3 @@ for (let i=0; i<50; i++){
 }
 searchResize();
 contactLink();
-$('#scroller').click(function(){
-    for (let i=0; i<$(window).height(); i++){
-        setTimeout(function(){window.scrollTo(0, i);}, i)
-    }
-})

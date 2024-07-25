@@ -4,6 +4,7 @@ html {
     justify-content: center;
     overflow-x: hidden;
     padding-bottom: 0;
+    scroll-behavior: smooth;
 }
 body {
     display: flex;
@@ -232,7 +233,7 @@ h4 {
     border: 0.75vh solid rgba(255, 255, 255, 1);
 }
 .moreButton:hover>h4 {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(2255, 255, 255, 1);
 }
 #options {
     z-index: 12;
@@ -688,7 +689,7 @@ b {
     border: none;
     margin: auto 1vh;
 }
-.part2 {
+#part2 {
     opacity: 1;
     display: none;
     flex-direction: column;
