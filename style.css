@@ -836,3 +836,6 @@ hr {
         margin-right: 0;
     }
 }
+.nomarg {
+    margin: 0 !important;
+}

@@ -1,6 +1,7 @@
 var lst = [
-    ["TouchUp", "https://dorahacks.io/buidl/13414", "images/touchUp (1).png", ["python", "hackathon", "project", "ai"], "A project that can <b> turn any computer into a touch-screen</b>, or let users to <b>control their device using hand gestures</b>. Placed <b class = 'cool'>First Overall at JamHacks8</b>.", "Jun. 2024"],
-    ["Portfolio Website", "https://github.com/derekGou/derekgou.github.io/", "images/LogoPFJPG.jpg", ["html+css", "js", "jquery", "webdev", "project"], "The <b class = 'cool'>website you're viewing</b> right now! Built from scratch with <b>HTML5</b>, <b>CSS3</b>, <b>JavaScript</b>, <b>jQuery</b>, and <b>Web3Forms</b>. All icons and canvases are <b class = 'cool'>designed by me</b>.", "Oc. 2023-Present"],
+    ["Pantry App", "https://pantry-app-phi.vercel.app", "images/pantry-app.jpg", ["js", "react", "nextjs", "mui", "firebase", "webdev"], "A pantry app project that <b>tracks items and amounts and saves them to a database</b>. Built with NextJS, Firebase, and MUI for the <b class = 'cool'>Headstarter SWE Fellowship</b>.", "Aug. 2024"],
+    ["TouchUp", "https://dorahacks.io/buidl/13414", "images/touchUp (1).png", ["python", "hackathon", "project", "ai"], "A project that can <b>turn any computer into a touch-screen</b>, or let users to <b>control their device using hand gestures</b>. Placed <b class = 'cool'>First Overall at JamHacks8</b>.", "Jun. 2024"],
+    ["Portfolio Website", "https://github.com/derekGou/derekgou.github.io/", "images/LogoPFJPG.jpg", ["html+css", "js", "jquery", "webdev", "project"], "The <b class = 'cool'>website you're viewing</b> right now! Built from scratch with <b>HTML5</b>, <b>CSS3</b>, <b>JavaScript</b>, <b>jQuery</b>, and <b>Web3Forms</b>. All icons and canvases are <b class = 'cool'>designed by me</b>.", "Oct. 2023-Present"],
     ["WebStylus", "https://devpost.com/software/webstylus", "images/webstylus.jpg", ["html+css", "js", "hackathon", "extension", "project"], "A <b>QOL Chrome Extension</b> with features such as Dark/Light Mode and AI alt-text generation. Submitted to RythmHacks 2023.", "Sep. 2023"],
     ["Hoohle", "https://chromewebstore.google.com/detail/hoohle-search-google-sear/jmjckdfpipjhodceglcomigogkodllbe", "images/hoohle.jpg", ["html+css", "js", "extension", "project"], "An <b>advanced search chrome extension</b>, which also allows for advanced image and file search.", "Sep. 2023"],
     ["Emoɉion", "https://devpost.com/software/emo-ion", "images/emojion.jpg", ["html+css", "js", "hackathon", "extension", "project"], "A <b>speech-to-text Chrome extension</b> that <b>annotates the speaker's emotion</b> through an animated emoji.", "Aug. 2023"],
@@ -42,13 +43,20 @@ function proj(input){
     let h3 = document.createElement("h3");
     let nodeh3 = document.createTextNode(name);
     h3.appendChild(nodeh3);
-    h3.classList.add("notop");
+    h3.classList.add("nomarg");
     project.appendChild(h3);
     let wrap = document.createElement("a");
     wrap.classList.add("aprologo");
     wrap.style.textDecoration = "none";
     wrap.href = url;
     wrap.target = "_blank";
+    let h3Date = document.createElement("h3");
+    h3Date.classList.add("notop")
+    let hl4 = document.createElement("hl4");
+    let nodehl4 = document.createTextNode(date)
+    hl4.appendChild(nodehl4)
+    h3Date.appendChild(hl4)
+    project.appendChild(h3Date)
     let logoItem = document.createElement("img");
     logoItem.classList.add("prologo");
     logoItem.src = logo;

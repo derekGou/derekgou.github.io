@@ -53,13 +53,7 @@ function projects(){
 }
 function resume(){
     if (showing[1]==0){
-        $('#page1').animate({
-            "opacity": "0"
-        }, "slow");
-        $('#page2').animate({
-            "opacity": "0"
-        }, "slow");
-        $('#page3').animate({
+        $('.page').animate({
             "opacity": "0"
         }, "slow");
         $('.downloadsHolder').animate({

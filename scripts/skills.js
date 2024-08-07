@@ -10,7 +10,8 @@ var skills = [
     ["React", 80],
     ["Vite", 50],
     ["Scrapy", 50],
-    ["Tailwind", 60],
+    ["Tailwind", 80],
+    ["Tensorflow", 40],
 ]
 function renderSkills(){
     let root = document.getElementById("skillsList");
