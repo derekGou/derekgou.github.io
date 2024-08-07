@@ -4,14 +4,13 @@ var skills = [
     ["CSS", 95],
     ["Javascript", 80],
     ["Typescript", 50],
-    ["Processing", 60],
-    ["C++", 10],
-    ["ChartJS", 80],
     ["React", 80],
     ["Vite", 50],
     ["Scrapy", 50],
     ["Tailwind", 80],
     ["Tensorflow", 40],
+    ["MUI", 60],
+    ["NextJS", 30],
 ]
 function renderSkills(){
     let root = document.getElementById("skillsList");
