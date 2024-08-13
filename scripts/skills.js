@@ -1,42 +1,52 @@
 var skills = [
-    ["Python", 90],
-    ["HTML", 95],
-    ["CSS", 95],
-    ["Javascript", 80],
-    ["Typescript", 50],
-    ["React", 80],
-    ["Vite", 50],
-    ["Scrapy", 50],
-    ["Tailwind", 80],
-    ["Tensorflow", 40],
-    ["MUI", 60],
-    ["NextJS", 30],
+    ["Github", "github.png"],
+    ["VSCode", "vscode.png"],
+    ["HTML", "html.png"],
+    ["CSS", "css.png"],
+    ["Javascript", "javascript.png"],
+    ["jQuery", "jquery.svg"],
+    ["Typescript", "typescript.png"],
+    ["Vite", "vite.png"],
+    ["React", "logo_dark.svg"],
+    ["Next", "next.png"],
+    ["Tailwind", "tailwind.png"],
+    ["MUI", "mui.png"],
+    ["Firebase", "firebase.png"],
+    ["Python", "python.png"],
+    ["Processing", "processing.png"],
+    ["ChartJS", "chartjs.png"],
+    ["OpenCV", "opencv.png"],
+    ["Mediapipe", "mediapipe.png"],
+    ["Tensorflow", "tensorflow.png"],
+    ["Keras", "keras.png"],
+    ["Scrapy", "scrapy.png"],
+    ["Gemini", "gemini.webp"],
+    ["Git", "git.png"],
+    ["Node", "node.png"],
+    ["Pygame", "pygame.png"],
+    ["Stripe", "stripe.webp"],
+    ["Clerk", "clerk.png"],
 ]
+
 function renderSkills(){
-    let root = document.getElementById("skillsList");
-    root.replaceChildren(...[]);
-    let num = 24
-    if ($(window).width()<=900){
-        num = 36
-    }
-    for (let i = 0; i<skills.length; i++){
-        skillContent = skills[i];
-        let skill = document.createElement("div");
-        skill.classList.add("skill");
-        let h3 = document.createElement("h3");
-        h3.innerHTML = skillContent[0];
-        h3.classList.add("infoSub");
-        h3.classList.add("skillName");
-        let pBar = document.createElement("div");
-        pBar.classList.add("pBar");
-        let pBarWhite = document.createElement("div");
-        pBarWhite.classList.add("pBar");
-        pBarWhite.classList.add("White");
-        pBarWhite.style.width = (num*skillContent[1]/100)+'vw';
-        pBar.appendChild(pBarWhite);
-        skill.appendChild(h3);
-        skill.appendChild(pBar);
-        root.appendChild(skill);
+    let root = document.getElementsByClassName("skillGrid")[0];
+    root.innerHTML = '';
+    for (let i=0; i<skills.length; i++){
+        let [name, image] = skills[i]
+        let skill = document.createElement("div")
+        skill.classList.add("skill")
+        let img = document.createElement("img")
+        img.classList.add("skillImage")
+        img.src = "images/skills/"+image;
+        skill.appendChild(img)
+        let skillName = document.createElement("div")
+        skillName.classList.add("skillName")
+        let p = document.createElement("p")
+        p.innerHTML = name
+        skillName.appendChild(p)
+        skill.appendChild(skillName)
+        root.appendChild(skill)
     }
 }
-renderSkills();
+
+renderSkills()

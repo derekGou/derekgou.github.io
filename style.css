@@ -150,12 +150,13 @@ background1 {
 h3 {
     opacity: 0;
     display: none;
+    font-size: 1.2rem;
     font-family: "IBM Plex Mono";
     color: white;
     margin: 2vh 2.5vw;
     font-weight: 300;
     @media only screen and (max-width: 768px) {
-        font-size: 1em;
+        font-size: 1rem;
     }
 }
 @keyframes pulse-animation {
@@ -222,7 +223,7 @@ h4 {
     width: fit-content;
     padding-left: 1.5vh;
     padding-right: 1.5vh;
-    font-size: 1em;
+    font-size: 1rem;
     margin: 0;
     font-weight: 800;
     font-family: "Open Sans";
@@ -312,7 +313,7 @@ input[type=text], input[type=email], textarea {
     border-radius: 0.5vh;
     box-sizing: border-box;
     font-family: "Open Sans";
-    font-size: 1em;
+    font-size: 1rem;
 }
 textarea {
     height: 20vh;
@@ -461,7 +462,7 @@ h5 {
     font-weight: 300;
     margin-top: 1.5vh;
     margin-bottom: 0;
-    font-size: 1em;
+    font-size: 1rem;
 }
 .notop {
     margin-top: 0 !important;
@@ -492,14 +493,14 @@ b {
 .ttag {
     background-color: rgba(240, 160, 255, 0.925);
     width: fit-content;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     font-weight: 600;
     font-family: "Open Sans";
     cursor: default;
-    padding: 0.25em 0.5em;
-    border-radius: 0.25em;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
     white-space: nowrap;
-    margin: 0.25em;
+    margin: 0.25rem;
 }
 .searchHolder {
     margin-bottom: 5vh;
@@ -527,7 +528,7 @@ b {
     border-radius: 0.5vh;
     box-sizing: border-box;
     font-family: "Open Sans";
-    font-size: 1em;
+    font-size: 1rem;
     position: relative;
     flex-grow: 1;
     height: 5.5vh;
@@ -660,7 +661,7 @@ b {
     border-radius: 0 !important;
     margin: auto;
     margin-right: 0;
-    font-size: 1em;
+    font-size: 1rem;
     display: flex;
     flex-direction: row;
     background: transparent;
@@ -701,8 +702,14 @@ b {
     position: absolute;
     left: 0;
     top: 100vh;
-    padding: 5vw;
+    padding: 100px;
     box-sizing: border-box;
+    @media only screen and (max-width: 900px) {
+        padding: 50px;
+    }
+    @media only screen and (max-width: 768px) {
+        padding: 0;
+    }
 }
 .infoHold {
     background-color: rgba(255, 255, 255, 0.25);
@@ -721,40 +728,50 @@ b {
     justify-content: stretch;
 }
 .photo {
+    width: 400px;
+    margin-left: 40px;
+    margin-bottom: 40px;
     position: relative;
-    width: 24vw;
     aspect-ratio: 3/2;
     overflow: hidden;
     cursor: pointer;
-}
-.infos {
-    flex-grow: 1;
-    width: 24vw;
+    float: right;
+    @media only screen and (max-width: 768px) {
+        float: none;
+        margin: 20px;
+    }
 }
 #overlay {
     position: absolute;
     left: 0;
     top: 0;
     opacity: 0;
+    width: 100%;
     transition: opacity 1s;
-    width: 24vw;
     aspect-ratio: 3/2;
     z-index: 100;
 }
 #photo {
     position: absolute;
     left: 0;
+    width: 100%;
     /* transform: translateY(-100%); */
     -webkit-filter: brightness(100%) grayscale(100%);
     filter: brightness(100%) grayscale(100%);
     transition: filter 1s, -webkit-filter 1s;
-    width: 24vw;
     aspect-ratio: 3/2;
     cursor: pointer;
 }
 .infoTitle {
     margin: 0 !important;
-    font-size: 2em;
+    font-size: 3rem;
+    font-family: "IBM Plex Mono";
+    text-align: center !important;
+}
+.skillsTitle {
+    margin: 0 !important;
+    font-size: 2rem;
+    font-weight: 400;
     font-family: "IBM Plex Mono";
     text-align: center !important;
 }
@@ -768,23 +785,17 @@ b {
     transition: filter 1s, -webkit-filter 1s;
 }
 .infoBio {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 24vw;
+    margin: 0 !important;
     text-align: left !important;
-}
-.skills {
-    margin-left: 4vw;
-    margin-right: 4vw;
+    font-size: 1.4rem;
 }
 ul {
     font-family: "IBM Plex Mono";
     list-style-type: disc;
     color: white;
-    width: 24vw;
     box-sizing: border-box;
     font-weight: 200;
-    font-size: 1em;
+    font-size: 1.2rem;
 }
 li::marker {
     color: #ffcc00 !important;
@@ -792,6 +803,8 @@ li::marker {
 hr {
     width: 100%;
     margin-bottom: 25px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 .infoSub {
     margin-top: 0 !important;
@@ -802,40 +815,56 @@ hr {
     display: block !important;
 }
 .pBar {
-    width: 24vw;
     height: 10px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.5);
     margin-bottom: 10px;
 }
-.skillName {
-    margin-bottom: 5px !important;
-}
 .White {
     position: absolute;
     background-color: white !important;
 }
-@media only screen and (max-width: 900px) {
-    .photo, .infos, #overlay, #photo, ul, .pBar, .infoBio {
-        width: 36vw;
-    }
-    .skills {
-        margin-left: 8vw;
-        margin-right: 0;
-    }
-    .ul2, .exp, .infoSub2 {
-        width: 100%;
-    }
-}
-@media only screen and (max-width: 500px) {
-    .photo, .infos, #overlay, #photo, ul, .pBar, .ul2, .exp, .infoSub2, .infoBio {
-        width: 100%;
-    }
-    .skills {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
 .nomarg {
     margin: 0 !important;
+}
+.bio {
+    flex-grow: 1;
+}
+.skillGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    justify-content: center;
+    align-items: center;
+}
+.skill {
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.skillImage {
+    max-width: 80%;
+    max-height: 80%;
+}
+.skillName {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-family: "IBM Plex Mono";
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.skillName:hover {
+    opacity: 1;
+    transition: all 0.5s;
 }

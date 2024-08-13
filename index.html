@@ -27,137 +27,141 @@
     <body>
         <background></background>
         <noscript>You need to enable JavaScript to run this app.</noscript>
-        <canvas id = "canvas"></canvas>
-        <div id = "title">
-            <div class = "horz">
+        <canvas id="canvas"></canvas>
+        <div id="title">
+            <div class="horz">
                 <canvas id="name"></canvas>
-                <div class = "button" id = "introButton"></div>
-                <div class = "vert" id = "description">
+                <div class="button" id="introButton"></div>
+                <div class="vert" id="description">
                     <h2>Hi, I'm Derek</h2>
                     <h3>
                         I'm a <hl1>software developer</hl1> and <hl1>high school student</hl1> from Waterloo, Ontario. 
-                        <hl2>Click around below</hl2>, or <a style = "text-decoration: none;" href = "#part2"><hl3 style = "cursor: pointer;">scroll down</hl3></a> for more information!
+                        <hl2>Click around below</hl2>, or <a style="text-decoration: none;" href="#part2"><hl3 style="cursor: pointer;">scroll down</hl3></a> for more information!
                     </h3>
-                    <div class = "moreButtons">
-                        <div class = "moreButton" id = "projects" tabindex="1" >
+                    <div class="moreButtons">
+                        <div class="moreButton" id="projects" tabindex="1" >
                             <h4>Projects</h4>
                         </div>
-                        <div class = "moreButton" id = "resume" tabindex="1" >
+                        <div class="moreButton" id="resume" tabindex="1" >
                             <h4>Resume</h4>
                         </div>
-                        <div class = "moreButton" id = "contact" tabindex="1" >
+                        <div class="moreButton" id="contact" tabindex="1" >
                             <h4>Contact Me!</h4>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class = "contactLinks">
-                <a class = "linkButtonWrapper" style = "text-decoration: none;" href = "https://github.com/derekGou/" target = "_blank">
-                    <img class = "icon" alt = "Github Icon, custom-made by Derek Gou" src = "images/github.svg">
+            <div class="contactLinks">
+                <a class="linkButtonWrapper" style="text-decoration: none;" href="https://github.com/derekGou/" target="_blank">
+                    <img class="icon" alt="Github Icon, custom-made by Derek Gou" src="images/github.svg">
                 </a>
-                <a class = "linkButtonWrapper" style = "text-decoration: none;" href = "https://www.instagram.com/go.u_de/" target = "_blank">
-                    <img class = "icon" alt = "Github Icon, custom-made by Derek Gou" src = "images/insta.svg">
+                <a class="linkButtonWrapper" style="text-decoration: none;" href="https://www.instagram.com/go.u_de/" target="_blank">
+                    <img class="icon" alt="Github Icon, custom-made by Derek Gou" src="images/insta.svg">
                 </a>
-                <a class = "linkButtonWrapper" style = "text-decoration: none;" href = "https://leetcode.com/u/DerekG19/" target = "_blank">
-                    <img class = "icon" alt = "Github Icon, custom-made by Derek Gou" src = "images/leetcode.svg">
+                <a class="linkButtonWrapper" style="text-decoration: none;" href="https://leetcode.com/u/DerekG19/" target="_blank">
+                    <img class="icon" alt="Github Icon, custom-made by Derek Gou" src="images/leetcode.svg">
                 </a>
-                <a class = "linkButtonWrapper" style = "text-decoration: none;" href = "https://www.linkedin.com/in/derek-gou/" target = "_blank">
-                    <img class = "icon" alt = "Github Icon, custom-made by Derek Gou" src = "images/linkedin.svg">
+                <a class="linkButtonWrapper" style="text-decoration: none;" href="https://www.linkedin.com/in/derek-gou/" target="_blank">
+                    <img class="icon" alt="Github Icon, custom-made by Derek Gou" src="images/linkedin.svg">
                 </a>
-                <a class = "linkButtonWrapper" style = "text-decoration: none;" href = "https://devpost.com/derekgou19/" target = "_blank">
-                    <img class = "icon" alt = "Github Icon, custom-made by Derek Gou" src = "images/devpost.svg">
+                <a class="linkButtonWrapper" style="text-decoration: none;" href="https://devpost.com/derekgou19/" target="_blank">
+                    <img class="icon" alt="Github Icon, custom-made by Derek Gou" src="images/devpost.svg">
                 </a>
             </div>
-            <div class = "extra" id = projectHold>
-                <div class = "searchHolder">
+            <div class="extra" id=projectHold>
+                <div class="searchHolder">
                     <div class="select">
-                        <select id = "searchMenu">
+                        <select id="searchMenu">
                             <option value="0">Search by tag</option>
                             <option value="1">Search by keyword</option>
                         </select>
                     </div>
                     <div class="autocomplete" style="flex-grow: 1;">
-                        <div class = "myInput">
-                            <input autocomplete="off" type = "text" id = "myInput" placeholder = "Your query" value = "">
+                        <div class="myInput">
+                            <input autocomplete="off" type="text" id="myInput" placeholder="Your query" value="">
                         </div>
                     </div>
                 </div>
-                <div class = "projectholder"></div>
+                <div class="projectholder"></div>
             </div>
-            <div class = "extra" id = "resumeHold">
-                <div class = "resumeholder">
-                    <iframe class = "page" src="media/Derek Gou - Resume - UPDATED 7_23_24.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+            <div class="extra" id="resumeHold">
+                <div class="resumeholder">
+                    <iframe class="page" src="media/Derek Gou - Resume - UPDATED 7_23_24.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
                 </div>
-                <div class = "downloadsHolder">
-                    <a style = "text-decoration: none;" href = "media/Derek Gou - Resume - UPDATED 7_23_24.pdf" target = "_blank">
-                        <div class = "download">
-                            <h3 class = "marg">Download resume</h3>
+                <div class="downloadsHolder">
+                    <a style="text-decoration: none;" href="media/Derek Gou - Resume - UPDATED 7_23_24.pdf" target="_blank">
+                        <div class="download">
+                            <h3 class="marg">Download resume</h3>
                         </div>
                     </a>
                 </div>
             </div>
-            <div class = "extra" id = "contactHold">
-                <div id = "emailForm">
+            <div class="extra" id="contactHold">
+                <div id="emailForm">
                     <h2>Email me:</h2>
-                    <h3 class = "centered">Reach out to me using the form below. Spamming is prohibited. Alternatively, reach me at <a id = "link" href = "mailto:derekgou19@gmail.com" target = "_blank">derekgou19@gmail.com</a></h3>
-                    <form id = "emailer" action = "https://api.web3forms.com/submit" method = "POST">
-                        <input class = "formwidth" type = "hidden" name = "apikey" value = "db4b95b0-b98c-4e07-b484-1429e8f1e9da">
-                        <input class = "formwidth" id = "name" type = "text" name = "name" placeholder = "Your name" value = "" required>
-                        <input class = "formwidth" id = "email" type = "email" name = "email" placeholder = "Your email" value = "" required>
-                        <textarea class = "formwidth" id = "message" name = "message" placeholder = "Your message" value = "" required></textarea>
-                        <input class = "formwidth" type = "submit"></input>
+                    <h3 class="centered">Reach out to me using the form below. Spamming is prohibited. Alternatively, reach me at <a id="link" href="mailto:derekgou19@gmail.com" target="_blank">derekgou19@gmail.com</a></h3>
+                    <form id="emailer" action="https://api.web3forms.com/submit" method="POST">
+                        <input class="formwidth" type="hidden" name="apikey" value="db4b95b0-b98c-4e07-b484-1429e8f1e9da">
+                        <input class="formwidth" id="name" type="text" name="name" placeholder="Your name" value="" required>
+                        <input class="formwidth" id="email" type="email" name="email" placeholder="Your email" value="" required>
+                        <textarea class="formwidth" id="message" name="message" placeholder="Your message" value="" required></textarea>
+                        <input class="formwidth" type="submit"></input>
                     </form>
                 </div>
             </div>
-            <div class = "backButton">
-                <div class = "leftArrow"></div>
+            <div class="backButton">
+                <div class="leftArrow"></div>
             </div>
         </div>
         <background1></background1>
-        <div id = "part2">
-            <div class = "infoHold">
-                <div style = "display: flex; flex-direction: column;">
-                    <h2 class = "infoTitle">About Me</h2>
+        <div id="part2">
+            <div class="infoHold">
+                <div style="display: flex; flex-direction: column; width: 100%;">
+                    <h2 class="infoTitle">About Me</h2>
                     <hr>
-                    <div style = "display: flex; flex-direction: row; flex-wrap: wrap;">
-                        <div class = "infos bio">
-                            <div class = "photo">
-                                <img id = "overlay" alt = "Derek at JamHacks8" src = "images/Copy of IMG_1077.png">
-                                <img id = "photo" alt = "Derek at JamHacks8" src = "images/Copy of IMG_1077.jpg">
+                    <div style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100%;">
+                        <div style="display: flex; flex-direction: column; width: 100%;">
+                            <div class="infos bio">
+                                <div class="photo">
+                                    <img id="overlay" alt="Derek at JamHacks8" src="images/Copy of IMG_1077.png">
+                                    <img id="photo" alt="Derek at JamHacks8" src="images/Copy of IMG_1077.jpg">
+                                </div>
+                                <h3 class="infoBio">I'm a <hl1>software developer</hl1>, and <hl1>high school student</hl1>.</h3>
+                                <h3 class="infoBio">Here are some of the things I'm currently up to:</h3>
+                                <ul>
+                                    <li>As a <hl2>web-dev intern @ the <a style="color: #4ADE80 !important;" href="https://cilc.ca">CILC</a></hl2>, I'm building a website from scratch using <hl3>ReactJS</hl3> and <hl3>Tailwind</hl3>.</li>
+                                    <li>I'm currently the <hl2>finance team lead @ <a style="color: #4ADE80 !important;" href="https://rythmhacks.ca">RythmHacks</a></hl2>, where I've led my team in raising <hl3>over $20k in sponsorships</hl3> in preparation for our event this fall.</li>
+                                    <li>I'm a <hl2>co-founder and co-lead @ <a style="color: #4ADE80 !important;" href="https://sprouthacks.ca">SproutHacks</a></hl2>, an in-person hackathon coming this fall. <hl3>More information coming soon</hl3>!</li>
+                                    <li>I'm currently a <hl2>Software Engineering Fellow @ <a style="color: #4ADE80 !important;" href="https://headstarter.co/">Headstarter</a></hl2>. <hl3>So far, I've built 3 web apps using a variety of tools for the fellowship</hl3>.</li>
+                                </ul>
                             </div>
-                            <h3 class = "infoBio">I'm a <hl1>software developer</hl1>, and <hl1>student</hl1> @ Waterloo Collegiate Institute.</h3>
-                            <h3 class = "infoBio">Here are some of the things I'm currently up to:</h3>
-                            <ul>
-                                <li>As a <hl2>web-dev intern @ the <a style = "color: #4ADE80 !important;" href = "https://cilc.ca">CILC</a></hl2>, I'm building a website from scratch using <hl3></hl3>ReactJS</hl3>, as well as a <hl3>CMS</hl3> for the website.</li>
-                                <li>I'm currently the <hl2>finance team lead @ <a style = "color: #4ADE80 !important;" href = "https://rythmhacks.ca">RythmHacks</a></hl2>, where I've led my team in raising <hl3>over $20k in sponsorships</hl3> in preparation for our event this fall.</li>
-                                <li>A few peers and I are working on building a <hl2>modular home-use drone</hl2> with instant charging capabilities. <hl3>More info coming soon</hl3>!</li>
+                            <div class="infos skills">
+                                <h2 class="skillsTitle">My Skills</h2>
+                                <hr>
+                                <div class="skillGrid"></div>
+                            </div>
+                        </div>
+                        <!-- <div class="infos exp">
+                            <h3 class="infoSub infoSub2">Here are some of the things I've been up to recently:</h3>
+                            <ul class="ul2">
+                                <li>Joined the <a style="color: white !important;" href="https://www.instagram.com/codercadets/">Coder Cadets team as a Co-Head of Training!</a> <hl4>(Jul. 2024)</hl4></li>
+                                <li>Started as a Software Engineering Fellow @ <a style="color: white !important;" href="https://headstarter.co/">The Headstarter</a> <hl4>(Jul. 2024)</hl4></li>
+                                <li>Joined the <a style="color: white !important;" href="https://www.instagram.com/hackathoncanada/">Hack Canada</a> team as a finance executive <hl4>(Jul. 2024)</hl4></li>
+                                <li>Won first overall at <a style="color: white !important;" href="https://dorahacks.io/hackathon/jamhacks8/results">JamHacks 8</a> <hl4>(Jun. 2024)</hl4></li>
+                                <li>Begun my internship @ the <a style="color: white !important;" href="https://cilc.ca">CILC</a> (May. 2024)</li>
+                                <li>Co-founded <a style="color: white !important;" href="https://wrsscc.vercel.app/">Waterloo's largest high school chess tournament</a> <hl4>(May. 2024)</hl4></li>
+                                <li>Placed <a style="color: white !important;" href="https://www.innovationhubslc.ca/news/student-led-coding-competition-inspires-next-gen-programmers">top 3 provincially</a> at the SLC coding competition <hl4>(May. 2024)</hl4></li>
+                                <li>Led WCI's Math Team to a <a style="color: white !important;" href="https://www.instagram.com/p/C7oves8OGzL/?img_index=1">4th place finish nationally</a> at the CTMC <hl4>(Apr. 2024)</hl4></li>
+                                <li>Joined <a style="color: white !important;" href="https://rythmhacks.ca">RythmHacks</a> as the Finance Team Lead <hl4>(Jan. 2024)</hl4></li>
+                                <li>Co-founded <a style="color: white !important;" href="https://sprouthacks.ca">SproutHacks</a> <hl4>(Sep. 2023)</hl4></li>
                             </ul>
-                        </div>
-                        <div class = "infos skills">
-                            <h3 class = "infoSub">As an experienced software developer, some of my skills include:</h3>
-                            <div id = "skillsList"></div>
-                        </div>
-                        <div class = "infos exp">
-                            <h3 class = "infoSub infoSub2">Here are some of the things I've been up to recently:</h3>
-                            <ul class = "ul2">
-                                <li>Joined the <a style = "color: white !important;" href = "https://www.instagram.com/codercadets/">Coder Cadets team as a Co-Head of Training!</a> <hl4>(Jul. 2024)</hl4></li>
-                                <li>Started as a Software Engineering Fellow @ <a style = "color: white !important;" href = "https://headstarter.co/">The Headstarter</a> <hl4>(Jul. 2024)</hl4></li>
-                                <li>Joined the <a style = "color: white !important;" href = "https://www.instagram.com/hackathoncanada/">Hack Canada</a> team as a finance executive <hl4>(Jul. 2024)</hl4></li>
-                                <li>Won first overall at <a style = "color: white !important;" href = "https://dorahacks.io/hackathon/jamhacks8/results">JamHacks 8</a> <hl4>(Jun. 2024)</hl4></li>
-                                <li>Begun my internship @ the <a style = "color: white !important;" href = "https://cilc.ca">CILC</a> (May. 2024)</li>
-                                <li>Co-founded <a style = "color: white !important;" href = "https://wrsscc.vercel.app/">Waterloo's largest high school chess tournament</a> <hl4>(May. 2024)</hl4></li>
-                                <li>Placed <a style = "color: white !important;" href = "https://www.innovationhubslc.ca/news/student-led-coding-competition-inspires-next-gen-programmers">top 3 provincially</a> at the SLC coding competition <hl4>(May. 2024)</hl4></li>
-                                <li>Led WCI's Math Team to a <a style = "color: white !important;" href = "https://www.instagram.com/p/C7oves8OGzL/?img_index=1">4th place finish nationally</a> at the CTMC <hl4>(Apr. 2024)</hl4></li>
-                                <li>Joined <a style = "color: white !important;" href = "https://rythmhacks.ca">RythmHacks</a> as the Finance Team Lead <hl4>(Jan. 2024)</hl4></li>
-                                <li>Co-founded <a style = "color: white !important;" href = "https://sprouthacks.ca">SproutHacks</a> <hl4>(Sep. 2023)</hl4></li>
-                            </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </body>
     <loader>
-        <div class = "circly"></div>
+        <div class="circly"></div>
     </loader>
 </html>
