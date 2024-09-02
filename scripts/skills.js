@@ -22,10 +22,11 @@ var skills = [
     ["Scrapy", "scrapy.png"],
     ["Gemini", "gemini.webp"],
     ["Git", "git.png"],
-    ["Node", "node.png"],
+    ["Node.js", "node.png"],
     ["Pygame", "pygame.png"],
     ["Stripe", "stripe.webp"],
     ["Clerk", "clerk.png"],
+    ["react-pdf", "reactpdf.png"],
 ]
 
 function renderSkills(){
