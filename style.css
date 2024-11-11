@@ -1,3 +1,4 @@
+
 html {
     display: flex;
     flex-direction: column;
@@ -18,146 +19,23 @@ body {
     width: 100dvw;
     padding-bottom: 0;
 }
-loader {
-    display: flex;
-    position: fixed;
-    height: 100dvh;
-    width: 100dvw;
-    background-color: black;
-    z-index: 100;
-    align-items: center;
-    justify-content: center;
-}
-.circly {
-    position: absolute;
-    z-index: 101;
-    width: 10vh;
-    height: 10vh;
-    border: 16px solid transparent;
-    border-radius: 50%;
-    border-top: 16px solid rgb(50,225,225);
-    -webkit-animation: spin 1.5s linear infinite;
-    animation: spin 1.5s linear infinite;
-}
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 #canvas {
-    position: fixed;
     z-index: -1;
 }
 #name {
     z-index: 1;
 }
-.wing {
-    width: 6vh;
-    height: 12vh;
-}
-#wingLeft {
-    animation: left 3s infinite ease-in-out;
-    transform-origin: center right;
-}
-#wingRight {
-    animation: right 3s infinite ease-in-out;  
-    transform-origin: center left;
-}
-@keyframes left {
-    0% {
-        transform: perspective(1000px) rotateY(0);
-    }
-    20% {
-        transform: perspective(1000px) rotateY(60deg);
-    }
-    40% {
-        transform: perspective(1000px) rotateY(0);
-    }
-    100% {
-        transform: perspective(1000px) rotateY(0);
-    }
-}
-@keyframes right {
-    0% {
-        transform: perspective(1000px) rotateY(0);
-    }
-    20% {
-        transform: perspective(1000px) rotateY(-60deg);
-    }
-    40% {
-        transform: perspective(1000px) rotateY(0);
-    }
-    100% {
-        transform: perspective(1000px) rotateY(0);
-    }
-}
 #introButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    z-index: 2;
+    z-index: 102;
     animation: pulse-animation 3s 1.5s infinite;
 }
-#title {
-    opacity: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-}
-h2 {
-    opacity: 0;
-    display: none;
-    color: white;
-    font-family: "Open Sans";
-    font-size: 2.5em;
-    font-weight: 600;
-    margin: 0 2.5vw;
-    @media only screen and (max-width: 768px) {
-        font-size: 1.5em;
-    }
-}
 background {
-    z-index: -2;
     background-image: radial-gradient(circle at center bottom, rgb(100, 100, 100) 0%, rgb(20, 5, 60) 60%,  rgb(10, 5, 15)100%);
-    position: fixed;
-    width: 100dvw;
-    height: 150dvh;
     opacity: 0;
-}
-background1 {
-    z-index: 10;
-    background-image: radial-gradient(circle at center bottom, rgb(100, 100, 100) 0%, rgb(20, 5, 60) 60%,  rgb(10, 5, 15)100%);
-    position: fixed;
-    width: 100dvw;
-    height: 150dvh;
-    opacity: 0;
-    display: none;
 }
 #canvas {
     display: none;
     opacity: 0;
-}
-h3 {
-    opacity: 0;
-    display: none;
-    font-size: 1.2rem;
-    font-family: "IBM Plex Mono";
-    color: white;
-    margin: 2vh 2.5vw;
-    font-weight: 300;
-    @media only screen and (max-width: 768px) {
-        font-size: 1rem;
-    }
 }
 @keyframes pulse-animation {
     0% {
@@ -167,712 +45,101 @@ h3 {
         box-shadow: 0 0 0 5vh rgba(255, 255, 255, 0);
     }
 }
-.horz {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.vert {
-    display: flex;
-    flex-direction: column;
-}
-#description {
-    width: 0;
-    height: 0;
-    justify-content: center;
-}
-hl1 {
-    color: #F87171 !important;
-    font-weight: 400;
-}
-hl2 {
-    color: #4ADE80 !important;
-    font-weight: 400;
-}
-hl3 {
-    color: #77BBFF !important;
-    font-weight: 400;
-}
-hl4 {
-    color: #999 !important;
-    font-weight: 400;
-}
-.moreButtons {
-    opacity: 0;
-    display: none;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 2.5vw;
-    width: inherit;
-    flex-wrap: wrap;
-}
-.moreButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    margin: 0 3vh 3vh 0;
-    border: 0.75vh solid rgba(255, 255, 255, 0.925);
-    border-radius: 1vh;
-    cursor: pointer;
-}
-h4 {
-    color: black;
-	mix-blend-mode: lighten;
-    background-color: rgba(255, 255, 255, 0.925);
-    width: fit-content;
-    padding-left: 1.5vh;
-    padding-right: 1.5vh;
-    font-size: 1rem;
-    margin: 0;
-    font-weight: 800;
-    font-family: "Open Sans";
-    text-align: center;
-    cursor: pointer;
-}
-.moreButton:hover {
-    border: 0.75vh solid rgba(255, 255, 255, 1);
-}
-.moreButton:hover>h4 {
-    background-color: rgba(2255, 255, 255, 1);
-}
-#options {
-    z-index: 12;
-}
-.extra {
-    opacity: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
+.moon {
     position: absolute;
-    width: 0vw;
-    height: 0vh;
     z-index: 100;
-}
-#resumeHold {
-    flex-direction: column;
-}
-.resumeholder {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.downloadsHolder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.page {
-    opacity: 0;
-    z-index: 100;
-    display: none;
-    height: 66vh;
-    aspect-ratio: 8.5/11;
-}
-.backButton {
-    position: absolute;
-    opacity: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
+    height: 8rem;
+    width: 8rem;
     border-radius: 50%;
-    border: 2.5px white solid;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.25);
-    z-index: 1000;
-    left: 2.5vh;
-    top: 2.5vh;
-    transition: background-color 0.5s;
-}
-.backButton:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: background-color 0.5s;
-}
-.leftArrow {
-    display: block;
-    width: 20px;
-    height: 20px;
-    transform: translateX(5px) rotate(-45deg);
-    border-top: 5px solid white;
-    border-left: 5px solid white;
-}
-label {
-    color: white;
-    font-family: "IBM Plex Mono";
-}
-input[type=text], input[type=email], textarea {
-    width: 60vh;
-    padding: 1vh 1.5vh;
-    margin: 1vh 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 0.5vh;
-    box-sizing: border-box;
-    font-family: "Open Sans";
-    font-size: 1rem;
-}
-textarea {
-    height: 20vh;
-}
-input[type=submit] {
-    width: 60vh;
-    background-color: #2A8294;
-    color: white;
-    padding: 1vh 1.5vh;
-    margin: 1vh 0;
-    border: none;
-    border-radius: 0.5vh;
-    cursor: pointer;
-}
-::-ms-input-placeholder {
-    font-family: "Open Sans";
-}
-  
-::placeholder {
-    font-family: "Open Sans";
-}
-#contactHold {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#emailForm {
-    padding: 2.5vh;
-    margin: 1vh;
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 1vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-input[type=text]:focus, input[type=email]:focus, textarea:focus {
-    outline: 2.5px solid #3A92A4 !important;
-}
-textarea {
-    resize: none;
-    height: 25vh;
-}
-.center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.centered {
-    text-align: center !important;
-}
-#link {
-    color: #6AB2C4;
-}
-.icon {
-    filter: brightness(0) invert(0.5);
-    height: 5vh;
-    transition: filter 0.5s;
-}
-.icon:hover {
-    filter: brightness(0) invert(1);
-    transition: filter 0.5s;
-}
-.contactLinks {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 5vh;
-    background-color: rgba(125, 125, 125, 0.25);
-    border-radius: 5vh;
-    padding: 0.5vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    z-index: 200;
-}
-.download {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 100vh;
-    border: 0.25vh white solid;
-    padding: 1.5vh;
-    margin: 2.5vh 10vh 0 10vh;
-    transition: background-color 0.5s;
-}
-.download:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: background-color 0.5s;
-}
-.marg {
-    margin: 0 !important;
-}
-.linkButtonWrapper {
-    margin: 1.25vh;
-    border-radius: 50%;
-    height: 5vh;
-    width: 5vh;
-}
-#projectHold {
-    top: 0;
-    position: absolute;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 90vw;
-    height: fit-content;
-    margin: 0 5vw;
-    top: 10vh;
-}
-.projectholder {
-    height: fit-content;
-    width: 90vw;
-    display: grid;
-    gap: 5vh 2.5vw;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 0.5fr));
-    grid-template-rows: auto;
-    padding-bottom: 10vh;
-    justify-content: center;
-    align-content: center;
-}
-.project {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.25);
-    padding: 3vh;
-    border-radius: 2.5vh;
-    height: 90%;
-}
-.prologo {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10%;
-    cursor: pointer;
-}
-h5 {
-    font-family: "IBM Plex Mono";
-    color: white;
-    font-weight: 300;
-    margin-top: 1.5vh;
-    margin-bottom: 0;
-    font-size: 1rem;
-}
-.notop {
-    margin-top: 0 !important;
-}
-.aprologo {
-    width: 60%;
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-b {
-    color: #6CB2C4;
-}
-.cool {
-    color: #CCE0F0;
-    cursor: pointer;
-    transition: color 0.5s;
-}
-.cool:hover {
-    color: #EEFFFF;
-    transition: color 0.5s;
-}
-.tags {
-    margin-top: 1.5vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-.tag {
-    border-radius: 100vh;
-}
-.ttag {
-    background-color: rgba(240, 160, 255, 0.925);
-    width: fit-content;
-    font-size: 0.75rem;
-    font-weight: 600;
-    font-family: "Open Sans";
-    cursor: default;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    white-space: nowrap;
-    margin: 0.25rem;
-}
-.searchHolder {
-    margin-bottom: 5vh;
-    padding: 1vh 1vw;
-    border-radius: 0.5vh;
-    background-color: rgba(255, 255, 255, 0.25);
-    width: 68vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-#myInput {
-    flex-grow: 1 !important;
-    border-radius: 0.25vh !important;
-    width: auto !important;
-    height: 4.6vh;
-    width: 92%;
-}
-.myInput {
-    background-color: white;
-    padding: 0 0.25vh;
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 0.5vh;
-    box-sizing: border-box;
-    font-family: "Open Sans";
-    font-size: 1rem;
-    position: relative;
-    flex-grow: 1;
-    height: 5.5vh;
-    z-index: 100;
-    width: 100%;
-    margin: 0;
-    align-items: center;
-    flex-direction: row-reverse;
-}
-#selectTags::-ms-expand {
-    display: none;
-}
-.select {
-    position: relative;
-    font-family: "Open Sans";
-    height: 100%;
-    margin: 1vh 0;
-    border-radius: 0.5vh;
-    margin-right: 2vh;
-    width: 20vh;
-    z-index: 100;
-}
-.select select {
-    display: none;
-}
-.select-selected {
-    position: relative;
-    background-color: white;
-    height: 4vh;
-    border-radius: 0.5vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1vh 1.5vh;
-    width: 18vh;
-    z-index: 100;
-}
-.select-selected:after {
-    position: absolute;
-    content: "";
-    top: 50%;
-    transform: translateY(-25%);
-    right: 0.75vh;
-    width: 0;
-    height: 0;
-    border: 0.6vh solid transparent;
-    border-color: #666 transparent transparent transparent;
-}
-.select-selected.select-arrow-active:after {
-    border-color: transparent transparent #666 transparent;
-    top: 50%;
-    transform: translateY(-75%);
-}
-.select-items div,.select-selected {
-    color: #000;
-    padding: 0.5vh 1.5vh;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-    user-select: none;
-    text-align: left;
-    width: 23vh;
-}
-.select-items {
-    position: absolute;
-    background-color: white;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    width: fit-content;
-    border-radius: 0 0 1vh 1vh;
-    overflow: hidden;
-}
-.select-hide {
-    display: none;
-}
-.select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
-}
-.autocomplete, input[type=text] {
-    box-sizing: border-box;
-}
-.autocomplete {
-    position: relative;
-    display: flex;
-    width: 100%;
-    z-index: 98;
-    vertical-align: middle;
-    align-items: center;
-    flex-direction: row-reverse;
-}
-.autocomplete-items {
-    position: absolute;
-    border: 1px solid #d4d4d4;
-    border-bottom: none;
-    border-top: none;
-    z-index: 97;
-    top: 100%;
-    left: 0;
-    right: 0;
-}
-.autocomplete-items div {
-    padding: 1vh 1.5vh;
-    cursor: pointer;
-    background-color: #fff; 
-    border-bottom: 1px solid #d4d4d4; 
-    font-family: "Open Sans";
-}
-.autocomplete-items div:hover {
-    background-color: #e9e9e9; 
-}
-.autocomplete-active {
-    background-color: #ddd !important; 
-    color: #ffffff; 
-}
-#text {
-    text-align: left;
-}
-.select-selected:focus {
-    outline: 2.5px solid #3A92A4 !important;
-}
-#myInputautocomplete-list {
-    border-radius: 0 0 1vh 1vh;
-    overflow: hidden;
-}
-.searchItem {
-    mix-blend-mode: darken !important;
-    margin-right: 0.75vh;
-    border-radius: 0 !important;
-    margin: auto;
-    margin-right: 0;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: row;
-    background: transparent;
-    height: 100%;
-    position: relative;
-}
-.closeButton {
-    background-color: rgba(240, 130, 240, 1);
-    width: 2vh;
-    height: 2vh;
-    border-radius: 0.5vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1vh;
-    cursor: pointer;
-}
-.tagHolder {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(240, 160, 255, 0.75);
-    border-radius: 0.5vh !important;
-    border: none;
-    margin: auto 1vh;
-}
-#part2 {
-    opacity: 1;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: fit-content;
-    position: absolute;
-    left: 0;
-    top: 100vh;
-    padding: 100px;
-    box-sizing: border-box;
-    @media only screen and (max-width: 900px) {
-        padding: 50px;
-    }
-    @media only screen and (max-width: 768px) {
-        padding: 0;
-    }
-}
-.infoHold {
-    background-color: rgba(255, 255, 255, 0.25);
-    width: 100%;
-    height: fit-content;
-    padding: 5vw;
-    margin: 0 0 5vw 0;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.bio {
-    justify-content: stretch;
-}
-.photo {
-    width: 400px;
-    margin-left: 40px;
-    margin-bottom: 40px;
-    position: relative;
-    aspect-ratio: 3/2;
-    overflow: hidden;
-    cursor: pointer;
-    float: right;
-    @media only screen and (max-width: 768px) {
-        float: none;
-        margin: 20px;
-    }
-}
-#overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    width: 100%;
-    transition: opacity 1s;
-    aspect-ratio: 3/2;
-    z-index: 100;
-}
-#photo {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    /* transform: translateY(-100%); */
-    -webkit-filter: brightness(100%) grayscale(100%);
-    filter: brightness(100%) grayscale(100%);
-    transition: filter 1s, -webkit-filter 1s;
-    aspect-ratio: 3/2;
-    cursor: pointer;
-}
-.infoTitle {
-    margin: 0 !important;
-    font-size: 3rem;
-    font-family: "IBM Plex Mono";
-    text-align: center !important;
-}
-.skillsTitle {
-    margin: 0 !important;
-    font-size: 2rem;
-    font-weight: 400;
-    font-family: "IBM Plex Mono";
-    text-align: center !important;
-}
-.photo:hover #overlay {
-    opacity: 1;
-    transition: opacity 1s;
-}
-.photo:hover #photo {
-    filter: brightness(75%) grayscale(100%);
-    -webkit-filter: brightness(75%) grayscale(100%);
-    transition: filter 1s, -webkit-filter 1s;
-}
-.infoBio {
-    margin: 0 !important;
-    text-align: left !important;
-    font-size: 1.4rem;
-}
-ul {
-    font-family: "IBM Plex Mono";
-    list-style-type: disc;
-    color: white;
-    box-sizing: border-box;
-    font-weight: 200;
-    font-size: 1.2rem;
-}
-li::marker {
-    color: #ffcc00 !important;
-}
-hr {
-    width: 100%;
-    margin-bottom: 25px;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-.infoSub {
-    margin-top: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    text-align: left !important;
-    opacity: 1 !important;
-    display: block !important;
-}
-.pBar {
-    height: 10px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 10px;
-}
-.White {
-    position: absolute;
-    background-color: white !important;
-}
-.nomarg {
-    margin: 0 !important;
-}
-.bio {
-    flex-grow: 1;
-}
-.skillGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 100px);
-    justify-content: center;
-    align-items: center;
-}
-.skill {
-    width: 100%;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-sizing: border-box;
-    aspect-ratio: 1/1;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
-.skillImage {
-    max-width: 80%;
-    max-height: 80%;
-}
-.skillName {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    color: white;
-    font-family: "IBM Plex Mono";
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.75);
-    opacity: 0;
+    -webkit-animation: spin 20s linear infinite;
+    animation: spin 20s linear infinite;
+    border: 10px solid white;
+    opacity: 0.2;
     transition: all 0.5s;
 }
-.skillName:hover {
-    opacity: 1;
+.moon:hover {
+    background-color: rgba(100, 200, 255, 0.5);
+    opacity: 0.5;
     transition: all 0.5s;
+}
+#moon1 {
+    transform-origin: 50% 175%;
+    margin-bottom: 22rem;
+}
+#moon2 {
+    transform-origin: -75% 50%;
+    margin-left: 22rem;
+}
+#moon3 {
+    transform-origin: 50% -75%;
+    margin-top: 22rem;
+}
+#moon4 {
+    transform-origin: 175% 50%;
+    margin-right: 22rem;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+i {
+    font-family: IBM Plex Mono;
+    font-size: 2.5rem !important;
+    color: white;
+}
+.spins {
+    -webkit-animation: spin 20s reverse linear infinite;
+    animation: spin 20s reverse linear infinite;
+}
+h1 {
+    font-family: IBM Plex Mono;
+    font-size: 2.5rem !important;
+    font-weight: 600 !important;
+    color: white;
+    opacity: 0.2;
+}
+h2 {
+    font-family: IBM Plex Mono;
+    font-size: 1.5rem !important;
+    font-weight: 300 !important;
+    color: white;
+    opacity: 0.2;
+}
+h3 {
+    font-family: IBM Plex Mono;
+    font-size: 2rem !important;
+    font-weight: 500 !important;
+    color: white;
+}
+p {
+    font-family: IBM Plex Mono;
+    font-size: 1rem !important;
+    font-weight: 200 !important;
+    color: white;
+}
+
+button {
+    color: black;
+    font-family: IBM Plex Mono;
+    background-color: #def !important;
+    padding: 5px 15px !important;
+    transition: all 0.5s;
+}
+button:hover {
+    background-color: #fff !important;
+    transition: all 0.5s;
+}
+
+a {
+    text-decoration: underline !important;
 }

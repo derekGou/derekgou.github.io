@@ -10,21 +10,16 @@ myName = document.querySelector('#name');
 var c1 = myName.getContext('2d', { willReadFrequently: true });
 var left;
 function pixelsize(){
-    let coef = 0;
     if (phase==0){
-        coef = 4;
+        return 3
     } else {
-        coef = 12;
-    }
-    if ($(window).width()>$(window).height()){
-        return parseInt(coef*$(window).height()/1000);
-    } else {
-        return parseInt(coef*$(window).width()/1000);
+        return 8
     }
 }
 introButton.onclick = function(){
     window.scrollTo(0, 0);
     phase = 1;
+    setPage('home')
     for (let i=0; i<spheres.length; i++){
         spheres[i].update();
     }
@@ -33,53 +28,29 @@ introButton.onclick = function(){
     }, "slow");
     setTimeout(function(){
         $('#introButton').css({
-            "display": "none",
-            "z-index": "-2"
+            "display": "none"
         })
-        $('#part2').css({
-            "display": "flex"
+        $('#off').css({
+            "display": "none"
         })
     }, 500);
     setTimeout(function(){
         $('background').animate({
             opacity: "1"
         }, "slow")
-        $('#title').css("display", "flex");
-        $('#title').animate({
-            opacity: "1"
-        }, "slow");
         $('#canvas').show();
         $('#canvas').animate({
             opacity: "1"
         }, "slow");
-        let w = 0;
-        if ($(window).height()<$(window).width()){
-            w = "50vw";
-        } else {
-            w = "80vw";
-        }
-        $('#description').animate({
-            width: w, 
-            height: "50vh"
-        }, "slow");
     }, 1000);
     setTimeout(function(){
-        $('h2').css("display", "block");
+        $('h1').animate({
+            opacity: "1"
+        }, "slow")
         $('h2').animate({
             opacity: "1"
-        }, "slow");
-        $('h3').css("display", "block");
-        $('h3').animate({
-            opacity: "1"
-        }, "slow");
-        $('.moreButtons').css("display", "flex");
+        }, "slow")
     }, 1500);
-    setTimeout(function(){
-        $('.moreButtons').slideDown();
-        $('.moreButtons').animate({
-            opacity: "1"
-        }, "slow");
-    }, 2000);
 }
 class star {
     constructor(){
@@ -122,62 +93,9 @@ class star {
         c1.fill();
     }
 }
-function resizeMyName(){
-    if ($(window).width()>$(window).height()){
-        myName.width = 0.50*$(window).height();
-        myName.height = 0.50*$(window).height();
-        $('#introButton').css({
-            "width": 0.50*$(window).height()+"px", 
-            "height": 0.50*$(window).height()+"px"
-        })
-        $('h3').css({
-            "text-align": "left",
-            "margin": "2vh 2.5vw"
-        });
-        $('h2').css({
-            "text-align": "left",
-            "margin": "0vh 2.5vw"
-        });
-        $('.horz').css({
-            "flex-direction": "row",
-            "width": ""
-        })
-        $('#description').css({
-            "width": phase*50+"vw",
-            "height": phase*50+"vh",
-            "align-items": "flex-start"
-        });
-        $('.moreButton').css({"margin": "0 3vh 3vh 0"});
-        $('.moreButtons').css({"justify-content": "flex-start"});
-        $('.vert').css({"justify-content": "center"});
-    } else {
-        myName.width = 0.40*$(window).width();
-        myName.height = 0.40*$(window).width();
-        $('#introButton').css({
-            "width": 0.50*$(window).width()+"px", 
-            "height": 0.50*$(window).width()+"px"
-        })
-        $('h3').css({
-            "text-align": "center",
-            "margin": "2vh 0"
-        });
-        $('h2').css({
-            "text-align": "center",
-            "margin": "2vh 0"
-        });
-        $('.horz').css({
-            "flex-direction": "column",
-            "width": "80vw"
-        })
-        $('#description').css({
-            "width": phase*80+"vw",
-            "height": phase*50+"vh",
-            "align-items": "center"
-        });
-        $('.moreButton').css({"margin": "1.5vh"});
-        $('.moreButtons').css({"justify-content": "center"});
-        $('.vert').css({"justify-content": "flex-start"});
-    }
+function runCanvas1(){
+    myName.width = $('#name').height();
+    myName.height = $('#name').height();
     spheres = [];
     for (let i=0; i<1250; i++){
         const sphere = new star();
@@ -188,7 +106,7 @@ function resizeMyName(){
         firstTime = false;
     }
 }
-resizeMyName();
+runCanvas1();
 
 function nameRender(){
     c1.clearRect(0, 0, myName.height, myName.height);
