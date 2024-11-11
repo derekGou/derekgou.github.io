@@ -22,6 +22,7 @@ function setPage(pageName){
                 $('#socials').animate({height: "0"}, "slow")
                 break
             case "home":
+                requestAnimationFrame(animateTyper)
                 $('#moon1').animate({opacity: "0.6"}, "slow");
                 $('#moon2').animate({opacity: "0.2"}, "slow");
                 $('#moon3').animate({opacity: "0.2"}, "slow");
