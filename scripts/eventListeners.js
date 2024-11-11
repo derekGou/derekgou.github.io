@@ -1,10 +1,19 @@
 window.addEventListener("resize", function(){
-    widths = [
-        $('#home').width(),
-        $('#profile').width(),
-        $('#projects').width(),
-        $('#socials').width()
+    $('#home').css('height', 'auto')
+    $('#profile').css('height', 'auto')
+    $('#projects').css('height', 'auto')
+    $('#socials').css('height', 'auto')
+    heights = [
+        $('#home').height(),
+        $('#profile').height(),
+        $('#projects').height(),
+        $('#socials').height()
     ]
+    $('#home').css('height', '0px')
+    $('#profile').css('height', '0px')
+    $('#projects').css('height', '0px')
+    $('#socials').css('height', '0px')
+    setPage(page)
     document.getElementById('introButton').style.left = $('#name').offset().left+'px';
     document.getElementById('introButton').style.top = $('#name').offset().top+'px';
 });
