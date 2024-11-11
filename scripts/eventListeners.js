@@ -18,4 +18,5 @@ window.addEventListener("load", function(){
     ]
     document.getElementById('introButton').style.left = $('#name').offset().left+'px';
     document.getElementById('introButton').style.top = $('#name').offset().top+'px';
+    console.log($('#name').offset().top+'px')
 })
