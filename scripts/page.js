@@ -7,10 +7,10 @@ function setPage(pageName){
         page = pageName
         switch (pageName){
             case "landing":
-                $('#moon1').animate({opacity: "0.2"}, "slow");
-                $('#moon2').animate({opacity: "0.2"}, "slow");
-                $('#moon3').animate({opacity: "0.2"}, "slow");
-                $('#moon4').animate({opacity: "0.2"}, "slow");
+                $('#moon1').animate({opacity: "0"}, "slow");
+                $('#moon2').animate({opacity: "0"}, "slow");
+                $('#moon3').animate({opacity: "0"}, "slow");
+                $('#moon4').animate({opacity: "0"}, "slow");
     
                 setTimeout(
                     function(){
