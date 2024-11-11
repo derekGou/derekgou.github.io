@@ -24,10 +24,10 @@ body {
 }
 #name {
     z-index: 1;
+    animation: pulse-animation 3s 1.5s infinite;
 }
 #introButton {
     z-index: 102;
-    animation: pulse-animation 3s 1.5s infinite;
 }
 background {
     background-image: radial-gradient(circle at center bottom, rgb(100, 100, 100) 0%, rgb(20, 5, 60) 60%,  rgb(10, 5, 15)100%);
@@ -48,8 +48,8 @@ background {
 .moon {
     position: absolute;
     z-index: 100;
-    height: 8rem;
-    width: 8rem;
+    height: 5rem;
+    width: 5rem;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.1);
     display: flex;
@@ -61,6 +61,10 @@ background {
     border: 10px solid white;
     opacity: 0.2;
     transition: all 0.5s;
+    @media (min-width: 768px) {
+        height: 8rem;
+        width: 8rem;
+    }
 }
 .moon:hover {
     background-color: rgba(100, 200, 255, 0.5);
@@ -69,19 +73,31 @@ background {
 }
 #moon1 {
     transform-origin: 50% 175%;
-    margin-bottom: 22rem;
+    margin-bottom: 13.75rem;
+    @media (min-width: 768px) {
+        margin-bottom: 22rem;
+    }
 }
 #moon2 {
     transform-origin: -75% 50%;
-    margin-left: 22rem;
+    margin-left: 13.75rem;
+    @media (min-width: 768px) {
+        margin-left: 22rem;
+    }
 }
 #moon3 {
     transform-origin: 50% -75%;
-    margin-top: 22rem;
+    margin-top: 13.75rem;
+    @media (min-width: 768px) {
+        margin-top: 22rem;
+    }
 }
 #moon4 {
     transform-origin: 175% 50%;
-    margin-right: 22rem;
+    margin-right: 13.75rem;
+    @media (min-width: 768px) {
+        margin-right: 22rem;
+    }
 }
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
