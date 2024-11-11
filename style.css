@@ -139,9 +139,12 @@ h3 {
 }
 p {
     font-family: IBM Plex Mono;
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;
     font-weight: 200 !important;
     color: white;
+    @media (min-width: 768px) {
+        font-size: 1rem !important;
+    }
 }
 
 button {
