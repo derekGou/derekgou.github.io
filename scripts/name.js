@@ -30,6 +30,7 @@ introButton.onclick = function(){
         $('#introButton').css({
             "display": "none"
         })
+        document.getElementById('name').style.animationDuration = '0s';
         $('#off').css({
             "display": "none"
         })
