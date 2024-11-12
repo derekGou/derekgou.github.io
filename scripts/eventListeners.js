@@ -20,12 +20,12 @@ window.addEventListener("resize", function(){
 
 $('#close').click(function(){close()})
 $('#openProjects').click(function(){
-    $('gridcontainer').css('display', 'flex')
+    $('#gridcontainer').css('display', 'flex')
     document.getElementById('gridtitle').innerHTML = 'Projects'
     $('#myProjects').css('display', 'flex')
 })
 $('#openSkills').click(function(){
-    $('gridcontainer').css('display', 'flex')
+    $('#gridcontainer').css('display', 'flex')
     document.getElementById('gridtitle').innerHTML = 'Skills'
     $('#mySkills').css('display', 'flex')
 })
