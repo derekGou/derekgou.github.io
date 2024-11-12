@@ -186,7 +186,7 @@ a {
     width: 3rem;
     padding: 0.5rem;
     margin: 0.5rem;
-    background-color: #0008;
+    background-color: #000c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,7 +207,7 @@ a {
     padding: 1rem;
     flex-direction: row;
     gap: 2rem;
-    background-color: #0008;
+    background-color: #000c;
 }
 .projectimg {
     width: 6.7rem;
