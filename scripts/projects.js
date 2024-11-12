@@ -93,3 +93,10 @@ function projects(){
         root.appendChild(div1)
     }
 }
+
+function close(){
+    $('#gridcontainer').css('display', 'none')
+    document.getElementById('gridtitle').innerHTML = ''
+    $('#mySkills').css('display', 'none')
+    $('#myProjects').css('display', 'none')
+}

@@ -17,3 +17,15 @@ window.addEventListener("resize", function(){
     document.getElementById('introButton').style.left = $('#name').offset().left+'px';
     document.getElementById('introButton').style.top = $('#name').offset().top+'px';
 });
+
+$('#close').click(function(){close()})
+$('#openProjects').click(function(){
+    $('gridcontainer').css('display', 'flex')
+    document.getElementById('gridtitle').innerHTML = 'Projects'
+    $('#myProjects').css('display', 'flex')
+})
+$('#openSkills').click(function(){
+    $('gridcontainer').css('display', 'flex')
+    document.getElementById('gridtitle').innerHTML = 'Skills'
+    $('#mySkills').css('display', 'flex')
+})
