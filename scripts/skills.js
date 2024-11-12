@@ -10,7 +10,7 @@ var skillList = [
     ["Javascript", "javascript.png"],
     ["jQuery", "jquery.svg"],
     ["Keras", "keras.png"],
-    ["Material UI", "MUI.png"],
+    ["Material UI", "mui.png"],
     ["Matplotlib", "matplotlib.png"],
     ["Mediapipe", "mediapipe.png"],
     ["NextJS", "next.png"],
