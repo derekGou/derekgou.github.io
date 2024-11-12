@@ -179,6 +179,7 @@ button:hover {
 
 a {
     text-decoration: underline !important;
+    width: fit-content !important;
 }
 
 .skillcontainer {
