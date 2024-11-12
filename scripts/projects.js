@@ -78,16 +78,20 @@ function projects(){
         a.href = lst[i][1]
         let text1 = document.createElement('p')
         text1.innerHTML = lst[i][0]
+        text1.classList.add("projectp")
         a.appendChild(text1)
         div2.appendChild(a)
         let text2 = document.createElement('p')
         text2.innerHTML = lst[i][3]
+        text2.classList.add("projectp")
         div2.appendChild(text2)
         let text3 = document.createElement('p')
         text3.innerHTML = lst[i][4]
+        text3.classList.add("projectp")
         div2.appendChild(text3)
         let text4 = document.createElement('p')
         text4.innerHTML = lst[i][5]
+        text4.classList.add("projectp")
         div2.appendChild(text4)
         div1.appendChild(div2)
         root.appendChild(div1)
