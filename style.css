@@ -224,3 +224,7 @@ a {
 #mySkills, #myProjects {
     display: none;
 }
+
+.projecttext {
+    width: fit-content;
+}
