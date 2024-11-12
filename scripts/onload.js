@@ -1,5 +1,8 @@
 document.getElementById('introButton').style.left = $('#name').offset().left+'px';
 document.getElementById('introButton').style.top = $('#name').offset().top+'px';
+skillgrid()
+projects()
+close()
 $('#home').css('height', 'auto')
 $('#profile').css('height', 'auto')
 $('#projects').css('height', 'auto')
@@ -29,6 +32,3 @@ for (let i=0; i<50; i++){
     dist = Math.pow(Math.random(), 0.75)*(num-$(window).height())+($(window).height());
     stars.push([dist, Math.PI*Math.random(), speed]);
 }
-skillgrid()
-projects()
-close()
