@@ -4,7 +4,7 @@ window.addEventListener("resize", function(){
     $('#projects').css('height', 'auto')
     $('#socials').css('height', 'auto')
     heights = [
-        $('#home').height(),
+        $('#home').height()+parseFloat(getComputedStyle(document.documentElement).fontSize)*3,
         $('#profile').height(),
         $('#projects').height(),
         $('#socials').height()

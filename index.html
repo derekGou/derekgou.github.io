@@ -21,6 +21,8 @@
         <script src="scripts/name.js" defer></script>
         <script src="scripts/canvas.js" defer></script>
         <script src="scripts/type.js" defer></script>
+        <script src="scripts/skills.js" defer></script>
+        <script src="scripts/projects.js" defer></script>
         <script src="scripts/onload.js" defer></script>
         <script src="https://kit.fontawesome.com/4fe502413e.js" crossorigin="anonymous"></script>
     </head>
@@ -32,7 +34,7 @@
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <canvas id="canvas" class="fixed"></canvas>
         <div class="flex flex-col md:flex-row items-center justify-center w-screen min-h-screen fixed top-0 left-0">
-            <div class="m-12 md:m-20 flex flex-row items-center justify-center">
+            <div class="m-8 md:m-12 flex flex-row items-center justify-center">
                 <canvas id="name" class="h-60 md:h-96 rounded-full"></canvas>
                 <div class="moon" id="moon1">
                     <i class="spins fa-solid fa-house"></i>
@@ -47,38 +49,58 @@
                     <i class="spins fa-solid fa-at"></i>
                 </div>
             </div>
-            <div class="flex flex-col w-fit mx-12 items-center align-center">
-                <div id="home" class="flex flex-col gap-4 md:w-full overflow-y-hidden">
+            <div class="md:max-w-[50vw] box-content flex flex-col w-fit mx-12 items-center align-center">
+                <div id="home" class="items-center justify-center flex flex-col gap-4 md:w-full overflow-y-hidden">
                     <h1>Hi! I'm Derek</h1>
-                    <div class="flex flex-row">
+                    <div class="flex flex-row w-full">
                         <h2 id="typer"></h2>
-                        <h2>&zwnj;</h2>
                     </div>
                 </div>
-                <div id="profile" class="flex flex-col gap-4 md:w-full overflow-y-hidden">
+                <div id="profile" class="items-center justify-center flex flex-col gap-4 md:w-full overflow-y-hidden">
                     <h3>My Profile</h3>
-                    <div class="flex flex-col">
-                        <p>🎉 3x hackathon winner</p>
-                        <p>🌐 Web-dev intern @CILC</p>
-                        <p>🌱 Co-founder + co-lead @SproutHacks</p>
-                        <p>📚 Student @WCI</p>
+                    <div class="flex flex-col w-full">
+                        <div class="flex flex-row gap-2 items-center justify-center md:justify-start">
+                            <p class="w-fit">🎉</p>
+                            <p class="w-fit">3x hackathon winner</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center justify-center md:justify-start">
+                            <p class="w-fit">🌐</p>
+                            <p class="w-fit">Web-dev intern @CILC</p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center justify-center md:justify-start">
+                            <p class="w-fit">🌱</p>
+                            <p class="w-fit">Co-founder + co-lead @<a href="https://sprouthacks.ca">SproutHacks</a></p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center justify-center md:justify-start">
+                            <p class="w-fit">📚</p>
+                            <p class="w-fit">Student @<a href="https://wci.wrdsb.ca">WCI</a></p>
+                        </div>
+                        <div class="flex flex-row gap-2 items-center justify-center md:justify-start">
+                            <p class="w-fit">🖥️</p>
+                            <p class="w-fit">Top skills: Web-dev, Python, UI/UX Design</p>
+                        </div>
                     </div>
-                    <a href="media/Derek Gou - Resume - UPDATED 11_10_24.pdf" download>
-                        <button>Download Resume</button>
-                    </a>
+                    <div class="gap-2 justify-center align-center md:justify-start w-full flex flex-row">
+                        <a href="media/Derek Gou - Resume - UPDATED 11_10_24.pdf" download>
+                            <button>Download Resume</button>
+                        </a>
+                        <button id="openSkills">See All Skills</button>
+                    </div>
                 </div>
-                <div id="projects" class="flex flex-col gap-4 md:w-full overflow-y-hidden">
+                <div id="projects" class="items-center justify-center flex flex-col gap-4 md:w-full overflow-y-hidden">
                     <h3>My Projects</h3>
-                    <div class="flex flex-col">
-                        <p>Warpz: <a href="https://github.com/gheatherington/NeoDev-backend" target="_blank">automated photogammetry system</a> complete with <a href="https://github.com/derekGou/neodev_project" target="_blank">web app</a>: 1st overall @<a href="https://neoleague.dev/" target="_blank">NeoDev</a> WRDSB Summit</p>
-                        <p>TouchUp: <a href="https://github.com/mattshrew/TouchUp" target="_blank">tray app</a> that enables users to browse with hand gestures: 1st overall @<a href="https://dorahacks.io/buidl/13414" target="_blank">JamHacks8</a></p>
-                        <p><a href="https://cilc-website.vercel.app" target="_blank">CILC Website</a>: custom website using React, JS, Vite, Tailwind</p>
-                        <p><a href="https://wcimapp.vercel.app/" target="_blank">WCI MApp</a>: simple indoor map app for simpler school navigation</p>
+                    <div class="flex flex-col w-full">
+                        <p><a href="https://github.com/derekGou" target="_blank">Warpz</a>: photogammetry system, 🥇@<a href="https://neoleague.dev" target="_blank">NeoDev</a></p>
+                        <p><a href="https://dorahacks.io/buidl/13414" target="_blank">TouchUp</a>: browse with hand gestures, 🥇@<a href="https://www.jamhacks.ca/" target="_blank">JamHacks8</a></p>
+                        <p><a href="https://wcimapp.vercel.app" target="_blank">WCI MApp</a>: indoor map and wayfinding app</p>
+                    </div>
+                    <div class="gap-2 justify-center align-center md:justify-start w-full flex flex-row">
+                        <button id="openProjects">See All Projects</button>
                     </div>
                 </div>
-                <div id="socials" class="flex flex-col gap-4 md:w-full overflow-y-hidden">
+                <div id="socials" class="items-center justify-center flex flex-col gap-4 md:w-full overflow-y-hidden">
                     <h3>My Socials</h3>
-                    <div class="flex flex-row gap-4 h-10">
+                    <div class="flex flex-row gap-4 h-10 w-full">
                         <a href="https://www.instagram.com/derekgou/" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
@@ -92,6 +114,20 @@
                             <i class="fa-solid fa-envelope"></i>
                         </a>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-border w-screen h-screen flex flex-col p-8 fixed top-0 left-0 items-center justify-center z-[103]">
+            <div class="flex items-start bg-white p-8 w-full">
+                <h3 class="grow !text-black"></h3>
+                <i class="fa-solid fa-xmark cursor-pointer" style="color: black"></i>
+            </div>
+            <div id="mySkills" class="flex-col bg-[#fff8] p-16 items-center justify-start box-border grow w-full">
+                <div id="skillgrid" class="w-full flex flex-row flex-wrap items-center justify-center"></div>
+            </div>
+            <div id="myProjects" class="flex flex-col bg-[#fff8] p-16 items-center justify-start box-border grow w-full overflow-y-scroll">
+                <div id="projectgrid" class="w-full h-it flex flex-col items-center justify-center">
+                    <div class="w-full items-center h-fit p-4 flex flex-row gap-4 bg-[#fff8]"></div>
                 </div>
             </div>
         </div>

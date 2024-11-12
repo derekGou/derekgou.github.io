@@ -5,7 +5,7 @@ $('#profile').css('height', 'auto')
 $('#projects').css('height', 'auto')
 $('#socials').css('height', 'auto')
 var heights = [
-    $('#home').height(),
+    $('#home').height()+parseFloat(getComputedStyle(document.documentElement).fontSize)*3,
     $('#profile').height(),
     $('#projects').height(),
     $('#socials').height()
@@ -29,3 +29,5 @@ for (let i=0; i<50; i++){
     dist = Math.pow(Math.random(), 0.75)*(num-$(window).height())+($(window).height());
     stars.push([dist, Math.PI*Math.random(), speed]);
 }
+skillgrid()
+projects()
