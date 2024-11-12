@@ -211,7 +211,7 @@ a {
     background-color: #000c;
 }
 .projectimg {
-    width: 6.7rem;
+    width: 4rem;
     @media (min-width: 768px) {
         width: 7.5rem;
     }
@@ -227,4 +227,5 @@ a {
 
 .projectp {
     width: fit-content;
+    text-align: left !important;
 }
