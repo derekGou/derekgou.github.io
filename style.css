@@ -220,3 +220,6 @@ a {
     flex-direction: column;
     gap: 0.5rem;
 }
+#mySkills, #myProjects {
+    display: none;
+}
